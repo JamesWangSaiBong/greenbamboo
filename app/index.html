@@ -16,7 +16,14 @@
 
 <body ng-controller="menuCtrl">
 
-  <p>{{ greeting }}</p>
-  <gb-menu-item ng-repeat="item in menu" item="item"></gb-menu-item>
+  <h2>Menu</h2>
+  <gb-menu-item ng-repeat="item in menu" item="item" order="orderDish(item)"></gb-menu-item>
+  
+  <h2>Order</h2>
+  <div ng-repeat="item in order.items">
+	<span>{{ item.enName }}</span>
+	<span>${{ item.price }}</span>
+	<button class="btn btn-sm" ng-click="removeDish(item)" style="cursor:pointer"><i class="glyphicon glyphicon-remove"></i></button>
+  </div>
 </body>
 </html>

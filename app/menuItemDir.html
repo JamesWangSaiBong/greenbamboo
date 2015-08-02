@@ -1,5 +1,5 @@
 <div>
-	<input type="checkbox" ng-click="order(item.addToOrder(item))">
+	<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-click="selectItem()">
 	<span>{{ item.enName }}</span>
 	<span>${{ item.price }}</span>
 </div>

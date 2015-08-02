@@ -5,12 +5,13 @@ app.directive('gbMenuItem', function(Order) {
 		restrict: 'E',
 		templateUrl: 'menuItemDir.html',
 		scope: {
-			item: '='
+			item: '=',
+			notifyParent: '&order'
 		},
 		controller: function($scope) {
-			$scope.order = function(item) {
-				Order.addItem(item);
-			};
+			$scope.selectItem = function() {
+				$scope.notifyParent();
+			}
 		}
 	}
 })

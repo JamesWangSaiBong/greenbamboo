@@ -1,24 +1,29 @@
 'use strict'
 
-app.factory('MenuFactory', function($http, $q, MenuItem) {
+app.service('Menu', function($http, $q, MenuItem) {
 	
-	var Menu = {
-		
-		getAllItems: function() {
-			var deferred = $q.defer();
-			var items = [];
-			$http.get('menu.json').success(function(data) {
-				for(var i=0; i<data.length; i++) {
-					items.push(new MenuItem(data[i]));
-				};
-				deferred.resolve(items);
-			}).error(function(response) {
-				deferred.reject(response);
-			});
-			return deferred.promise;
-		}
-		
+	this.items = [];
+	
+	this.getAllItems = function() {
+		var deferred = $q.defer();
+		var that = this;
+		$http.get('menu.json').success(function(data) {
+			for(var i=0; i<data.length; i++) {
+				that.items.push(new MenuItem(data[i]));
+			};
+			deferred.resolve(that.items);
+		}).error(function(response) {
+			deferred.reject(response);
+		});
+		return deferred.promise;
 	};
 	
-	return Menu;
+	this.dropItemFromOrder = function(id) {
+		var that = this;
+		for(var i=0; i<that.items.length; i++) {
+			if(that.items[i].id === id) {
+				that.items[i].isSelected = false;
+			}
+		}
+	}
 })
