@@ -2,7 +2,7 @@
 
 var app = angular.module('GBWeb',[]);
 
-app.controller('menuCtrl', function($scope, MenuFactory, Order) {
+app.controller('menuCtrl', function($scope, MenuFactory) {
 	$scope.greeting = 'Hello Green Bamboo!';
 	
 	MenuFactory.getAllItems().then(function(items) {
@@ -10,7 +10,6 @@ app.controller('menuCtrl', function($scope, MenuFactory, Order) {
 		console.log($scope.menu);
 	});
 	
-	$scope.order = function(item) {
-		Order.addItem(item);
-	}
+	
+	
 })
