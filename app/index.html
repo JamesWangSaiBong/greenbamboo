@@ -10,10 +10,15 @@
   <script src="app.js"></script>
   <script src="menuFactory.js"></script>
   <script src="menuItemFactory.js"></script>
+  <script src="orderSvc.js"></script>
 </head>
 <body ng-controller="menuCtrl">
 
   <p>{{ greeting }}</p>
-
+  <div ng-repeat="item in menu">
+	<input type="checkbox" ng-click="order(item.addToOrder(item))">
+	<span>{{ item.enName }}</span>
+	<span>${{ item.price }}</span>
+  </div>
 </body>
 </html>
