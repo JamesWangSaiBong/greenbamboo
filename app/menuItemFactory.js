@@ -9,14 +9,7 @@ app.factory('MenuItem', function() {
 	};
 	
 	MenuItem.prototype.addToOrder = function() {
-		var that = this
-		that.isSelected = true;
-		var orderItem = {
-			id: that.id,
-			enName: that.enName,
-			price: that.price
-		};
-		return orderItem;
+		this.isSelected = true;
 	};
 	
 	MenuItem.prototype.dropFromOrder = function() {
