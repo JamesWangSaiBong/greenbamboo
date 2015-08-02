@@ -1,13 +1,17 @@
 'use strict'
 
-app.factory('MenuFactory', function($http, $q) {
+app.factory('MenuFactory', function($http, $q, MenuItem) {
 	
 	var Menu = {
 		
 		getAllItems: function() {
 			var deferred = $q.defer();
+			var items = [];
 			$http.get('menu.json').success(function(data) {
-				deferred.resolve(data);
+				for(var i=0; i<data.length; i++) {
+					items.push(new MenuItem(data[i]));
+				};
+				deferred.resolve(items);
 			}).error(function(response) {
 				deferred.reject(response);
 			});
