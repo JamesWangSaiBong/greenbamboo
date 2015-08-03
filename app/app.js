@@ -10,11 +10,6 @@ app.controller('menuCtrl', function($scope, Menu, Order) {
 	
 	$scope.order = Order;
 	
-	$scope.orderDish = function(menuItem) {
-		$scope.order.addItem(menuItem);
-		console.log($scope.order);
-	};
-	
 	$scope.removeDish = function(item) {
 		$scope.order.dropItem(item)
 	}

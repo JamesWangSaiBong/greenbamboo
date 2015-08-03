@@ -19,7 +19,7 @@
 <body ng-controller="menuCtrl">
 
   <h2>Menu</h2>
-  <gb-menu-item ng-repeat="item in menu" item="item" order="orderDish(item)"></gb-menu-item>
+  <gb-menu-item ng-repeat="item in menu" item="item"></gb-menu-item>
   
   <h2>Order</h2>
   <gb-order-item ng-repeat="item in order.items" item="item" method="removeDish(item)"></gb-order-item>

@@ -1,5 +1,11 @@
 <div>
-	<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-click="selectItem()">
+	<span ng-hide="item.isSelected">
+		<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-click="order(item)">
+	</span>
+	<span ng-show="item.isSelected">
+		<span>{{ quantity }}</span>
+		<button class="btn btn-success" ng-click="addQuantity(item)"><i class="glyphicon glyphicon-plus"></i></button>
+	</span>
 	<span>{{ item.enName }}</span>
 	<span>${{ item.price }}</span>
 </div>

@@ -6,7 +6,11 @@ app.factory('OrderItem', function() {
 		this.enName = menuItem.enName;
 		this.price = menuItem.price;
 		this.quantity = 1
+	};
+	
+	OrderItem.prototype.getQuantity = function() {
+		return this.quantity;
 	}
 	
 	return OrderItem;
-})
+});
