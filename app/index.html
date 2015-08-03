@@ -13,6 +13,7 @@
   <script src="orderSvc.js"></script>
   <script src="menuItemDir.js"></script>
   <script src="orderItemFactory.js"></script>
+  <script src="orderItemDir.js"></script>
 </head>
 
 <body ng-controller="menuCtrl">
@@ -21,10 +22,6 @@
   <gb-menu-item ng-repeat="item in menu" item="item" order="orderDish(item)"></gb-menu-item>
   
   <h2>Order</h2>
-  <div ng-repeat="item in order.items">
-	<span>{{ item.enName }}</span>
-	<span>${{ item.price }}</span>
-	<button class="btn btn-sm" ng-click="removeDish(item)" style="cursor:pointer"><i class="glyphicon glyphicon-remove"></i></button>
-  </div>
+  <gb-order-item ng-repeat="item in order.items" item="item" method="removeDish(item)"></gb-order-item>
 </body>
 </html>

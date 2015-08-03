@@ -1,15 +1,15 @@
 'use strict'
 
-app.directive('gbMenuItem', function() {
+app.directive('gbOrderItem', function() {
 	return {
 		restrict: 'E',
-		templateUrl: 'menuItemDir.html',
+		templateUrl: 'orderItemDir.html',
 		scope: {
 			item: '=',
-			notifyParent: '&order'
+			notifyParent: '&method'
 		},
 		controller: function($scope) {
-			$scope.selectItem = function() {
+			$scope.removeItem = function() {
 				$scope.notifyParent();
 			}
 		}
