@@ -1,7 +1,12 @@
 <div>
 	<span>{{ item.enName }}</span>
 	<span>${{ item.price }}</span>
-	<button class="btn btn-sm" ng-click="removeItem()" style="cursor:pointer">
-		<i class="glyphicon glyphicon-remove"></i>
+	<span>x{{ item.quantity }}</span>
+	
+	<button class="btn btn-sm" style="cursor:pointer" ng-click="removeDish(item)" ng-show="allowRemove">
+		<i class="glyphicon glyphicon-remove" ></i>
+	</button>
+	<button class="btn" style="cursor:pointer" ng-click="orderLess(item)" ng-hide="allowRemove">
+		<i class="glyphicon glyphicon-minus"></i>
 	</button>
 </div> 

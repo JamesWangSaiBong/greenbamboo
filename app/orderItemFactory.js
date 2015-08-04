@@ -12,5 +12,13 @@ app.factory('OrderItem', function() {
 		return this.quantity;
 	}
 	
+	OrderItem.prototype.incrementQuantity = function() {
+		this.quantity++;
+	}
+	
+	OrderItem.prototype.decrementQuantity = function() {
+		this.quantity--;
+	}
+	
 	return OrderItem;
 });

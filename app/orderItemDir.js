@@ -1,16 +1,25 @@
 'use strict'
 
-app.directive('gbOrderItem', function() {
+app.directive('gbOrderItem', function(Order, Menu) {
 	return {
 		restrict: 'E',
 		templateUrl: 'orderItemDir.html',
 		scope: {
-			item: '=',
-			notifyParent: '&method'
+			item: '='
 		},
 		controller: function($scope) {
-			$scope.removeItem = function() {
-				$scope.notifyParent();
+			
+			$scope.$watch('item.quantity', function(newVal) {
+				$scope.allowRemove = (newVal > 1)? false : true;
+			});
+			
+			$scope.removeDish = function(item) {
+				Order.dropItem(item)
+			}
+			
+			$scope.orderLess = function(item) {
+				item.decrementQuantity();
+				Menu.decrementItemOrderQuantity(item)
 			}
 		}
 	}

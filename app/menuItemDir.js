@@ -11,12 +11,11 @@ app.directive('gbMenuItem', function(Order) {
 			
 			$scope.order = function(item) {
 				Order.addItem(item);
-				$scope.quantity = Order.getItemQuantity(item.id);
 			};
 			
 			$scope.addQuantity = function(item) {
-				Order.incrementItemQuantity(item.id);
-				$scope.quantity = Order.getItemQuantity(item.id);
+				item.incrementOrderQuantity();
+				Order.incrementItemQuantity(item);
 			}
 		}
 	}

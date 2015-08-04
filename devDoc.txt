@@ -1,0 +1,28 @@
+addItemToOrder
+
+	- initiate from menuItemDir
+	- menuItem.addToOrder()
+		- will set menuItem.isSelected and menuItem.orderQuantity
+	- Order.addItem(item)
+		- use OrderSvc because it needs to check whether or not the order has the item that the user is trying to add
+		- If the item is not already in the order, the the OrderSvc will create a new orderItem and push it into the Order. It will also call the menuItem.addToOrder method
+
+
+addQuantity
+	
+	- initiate from menuItemDir
+	- On click, it will invoke the menuItem.incrementOrderQuantity() method, which will increment menuItem.orderQuantity
+	- On click, it will also invoke the Order.incrementItemQuantity(item) method. This OrderSvc method will take the menuItem as a parameter and find the corresponding orderItem in the Order, then increment its quantity(orderItem.quantity) by calling orderItem.incrementQuantity()
+
+removeDish
+
+	- initiate from orderItemDir
+	- On click, it will invoke the Order.dropItem(item) method, which will take an orderItem as a parameter, and search for it within the Order. Once found, it will remove the item from the order and call the Menu.dropItemFromOrder(orderItem) method.
+	- Menu.dropItemFromOrder(orderItem) will find the corresponding menuItem in the Menu and then call the menuItem.dropFromOrder() method.
+	- menuItem.dropFromOrder() method will set the menuItem.orderQuantity to 0 and menuItem.isSelected to false
+
+orderLess
+
+	- initiate from orderItemDir
+	- On click, it will invoke the orderItem.decrementQuantity() method, which decrements its quantity property
+	- On click, it will also invoke the Menu.decrementItemOrderQuantity(orderItem) method, which will search the Menu for the corresponding menuItem. Once found, it will call the menuItem.decrementOrderQuantity() method that will decrement its orderQuantity property
