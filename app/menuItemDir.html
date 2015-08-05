@@ -1,4 +1,5 @@
 <div>
+	<h3>Item {{ item.id }}</h3>
 	<span ng-hide="item.isSelected">
 		<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-click="order(item)">
 	</span>
@@ -11,4 +12,13 @@
 	<span>{{ item.enName }}</span>
 	
 	<span>${{ item.price }}</span>
+	
+	<h5 ng-if="item.options">Number of Options : {{ item.numOfoptions }}</h5>
+	<div ng-repeat="option in item.options">
+		<span ng-repeat="choice in option">
+			<span>{{ choice.opt_name }}</span>
+			<span ng-if="choice.price"> - ${{ choice.price }}</span>
+			<span> || </span>
+		</span>
+	</div>
 </div>

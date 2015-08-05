@@ -1,6 +1,6 @@
 'use strict'
 
-app.directive('gbMenuItem', function(Order) {
+app.directive('gbMenuItem', function(Order, StagingArea) {
 	return {
 		restrict: 'E',
 		templateUrl: 'menuItemDir.html',
@@ -10,12 +10,21 @@ app.directive('gbMenuItem', function(Order) {
 		controller: function($scope) {
 			
 			$scope.order = function(item) {
-				Order.addItem(item);
+				if(!!item.options) {
+					StagingArea.addItem(item);
+					console.log(StagingArea.stagingItems);
+				} else {
+					Order.addItem(item);
+				}
 			};
 			
 			$scope.addQuantity = function(item) {
-				item.incrementOrderQuantity();
-				Order.incrementItemQuantity(item);
+				if(!!item.options) {					
+					StagingArea.addItem(item);
+				} else {
+					item.incrementOrderQuantity();
+					Order.addItem(item);
+				}
 			}
 		}
 	}
