@@ -13,7 +13,7 @@
 	
 	<span>${{ item.price }}</span>
 	
-	<div ng-if="item.options && item.numOfStagingItems">
+	<div ng-if="isCollapsed">
 		<div>Pick your options for {{ item.numOfStagingItems }} {{ item.enName }}</div>
 		<div ng-repeat="option in item.options">
 			<span ng-repeat="choice in option">

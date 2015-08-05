@@ -15,22 +15,15 @@ app.service('Order', function(Menu, OrderItem) {
 	}
 	
 	this.addItem = function(menuItem) {
-		for(var i=0; i<this.items.length; i++) {
-			if(this.items[i].menuId === menuItem.id) {
-				return;
-			}
-		};
+		var orderItem = _searchItemById(menuItem.id);
+		if(orderItem) {
+			orderItem.incrementQuantity();
+			return;
+		}
 		menuItem.addToOrder();
 		this.items.push(new OrderItem(menuItem));
 	};
 	
-	
-	this.incrementItemQuantity = function(menuItem) {
-		var orderItem = _searchItemById(menuItem.id);
-		if(orderItem) {
-			 orderItem.incrementQuantity();
-		}
-	}
 	
 	this.dropItem = function(orderItem) {
 		var i = this.items.indexOf(orderItem);

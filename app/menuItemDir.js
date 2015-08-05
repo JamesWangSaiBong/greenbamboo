@@ -9,9 +9,12 @@ app.directive('gbMenuItem', function(Order) {
 		},
 		controller: function($scope) {
 			
+			$scope.isCollapsed = true;
+			
 			$scope.order = function(item) {
 				if(!!item.options) {
 					item.addToStaging(); //If item.options is not null, then it's an AdvanceMenuItem
+					$scope.isCollapsed = false;
 				} else {
 					Order.addItem(item);
 				}
@@ -22,7 +25,7 @@ app.directive('gbMenuItem', function(Order) {
 					item.incrementStagingQuantity();
 				} else {
 					item.incrementOrderQuantity();
-					Order.incrementItemQuantity(item);
+					Order.addItem(item);
 				}
 			}
 		}
