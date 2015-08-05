@@ -1,6 +1,6 @@
 'use strict'
 
-app.service('Menu', function($http, $q, MenuItem) {
+app.service('Menu', function($http, $q, MenuItem, AdvanceMenuItem) {
 	
 	this.items = [];
 	
@@ -19,7 +19,12 @@ app.service('Menu', function($http, $q, MenuItem) {
 		var that = this;
 		$http.get('menu.json').success(function(data) {
 			for(var i=0; i<data.length; i++) {
-				that.items.push(new MenuItem(data[i]));
+				if(!data[i].options) {
+					that.items.push(new MenuItem(data[i]));
+				} else {
+					that.items.push(new AdvanceMenuItem(data[i]));
+				}
+				console.log(that.items);
 			};
 			deferred.resolve(that.items);
 		}).error(function(response) {

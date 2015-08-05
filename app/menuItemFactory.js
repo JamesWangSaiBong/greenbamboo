@@ -7,10 +7,6 @@ app.factory('MenuItem', function() {
 		this.price = item.price;
 		this.orderQuantity = 0;
 		this.isSelected = false;
-		if(!!item.options) {
-			this.numOfoptions = item.options.length;
-			this.options = item.options;
-		}
 	};
 	
 	MenuItem.prototype.addToOrder = function() {
