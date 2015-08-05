@@ -13,6 +13,7 @@ app.factory('AdvanceMenuItem', function(MenuItem) {
 	AdvanceMenuItem.prototype.constructor = AdvanceMenuItem;
 	
 	AdvanceMenuItem.prototype.addToStaging = function() {
+		this.addToOrder(); //Used to keep track of isSelected and selectedQuantity
 		this.numOfStagingItems = 1;
 	}
 	
