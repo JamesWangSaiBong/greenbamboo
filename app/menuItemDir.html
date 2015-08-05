@@ -13,12 +13,14 @@
 	
 	<span>${{ item.price }}</span>
 	
-	<h5 ng-if="item.options">Number of Options : {{ item.numOfoptions }}</h5>
-	<div ng-repeat="option in item.options">
-		<span ng-repeat="choice in option">
-			<span>{{ choice.opt_name }}</span>
-			<span ng-if="choice.price"> - ${{ choice.price }}</span>
-			<span> || </span>
-		</span>
+	<div ng-if="item.options && item.numOfStagingItems">
+		<div>Pick your options for {{ item.numOfStagingItems }} {{ item.enName }}</div>
+		<div ng-repeat="option in item.options">
+			<span ng-repeat="choice in option">
+				<span>{{ choice.opt_name }}</span>
+				<span ng-if="choice.price"> - ${{ choice.price }}</span>
+				<span> || </span>
+			</span>
+		</div>
 	</div>
 </div>
