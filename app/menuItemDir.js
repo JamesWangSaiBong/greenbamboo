@@ -18,8 +18,12 @@ app.directive('gbMenuItem', function(Order) {
 			};
 			
 			$scope.addQuantity = function(item) {
-				item.incrementOrderQuantity();
-				Order.incrementItemQuantity(item);
+				if(!!item.options) {
+					item.incrementStagingQuantity();
+				} else {
+					item.incrementOrderQuantity();
+					Order.incrementItemQuantity(item);
+				}
 			}
 		}
 	}

@@ -24,7 +24,6 @@ app.service('Menu', function($http, $q, MenuItem, AdvanceMenuItem) {
 				} else {
 					that.items.push(new AdvanceMenuItem(data[i]));
 				}
-				console.log(that.items);
 			};
 			deferred.resolve(that.items);
 		}).error(function(response) {

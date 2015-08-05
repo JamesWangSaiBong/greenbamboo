@@ -17,5 +17,10 @@ app.factory('AdvanceMenuItem', function(MenuItem) {
 		this.numOfStagingItems = 1;
 	}
 	
+	AdvanceMenuItem.prototype.incrementStagingQuantity = function() {
+		this.numOfStagingItems++;
+		this.incrementOrderQuantity(); //Used to keep track of selectedQuantity
+	}
+	
 	return AdvanceMenuItem;
 });
