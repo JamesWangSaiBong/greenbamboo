@@ -24,11 +24,12 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
 	AdvanceMenuItem.prototype.addToStaging = function() {
 		this.addToOrder(); //Used to keep track of isSelected and selectedQuantity
 		this.isStaging = true;
+		console.log(this);
 	}
 	
-	AdvanceMenuItem.prototype.incrementStagingQuantity = function() {
-		//this.numOfStagingItems++;
-		this.incrementOrderQuantity(); //Used to keep track of selectedQuantity
+	AdvanceMenuItem.prototype.incrementOrderQuantity = function() {
+		this.orderQuantity++; //Used to keep track of selectedQuantity
+		this.isStaging = true;
 	}
 	
 	AdvanceMenuItem.prototype.isCompleted = function() {

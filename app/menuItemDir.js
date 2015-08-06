@@ -21,10 +21,18 @@ app.directive('gbMenuItem', function(Order) {
 			};
 			
 			$scope.addQuantity = function(item) {
+				//If item is at staging, then disable the button and output a notification
+				if(item.isStaging) {
+					$scope.disableButton = true;
+					$scope.alertMsg = 'Please pick your option first';
+					return;
+				}
+				item.incrementOrderQuantity();
+				//If item.options is not null, it's an advanceMenuItem. Thus, expand the option-panel
 				if(!!item.options) {
-					item.incrementStagingQuantity();
+					$scope.isCollapsed = false;
 				} else {
-					item.incrementOrderQuantity();
+				//Otherwise, simply increment the item's order quantity and add it to the order.
 					Order.addItem(item);
 				}
 			};
@@ -32,6 +40,8 @@ app.directive('gbMenuItem', function(Order) {
 			$scope.pickOption = function() {
 				var isCompleted = $scope.item.isCompleted();
 				if(isCompleted) {
+					$scope.alertMsg = '';
+					$scope.disableButton = false;
 					Order.addItem($scope.item);
 					$scope.isCollapsed = true;
 				}

@@ -6,12 +6,14 @@
 	
 	<span ng-show="item.isSelected">
 		<span>{{ item.orderQuantity }}</span>
-		<button class="btn btn-success" ng-click="addQuantity(item)"><i class="glyphicon glyphicon-plus"></i></button>
+		<button class="btn btn-success" ng-click="addQuantity(item)" ng-disabled="disableButton"><i class="glyphicon glyphicon-plus"></i></button>
 	</span>
 	
 	<span>{{ item.enName }}</span>
 	
 	<span>${{ item.price }}</span>
+	
+	<div>{{ alertMsg }}</div>
 	
 	<div ng-if="!isCollapsed" class="well well-lg">
 		<div>Pick your options for {{ item.numOfStagingItems }} {{ item.enName }}</div>
