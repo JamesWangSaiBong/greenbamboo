@@ -1,0 +1,9 @@
+<div>
+	<div class="btn-group">
+		<label class="btn btn-default" ng-repeat="choice in option" ng-model="radio.model" btn-radio="choice">
+			<span>{{choice.opt_name}}</span>
+			<span ng-show="choice.price"> - ${{ choice.price }}</span>
+		</label>
+		{{radio.model}}
+	</div>
+</div>

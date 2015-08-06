@@ -13,14 +13,8 @@
 	
 	<span>${{ item.price }}</span>
 	
-	<div ng-if="isCollapsed">
+	<div ng-if="!isCollapsed" class="well well-lg">
 		<div>Pick your options for {{ item.numOfStagingItems }} {{ item.enName }}</div>
-		<div ng-repeat="option in item.options">
-			<span ng-repeat="choice in option">
-				<span>{{ choice.opt_name }}</span>
-				<span ng-if="choice.price"> - ${{ choice.price }}</span>
-				<span> || </span>
-			</span>
-		</div>
+		<option-panel ng-repeat="option in item.options" option="option"></option-panel>
 	</div>
 </div>
