@@ -29,8 +29,12 @@ app.directive('gbMenuItem', function(Order) {
 				}
 			};
 			
-			$scope.pickOption = function(choice) {
-				console.log(choice);
+			$scope.pickOption = function() {
+				var isCompleted = $scope.item.isCompleted();
+				if(isCompleted) {
+					Order.addItem($scope.item);
+					$scope.isCollapsed = true;
+				}
 			}
 		}
 	}
