@@ -15,7 +15,6 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
 		this.numOfOptions = arguments[0].options.length;
 		this.options = setOptSetArray(arguments[0].options);
 		this.numOfStagingItems = 0;
-		console.log(this);
 	}
 	
 	//AdvanceMenuItem inherits from MenuItem

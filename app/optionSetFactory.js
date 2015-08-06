@@ -16,5 +16,10 @@ app.factory('OptionSet', function(Option){
 		this.selectedOption = null;
 	};
 	
+	OptionSet.prototype.pickOption = function(choice) {
+		this.isSelected = true;
+		this.selectedOption = choice;
+	}
+	
 	return OptionSet;
 })
