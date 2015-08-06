@@ -1,11 +1,21 @@
 'use strict'
 
-app.factory('AdvanceMenuItem', function(MenuItem) {
+app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
+	
+	var setOptSetArray = function(optSets) {
+		var optSetArray = [];
+		for(var i=0; i<optSets.length; i++) {
+			optSetArray.push(new OptionSet(optSets[i]));
+		}
+		return optSetArray;
+	}
+	
 	function AdvanceMenuItem() {
 		MenuItem.apply(this, arguments); //Using the MenuItem constructor as part of this constructor
 		this.numOfOptions = arguments[0].options.length;
-		this.options = arguments[0].options;
+		this.options = setOptSetArray(arguments[0].options);
 		this.numOfStagingItems = 0;
+		console.log(this);
 	}
 	
 	//AdvanceMenuItem inherits from MenuItem
