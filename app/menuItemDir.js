@@ -27,6 +27,10 @@ app.directive('gbMenuItem', function(Order) {
 					item.incrementOrderQuantity();
 					Order.addItem(item);
 				}
+			};
+			
+			$scope.pickOption = function(choice) {
+				console.log(choice);
 			}
 		}
 	}

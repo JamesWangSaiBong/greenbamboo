@@ -5,10 +5,17 @@ app.directive('optionPanel', function() {
 		restrict: 'E',
 		templateUrl: 'optionPanel.html',
 		scope: {
-			option: '='
+			option: '=',
+			notifyParent: '&pickOption'
 		},
 		controller: function($scope) {
 			$scope.radio = {model:undefined};
+			
+			$scope.$watch('radio.model', function(newVal) {
+				if(!!newVal) {
+					$scope.notifyParent({choice:newVal});
+				}
+			})
 		}
 	}
 })
