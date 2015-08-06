@@ -5,10 +5,12 @@ app.directive('optionPanel', function() {
 		restrict: 'E',
 		templateUrl: 'optionPanel.html',
 		scope: {
-			option: '=',
+			optSet: '=optionSet',
 			notifyParent: '&pickOption'
 		},
 		controller: function($scope) {
+			console.log($scope.optSet);
+			
 			$scope.radio = {model:undefined};
 			
 			$scope.$watch('radio.model', function(newVal) {
