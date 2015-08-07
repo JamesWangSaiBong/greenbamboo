@@ -32,7 +32,7 @@ app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
 		var orderItem = _searchItemByName(_getMenuItemName(menuItem));
 		if(orderItem) {
 			orderItem.incrementQuantity();
-			menuItem.clearSelectedOptions(); //Call this method to reset all the selected options
+			if(!!menuItem.options) { menuItem.clearSelectedOptions(); } //Call this method to reset all the selected options
 			return;
 		}
 		if(!menuItem.options) {
