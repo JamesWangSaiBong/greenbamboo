@@ -14,7 +14,6 @@ app.factory('AdvanceOrderItem', function(OrderItem) {
 	function AdvanceOrderItem() {
 		OrderItem.apply(this, arguments);
 		this.enName = setName(arguments[0]);
-		console.log(this);
 	};
 	
 	//AdvanceOrderItem inherits from OrderItem

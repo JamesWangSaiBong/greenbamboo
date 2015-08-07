@@ -17,7 +17,6 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
 		this.isStaging = false;
 	}
 	
-	
 	//AdvanceMenuItem inherits from MenuItem
 	AdvanceMenuItem.prototype = Object.create(MenuItem.prototype);
 	AdvanceMenuItem.prototype.constructor = AdvanceMenuItem;
@@ -25,7 +24,6 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
 	AdvanceMenuItem.prototype.addToStaging = function() {
 		this.addToOrder(); //Used to keep track of isSelected and selectedQuantity
 		this.isStaging = true;
-		console.log(this);
 	}
 	
 	AdvanceMenuItem.prototype.incrementOrderQuantity = function() {
@@ -42,13 +40,17 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
 			if(!this.options[i].isSelected) { return isCompleted; }
 		};
 		isCompleted = true;
-		//Clear all selected options
-		
-		
 		//Set isStaging back to false once the item has been completed (all options selected)
 		this.isStaging = false;
 		return isCompleted;
 	}
+	
+	//This is called in OrderSvc after the menuItem has been added to the Order.
+	AdvanceMenuItem.prototype.clearSelectedOptions = function() {
+		for(var i=0; i<this.options.length; i++) {
+			this.options[i].clearOption();
+		}
+	};
 	
 	return AdvanceMenuItem;
 });

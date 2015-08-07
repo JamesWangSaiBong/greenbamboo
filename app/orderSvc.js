@@ -39,6 +39,7 @@ app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
 			this.items.push(new OrderItem(menuItem));
 		} else {
 			this.items.push(new AdvanceOrderItem(menuItem));
+			menuItem.clearSelectedOptions(); //Call this method to reset all the selected options
 		}
 	};
 	
