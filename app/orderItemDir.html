@@ -3,10 +3,8 @@
 	<span>${{ item.price }}</span>
 	<span>x{{ item.quantity }}</span>
 	
-	<button class="btn btn-sm" style="cursor:pointer" ng-click="removeDish(item)" ng-show="allowRemove">
-		<i class="glyphicon glyphicon-remove" ></i>
-	</button>
-	<button class="btn" style="cursor:pointer" ng-click="orderLess(item)" ng-hide="allowRemove">
-		<i class="glyphicon glyphicon-minus"></i>
+	<button class="btn btn-sm" style="cursor:pointer" ng-click="removeDish(item)">
+		<i ng-show="allowRemove" class="glyphicon glyphicon-remove" ></i>
+		<i ng-hide="allowRemove" class="glyphicon glyphicon-minus"></i>
 	</button>
 </div> 

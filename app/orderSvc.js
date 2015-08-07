@@ -32,6 +32,7 @@ app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
 		var orderItem = _searchItemByName(_getMenuItemName(menuItem));
 		if(orderItem) {
 			orderItem.incrementQuantity();
+			menuItem.clearSelectedOptions(); //Call this method to reset all the selected options
 			return;
 		}
 		if(!menuItem.options) {
@@ -47,8 +48,13 @@ app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
 	this.dropItem = function(orderItem) {
 		var i = this.items.indexOf(orderItem);
 		if(i>-1) {
-			this.items.splice(i,1);
-			Menu.dropItemFromOrder(orderItem);
+			if(orderItem.quantity == 1) {
+				this.items.splice(i,1);
+				Menu.decrementItemOrderQuantity(orderItem);
+			} else if(orderItem.quantity > 1) {
+				orderItem.decrementQuantity();
+				Menu.decrementItemOrderQuantity(orderItem);
+			}
 		}
 	};
 });

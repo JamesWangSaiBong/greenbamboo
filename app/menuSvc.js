@@ -32,6 +32,7 @@ app.service('Menu', function($http, $q, MenuItem, AdvanceMenuItem) {
 		return deferred.promise;
 	};
 	
+	//Deprecated
 	this.dropItemFromOrder = function(orderItem) {
 		var menuItem = _searchItemById(orderItem.menuId);
 		if(menuItem) {

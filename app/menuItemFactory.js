@@ -14,6 +14,7 @@ app.factory('MenuItem', function() {
 		this.isSelected = true;
 	};
 	
+	//Deprecated
 	MenuItem.prototype.dropFromOrder = function() {
 		this.orderQuantity = 0;
 		this.isSelected = false;
@@ -25,6 +26,9 @@ app.factory('MenuItem', function() {
 	
 	MenuItem.prototype.decrementOrderQuantity = function() {
 		this.orderQuantity--;
+		if(this.orderQuantity === 0) { 
+			this.isSelected = false 
+		};
 	}
 	
 	return MenuItem;
