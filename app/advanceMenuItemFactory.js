@@ -17,6 +17,7 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
 		this.isStaging = false;
 	}
 	
+	
 	//AdvanceMenuItem inherits from MenuItem
 	AdvanceMenuItem.prototype = Object.create(MenuItem.prototype);
 	AdvanceMenuItem.prototype.constructor = AdvanceMenuItem;
@@ -41,6 +42,9 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
 			if(!this.options[i].isSelected) { return isCompleted; }
 		};
 		isCompleted = true;
+		//Clear all selected options
+		
+		
 		//Set isStaging back to false once the item has been completed (all options selected)
 		this.isStaging = false;
 		return isCompleted;
