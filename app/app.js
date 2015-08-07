@@ -1,6 +1,6 @@
 'use strict'
 
-var app = angular.module('GBWeb',[]);
+var app = angular.module('GBWeb',['ui.bootstrap']);
 
 app.controller('menuCtrl', function($scope, Menu, Order) {
 

@@ -6,19 +6,17 @@
 	
 	<span ng-show="item.isSelected">
 		<span>{{ item.orderQuantity }}</span>
-		<button class="btn btn-success" ng-click="addQuantity(item)"><i class="glyphicon glyphicon-plus"></i></button>
+		<button class="btn btn-success" ng-click="addQuantity(item)" ng-disabled="disableButton"><i class="glyphicon glyphicon-plus"></i></button>
 	</span>
 	
 	<span>{{ item.enName }}</span>
 	
 	<span>${{ item.price }}</span>
 	
-	<h5 ng-if="item.options">Number of Options : {{ item.numOfoptions }}</h5>
-	<div ng-repeat="option in item.options">
-		<span ng-repeat="choice in option">
-			<span>{{ choice.opt_name }}</span>
-			<span ng-if="choice.price"> - ${{ choice.price }}</span>
-			<span> || </span>
-		</span>
+	<div>{{ alertMsg }}</div>
+	
+	<div ng-if="!isCollapsed" class="well well-lg">
+		<div>Pick your options for {{ item.numOfStagingItems }} {{ item.enName }}</div>
+		<option-panel ng-repeat="optSet in item.options" option-set="optSet" pick-option="pickOption(choice)"></option-panel>
 	</div>
 </div>

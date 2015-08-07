@@ -15,12 +15,7 @@ app.directive('gbOrderItem', function(Order, Menu) {
 			
 			$scope.removeDish = function(item) {
 				Order.dropItem(item)
-			}
-			
-			$scope.orderLess = function(item) {
-				item.decrementQuantity();
-				Menu.decrementItemOrderQuantity(item)
-			}
+			};
 		}
 	}
 })
