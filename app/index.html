@@ -20,12 +20,13 @@
   <script src="optionFactory.js"></script>
   <script src="optionSetFactory.js"></script>
   <script src="advanceOrderItemFactory.js"></script>
+  <script src="itemIdentifierSvc.js"></script>
 </head>
 
 <body ng-controller="menuCtrl">
 
-  <h2>Menu</h2>
-  <gb-menu-item ng-repeat="item in menu" item="item"></gb-menu-item>
+  <h2>Appetizers</h2>
+  <gb-menu-item ng-repeat="item in menu.appetizers" item="item"></gb-menu-item>
   
   <h2>Order</h2>
   <gb-order-item ng-repeat="item in order" item="item" method="removeDish(item)"></gb-order-item>

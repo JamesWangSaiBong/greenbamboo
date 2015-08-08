@@ -4,6 +4,7 @@ app.factory('MenuItem', function() {
 	function MenuItem(item) {
 		this.id = item.id;
 		this.enName = item.en_name;
+		this.type = item.type;
 		this.price = item.price;
 		this.orderQuantity = 0;
 		this.isSelected = false;

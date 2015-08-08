@@ -1,15 +1,17 @@
 'use strict'
 
-app.service('Menu', function($http, $q, MenuItem, AdvanceMenuItem) {
+app.service('Menu', function($http, $q, ItemIdentifier) {
 	
-	this.items = [];
+	this.items = {};
 	
 	var that = this;
 	
-	function _searchItemById(id) {
-		for(var i=0; i<that.items.length; i++) {
-			if(that.items[i].id === id) {
-				return that.items[i];
+	function _searchItem(item) {
+		
+		var itemType = item.type;
+		for(var i=0; i<that.items[itemType].length; i++) {
+			if(that.items[itemType][i].id === item.menuId) {
+				return that.items[itemType][i];
 			}
 		}
 	}
@@ -18,13 +20,8 @@ app.service('Menu', function($http, $q, MenuItem, AdvanceMenuItem) {
 		var deferred = $q.defer();
 		var that = this;
 		$http.get('menu.json').success(function(data) {
-			for(var i=0; i<data.length; i++) {
-				if(!data[i].options) {
-					that.items.push(new MenuItem(data[i]));
-				} else {
-					that.items.push(new AdvanceMenuItem(data[i]));
-				}
-			};
+			that.items = ItemIdentifier.identifyMenuItem(data);
+			console.log(that.items);
 			deferred.resolve(that.items);
 		}).error(function(response) {
 			deferred.reject(response);
@@ -34,14 +31,14 @@ app.service('Menu', function($http, $q, MenuItem, AdvanceMenuItem) {
 	
 	//Deprecated
 	this.dropItemFromOrder = function(orderItem) {
-		var menuItem = _searchItemById(orderItem.menuId);
+		var menuItem = _searchItem(orderItem);
 		if(menuItem) {
 			menuItem.dropFromOrder();
 		}
 	};
 	
 	this.decrementItemOrderQuantity = function(OrderItem) {
-		var menuItem = _searchItemById(OrderItem.menuId);
+		var menuItem = _searchItem(OrderItem);
 		if(menuItem) {
 			menuItem.decrementOrderQuantity();
 		}

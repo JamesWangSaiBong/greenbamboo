@@ -1,21 +1,63 @@
 [{
 	"id": 1,
 	"en_name": "Spring Rolls (2)",
+	"type": "appetizers",
 	"price": 4.75
 },
 {
 	"id": 2,
-	"en_name": "Fresh Shrimp & Prok Salad Rolls (2)",
+	"en_name": "Fresh Shrimp & Pork Salad Rolls (2)",
+	"type": "appetizers",
 	"price": 4.75
+},
+{
+	"id": 6,
+	"en_name": "Satay Skewers (4) Beef/Pork/Chicken",
+	"type": "appetizers",
+	"price": 7.95,
+	"options": [
+		[{
+			"opt_name": "Beef"
+		},
+		{
+			"opt_name": "Pork"
+		},
+		{
+			"opt_name": "Chicken"
+		}]
+	]
+},
+{
+	"id": 7,
+	"en_name": "Stir Fried Bok Choy or Chinese Green with Garlic",
+	"type": "vegetables",
+	"price": 8.50,
+	"options": [
+		[{
+			"opt_name": "Bok Choy"
+		},
+		{
+			"opt_name": "Chinese Green"
+		}]
+	]
+},
+{
+	"id": 8,
+	"en_name": "Deep-Fried Spicy Eggplant",
+	"type": "vegetables",
+	"price": 7.95
 },
 {
 	"id": 3,
 	"en_name": "Fresh Shredded Pork Rolls(2)",
+	"type": "appetizers",
 	"price": 4.75
 },
 {
 	"id": 4,
 	"en_name": "Grilled Meat Wraps",
+	"type": "lightCourses",
+	"price": 9.00,
 	"options": [
 		[{
 			"opt_name": "Beef",
@@ -38,6 +80,8 @@
 {
 	"id": 5,
 	"en_name": "Special Beef Noodle with Rare Beef, Beef Balls, Tendon, Brisket & Tripe",
+	"type": "noodles",
+	"price": 7.25,
 	"options": [
 		[{
 			"opt_name": "Fresh Rice Noodle"
@@ -61,4 +105,28 @@
 			"price": 10.95
 		}]
 	]
+},
+{
+	"id": 9,
+	"en_name": "Beef Brisket, Carrot Stew with Bread",
+	"type": "lightCourses",
+	"price": 8.75
+},
+{
+	"id": 10,
+	"en_name": "Sweet & Sour Crab Soup with Vermicelli",
+	"type": "noodles",
+	"price": 8.75
+},
+{
+	"id": 11,
+	"en_name": "Thai Mango Salad with Shrimp & Chicken",
+	"type": "salads",
+	"price": 9.95
+},
+{
+	"id": 12,
+	"en_name": "Lime Beef Salad",
+	"type": "salads",
+	"price": 12.50
 }]
