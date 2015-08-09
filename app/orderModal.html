@@ -1,0 +1,46 @@
+<div class="modal-header">
+	<h3 class="modal-title">Your Order</h3>
+</div>
+<div class="modal-body">
+	<ul>
+		<div ng-show="order.items.appetizers.length != 0">
+			<h3>Appetizers</h3>
+			<gb-order-item ng-repeat="item in order.items.appetizers" item="item" method="removeDish(item)"></gb-order-item>
+		</div>
+		
+		<div ng-show="order.items.vegetables.length != 0">
+			<h3>Vegetables</h3>
+			<gb-order-item ng-repeat="item in order.items.vegetables" item="item" method="removeDish(item)"></gb-order-item>
+		</div>
+		
+		<div ng-show="order.items.lightCourses.length != 0">
+			<h3>Light Courses</h3>
+			<gb-order-item ng-repeat="item in order.items.lightCourses" item="item" method="removeDish(item)"></gb-order-item>
+		</div>
+		
+		<div ng-show="order.items.noodles.length != 0">
+			<h3>Soup Noodles</h3>
+			<gb-order-item ng-repeat="item in order.items.noodles" item="item" method="removeDish(item)"></gb-order-item>
+		</div>
+		<div ng-show="order.items.salads.length != 0">
+			<h3>Salads</h3>
+			<gb-order-item ng-repeat="item in order.items.salads" item="item" method="removeDish(item)"></gb-order-item>
+		</div>
+	</ul>
+	<div>
+		<span>Total {{ order.info.quantity }} items:</span>
+		<span>{{ order.info.beforeTax | currency }}</span>
+	</div>
+	<div>
+		<span>Tax: </span>
+		<span>{{ order.info.tax | currency }}</span>
+	</div>
+	<div>
+		<span>Total: </span>
+		<span>{{order.info.total | currency}}</span>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-warning" ng-click="close()">Close</button>
+	<button class="btn btn-primary" ng-click="ok()">Complete</button>
+</div>

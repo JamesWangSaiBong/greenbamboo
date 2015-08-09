@@ -21,7 +21,6 @@ app.service('Menu', function($http, $q, ItemIdentifier) {
 		var that = this;
 		$http.get('menu.json').success(function(data) {
 			that.items = ItemIdentifier.identifyMenuItem(data);
-			console.log(that.items);
 			deferred.resolve(that.items);
 		}).error(function(response) {
 			deferred.reject(response);

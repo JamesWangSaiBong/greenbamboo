@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="../bower_components/angular/angular.js"></script>
-	<script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script src="app.js"></script>
 	<script src="menuSvc.js"></script>
 	<script src="menuItemFactory.js"></script>
@@ -44,32 +44,12 @@
 	<section>
 
 	<section>
-		<h2>Order</h2>
-		<ul>
-			<div ng-show="order.appetizers != 0">
-				<h3>Appetizers</h3>
-				<gb-order-item ng-repeat="item in order.appetizers" item="item" method="removeDish(item)"></gb-order-item>
-			</div>
+		<div ng-click="openModal()" style="cursor:pointer">
+			<h2 ng-show="!order.info.quantity" style="display:inline">Place your order</h2>
+			<h2 ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </h2>
+			<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
 			
-			<div ng-show="order.vegetables != 0">
-				<h3>Vegetables</h3>
-				<gb-order-item ng-repeat="item in order.vegetables" item="item" method="removeDish(item)"></gb-order-item>
-			</div>
-			
-			<div ng-show="order.lightCourses != 0">
-				<h3>Light Courses</h3>
-				<gb-order-item ng-repeat="item in order.lightCourses" item="item" method="removeDish(item)"></gb-order-item>
-			</div>
-			
-			<div ng-show="order.noodles.length != 0">
-				<h3>Soup Noodles</h3>
-				<gb-order-item ng-repeat="item in order.noodles" item="item" method="removeDish(item)"></gb-order-item>
-			</div>
-			<div ng-show="order.salads != 0">
-				<h3>Salads</h3>
-				<gb-order-item ng-repeat="item in order.salads" item="item" method="removeDish(item)"></gb-order-item>
-			</div>
-		</ul>
+		</div>
 	<section>	
 </body>
 </html>

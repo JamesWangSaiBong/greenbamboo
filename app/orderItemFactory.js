@@ -25,5 +25,13 @@ app.factory('OrderItem', function() {
 		return this.type;
 	}
 	
+	OrderItem.prototype.getPrice = function() {
+		return this.price;
+	}
+	
+	OrderItem.prototype.getTax = function() {
+		return this.price * 0.13;
+	}
+	
 	return OrderItem;
 });
