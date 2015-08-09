@@ -1,7 +1,7 @@
 <div>
-	<div>
+	<div ng-click="order(item)" ng-class="{'pointer-hover' : !item.isSelected}">
 		<span ng-hide="item.isSelected">
-			<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-click="order(item)">
+			<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected">
 		</span>
 		
 		<span ng-show="item.isSelected">

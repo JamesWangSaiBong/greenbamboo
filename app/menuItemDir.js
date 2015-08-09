@@ -13,6 +13,10 @@ app.directive('gbMenuItem', function(Order) {
 			$scope.isCollapsed = true;
 			
 			$scope.order = function(item) {
+				//Disable it if item has already been selected
+				if(item.isSelected) {
+					return;
+				}
 				if(!!item.options) {
 					item.addToStaging(); //If item.options is not null, then it's an AdvanceMenuItem
 					$scope.isCollapsed = false;
