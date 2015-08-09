@@ -21,5 +21,9 @@ app.factory('OrderItem', function() {
 		this.quantity--;
 	}
 	
+	OrderItem.prototype.getType = function() {
+		return this.type;
+	}
+	
 	return OrderItem;
 });

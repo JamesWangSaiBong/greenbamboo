@@ -34,6 +34,10 @@ app.factory('MenuItem', function() {
 		if(this.orderQuantity === 0) { 
 			this.isSelected = false 
 		};
+	};
+	
+	MenuItem.prototype.getType = function() {
+		return this.type;
 	}
 	
 	return MenuItem;

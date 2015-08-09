@@ -2,14 +2,23 @@
 
 app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
 	
-	this.items = [];
+	this.items = {
+		appetizers: [],
+		vegetables: [],
+		lightCourses: [],
+		noodles: [],
+		salads: []
+	};
 	
 	var that = this;
 	
-	function _searchItemByName(name) {
-		for(var i=0; i<that.items.length; i++) {
-			if(that.items[i].enName === name) {
-				return that.items[i];
+	function _searchItem(item, name) {
+		console.log(name);
+		var itemType = item.getType();
+		for(var i=0; i<that.items[itemType].length; i++) {
+			console.log(that.items[itemType]);
+			if(that.items[itemType][i].enName === name) {
+				return that.items[itemType][i];
 			}
 		}
 	}
@@ -29,7 +38,8 @@ app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
 	}
 	
 	this.addItem = function(menuItem) {
-		var orderItem = _searchItemByName(_getMenuItemName(menuItem));
+		console.log(menuItem);
+		var orderItem = _searchItem(menuItem, _getMenuItemName(menuItem));
 		if(orderItem) {
 			orderItem.incrementQuantity();
 			if(!!menuItem.options) { menuItem.clearSelectedOptions(); } //Call this method to reset all the selected options
@@ -37,18 +47,23 @@ app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
 		}
 		if(!menuItem.options) {
 			menuItem.addToOrder();
-			this.items.push(new OrderItem(menuItem));
+			var orderItem = new OrderItem(menuItem);
+			this.items[orderItem.getType()].push(orderItem);
+			console.log(this.items[orderItem.getType()]);
 		} else {
-			this.items.push(new AdvanceOrderItem(menuItem));
+			var advanceOrderItem = new AdvanceOrderItem(menuItem);
+			this.items[advanceOrderItem.getType()].push(advanceOrderItem);
 			menuItem.clearSelectedOptions(); //Call this method to reset all the selected options
+			console.log(this.items[advanceOrderItem.getType()]);
 		}
 	};
 		
 	this.dropItem = function(orderItem) {
-		var i = this.items.indexOf(orderItem);
+		var itemType = orderItem.getType();
+		var i = this.items[itemType].indexOf(orderItem);
 		if(i>-1) {
 			if(orderItem.quantity == 1) {
-				this.items.splice(i,1);
+				this.items[itemType].splice(i,1);
 				Menu.decrementItemOrderQuantity(orderItem);
 			} else if(orderItem.quantity > 1) {
 				orderItem.decrementQuantity();

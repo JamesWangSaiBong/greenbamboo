@@ -1,20 +1,22 @@
 <div>
-	<h3>Item {{ item.id }}</h3>
-	<span ng-hide="item.isSelected">
-		<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-click="order(item)">
-	</span>
-	
-	<span ng-show="item.isSelected">
-		<span>{{ item.orderQuantity }}</span>
-		<button class="btn btn-success" ng-click="addQuantity(item)" ng-disabled="disableButton"><i class="glyphicon glyphicon-plus"></i></button>
-	</span>
-	
-	<span>{{ item.enName }}</span>
-	
-	<span>${{ item.price }}</span>
+	<div>
+		<span ng-hide="item.isSelected">
+			<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-click="order(item)">
+		</span>
+		
+		<span ng-show="item.isSelected">
+			<span>{{ item.orderQuantity }}</span>
+			<button class="btn btn-success" ng-click="addQuantity(item)" ng-disabled="disableButton"><i class="glyphicon glyphicon-plus"></i></button>
+		</span>
+		
+		<span>{{ item.enName }}</span>
+		
+		<span>${{ item.price }}</span>
+	</div>
 	
 	<div>{{ alertMsg }}</div>
 	
+	<!-- Option Section -->
 	<div ng-if="!isCollapsed" class="well well-lg">
 		<div>Pick your options for {{ item.numOfStagingItems }} {{ item.enName }}</div>
 		<option-panel ng-repeat="optSet in item.options" option-set="optSet" pick-option="pickOption(choice)"></option-panel>

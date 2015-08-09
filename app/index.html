@@ -1,34 +1,75 @@
 <!doctype html>
 <html lang="en" ng-app="GBWeb">
 <head>
-  <meta charset="utf-8">
-  <title>My HTML File</title>
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="../bower_components/angular/angular.js"></script>
-  <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-  <script src="app.js"></script>
-  <script src="menuSvc.js"></script>
-  <script src="menuItemFactory.js"></script>
-  <script src="orderSvc.js"></script>
-  <script src="menuItemDir.js"></script>
-  <script src="orderItemFactory.js"></script>
-  <script src="orderItemDir.js"></script>
-  <script src="advanceMenuItemFactory.js"></script>
-  <script src="optionPanelDir.js"></script>
-  <script src="optionFactory.js"></script>
-  <script src="optionSetFactory.js"></script>
-  <script src="advanceOrderItemFactory.js"></script>
-  <script src="itemIdentifierSvc.js"></script>
+	<meta charset="utf-8">
+	<title>My HTML File</title>
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="app.js"></script>
+	<script src="menuSvc.js"></script>
+	<script src="menuItemFactory.js"></script>
+	<script src="orderSvc.js"></script>
+	<script src="menuItemDir.js"></script>
+	<script src="orderItemFactory.js"></script>
+	<script src="orderItemDir.js"></script>
+	<script src="advanceMenuItemFactory.js"></script>
+	<script src="optionPanelDir.js"></script>
+	<script src="optionFactory.js"></script>
+	<script src="optionSetFactory.js"></script>
+	<script src="advanceOrderItemFactory.js"></script>
+	<script src="itemIdentifierSvc.js"></script>
+	<script src="menuDir.js"></script>
 </head>
 
 <body ng-controller="menuCtrl">
+	<section>
+		<h2>Menu</h2>
+		
+		<gb-menu>
+			
+			<gb-menu-section title="Appetizers" section="menu.appetizers"></gb-menu-section>
+			
+			<gb-menu-section title="Vegetables" section="menu.vegetables"></gb-menu-section>
+			
+			<gb-menu-section title="Light Courses" section="menu.lightCourses"></gb-menu-section>
+			
+			<gb-menu-section title="Soup Noodles" section="menu.noodles"></gb-menu-section>
+			
+			<gb-menu-section title="Salads" section="menu.salads"></gb-menu-section>
+			
+		</gb-menu>
+	<section>
 
-  <h2>Appetizers</h2>
-  <gb-menu-item ng-repeat="item in menu.appetizers" item="item"></gb-menu-item>
-  
-  <h2>Order</h2>
-  <gb-order-item ng-repeat="item in order" item="item" method="removeDish(item)"></gb-order-item>
+	<section>
+		<h2>Order</h2>
+		<ul>
+			<div ng-show="order.appetizers != 0">
+				<h3>Appetizers</h3>
+				<gb-order-item ng-repeat="item in order.appetizers" item="item" method="removeDish(item)"></gb-order-item>
+			</div>
+			
+			<div ng-show="order.vegetables != 0">
+				<h3>Vegetables</h3>
+				<gb-order-item ng-repeat="item in order.vegetables" item="item" method="removeDish(item)"></gb-order-item>
+			</div>
+			
+			<div ng-show="order.lightCourses != 0">
+				<h3>Light Courses</h3>
+				<gb-order-item ng-repeat="item in order.lightCourses" item="item" method="removeDish(item)"></gb-order-item>
+			</div>
+			
+			<div ng-show="order.noodles.length != 0">
+				<h3>Soup Noodles</h3>
+				<gb-order-item ng-repeat="item in order.noodles" item="item" method="removeDish(item)"></gb-order-item>
+			</div>
+			<div ng-show="order.salads != 0">
+				<h3>Salads</h3>
+				<gb-order-item ng-repeat="item in order.salads" item="item" method="removeDish(item)"></gb-order-item>
+			</div>
+		</ul>
+	<section>	
 </body>
 </html>
