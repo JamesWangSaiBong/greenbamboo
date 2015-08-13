@@ -1,5 +1,14 @@
 
 body {
+	font-size:160%
+}
+
+header, section, footer, aside, nav, article, figure, figcaption {
+	display:block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
 }
 
 h1 {
@@ -12,7 +21,6 @@ h2 {
 
 h3 {
 	font-size: 1.5em;
-	margin: 0;
 }
 
 .menu-section {
