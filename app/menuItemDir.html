@@ -1,17 +1,16 @@
-<div>
+<div class="menu-item">
 	<div ng-click="order(item)" ng-class="{'pointer-hover' : !item.isSelected}">
-		<span ng-hide="item.isSelected">
-			<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected">
-		</span>
 		
-		<span ng-show="item.isSelected">
+		<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-hide="item.isSelected" />
+		
+		<span id="quantity-ctrl" ng-show="item.isSelected">
 			<span>{{ item.orderQuantity }}</span>
 			<button class="btn btn-success" ng-click="addQuantity(item)" ng-disabled="disableButton"><i class="glyphicon glyphicon-plus"></i></button>
 		</span>
 		
-		<span>{{ item.enName }}</span>
+		<span class="item-name">{{ item.enName }}</span>
 		
-		<span>${{ item.price }}</span>
+		<span class="item-price">${{ item.price }}</span>
 	</div>
 	
 	<div>{{ alertMsg }}</div>

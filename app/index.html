@@ -1,55 +1,56 @@
 <!doctype html>
 <html lang="en" ng-app="GBWeb">
-<head>
-	<meta charset="utf-8">
-	<title>My HTML File</title>
-	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="style.css">
-	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="../bower_components/angular/angular.js"></script>
-	<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-	<script src="app.js"></script>
-	<script src="menuSvc.js"></script>
-	<script src="menuItemFactory.js"></script>
-	<script src="orderSvc.js"></script>
-	<script src="menuItemDir.js"></script>
-	<script src="orderItemFactory.js"></script>
-	<script src="orderItemDir.js"></script>
-	<script src="advanceMenuItemFactory.js"></script>
-	<script src="optionPanelDir.js"></script>
-	<script src="optionFactory.js"></script>
-	<script src="optionSetFactory.js"></script>
-	<script src="advanceOrderItemFactory.js"></script>
-	<script src="itemIdentifierSvc.js"></script>
-	<script src="menuDir.js"></script>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>My HTML File</title>
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="../bower_components/angular/angular.js"></script>
+		<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="app.js"></script>
+		<script src="menuSvc.js"></script>
+		<script src="menuItemFactory.js"></script>
+		<script src="orderSvc.js"></script>
+		<script src="menuItemDir.js"></script>
+		<script src="orderItemFactory.js"></script>
+		<script src="orderItemDir.js"></script>
+		<script src="advanceMenuItemFactory.js"></script>
+		<script src="optionPanelDir.js"></script>
+		<script src="optionFactory.js"></script>
+		<script src="optionSetFactory.js"></script>
+		<script src="advanceOrderItemFactory.js"></script>
+		<script src="itemIdentifierSvc.js"></script>
+		<script src="menuDir.js"></script>
+	</head>
 
-<body ng-controller="menuCtrl">
-	<section>
-		<h2>Menu</h2>
-		
-		<gb-menu>
+	<body ng-controller="menuCtrl">
+		<article>
 			
-			<gb-menu-section title="Appetizers" section="menu.appetizers"></gb-menu-section>
+			<h1 style="text-align: center; font-weight: bold; font-size: 4em; margin-bottom:1em">Menu</h1>
 			
-			<gb-menu-section title="Vegetables" section="menu.vegetables"></gb-menu-section>
-			
-			<gb-menu-section title="Light Courses" section="menu.lightCourses"></gb-menu-section>
-			
-			<gb-menu-section title="Soup Noodles" section="menu.noodles"></gb-menu-section>
-			
-			<gb-menu-section title="Salads" section="menu.salads"></gb-menu-section>
-			
-		</gb-menu>
-	<section>
+			<gb-menu>
+				
+				<gb-menu-section title="Appetizers" section="menu.appetizers"></gb-menu-section>
+				
+				<gb-menu-section title="Vegetables" section="menu.vegetables"></gb-menu-section>
+				
+				<gb-menu-section title="Light Courses" section="menu.lightCourses"></gb-menu-section>
+				
+				<gb-menu-section title="Soup Noodles" section="menu.noodles"></gb-menu-section>
+				
+				<gb-menu-section title="Salads" section="menu.salads"></gb-menu-section>
+				
+			</gb-menu>
+		</article>
 
-	<section>
-		<div ng-click="openModal()" style="cursor:pointer">
-			<h2 ng-show="!order.info.quantity" style="display:inline">Place your order</h2>
-			<h2 ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </h2>
-			<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
-			
-		</div>
-	<section>	
-</body>
+		<article>
+			<div ng-click="openModal()" style="cursor:pointer">
+				<h2 ng-show="!order.info.quantity" style="display:inline">Place your order</h2>
+				<h2 ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </h2>
+				<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
+				
+			</div>
+		</article>	
+	</body>
 </html>

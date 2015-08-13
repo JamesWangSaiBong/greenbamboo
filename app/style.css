@@ -1,3 +1,54 @@
+
+body {
+}
+
+h1 {
+	font-size: 2.5em
+}
+
+h2 {
+	font-size: 1.875em
+}
+
+h3 {
+	font-size: 1.5em;
+	margin: 0;
+}
+
+.menu-section {
+	border-top: 0.125em solid #FF9800;
+	border-bottom: 0.125em solid #FF9800;
+}
+
+.list-heading {
+	margin: 0;
+	padding: 1em 2em;
+	background-color: #EF6C00
+}
+
+.list-heading > a {
+	text-align: center;
+	color: white
+}
+
+.menu {
+	padding: 0 0 0 0;
+}
+
+.menu-item {
+	background-color: #EEEEEE;
+	padding:1em 2em;
+	border-top: 0.125em solid #E0E0E0;
+}
+
+.item-name {
+	color: #212121;
+}
+
+.item-price {
+	color: #616161;
+}
+
 .pointer-hover:hover {
 	cursor: hand;
 	cursor: pointer

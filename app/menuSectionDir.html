@@ -1,4 +1,8 @@
-<a href="" ng-click="select()"><h3>{{ title }}</h3></a>
-<div ng-show="isSelected">
-	<gb-menu-item ng-repeat="item in section" item="item"></gb-menu-item>
-</div>
+<section class="menu-section">
+	<div class="list-heading">
+		<a href="" ng-click="select()"><h3>{{ title }}</h3></a>
+	</div>
+	<div ng-show="isSelected">
+		<gb-menu-item ng-repeat="item in section" item="item"></gb-menu-item>
+	</div>
+</section>
