@@ -29,7 +29,7 @@
 
 	<body ng-controller="menuCtrl">
 	
-		<header style="background-color: #EEEEEE; color:#EF6C00; padding: 2em 1em">
+		<header style="background-color: #EEEEEE; color:#EF6C00; padding: 1em 1em">
 			<!-- logo -->
 			
 			<hgroup>
@@ -39,7 +39,7 @@
 		
 		</header>
 		
-		<section style="background-color:#FFB74D; padding:2em 1em">
+		<section style="background-color:#FFB74D; padding:1em 1em">
 			<div style="margin-bottom:1em">
 			<!-- location icon -->
 				<a href="https://www.google.ca/maps/place/Green+Bamboo+Restaurant/@43.785257,-79.2759064,16.71z/data=!4m7!1m4!3m3!1s0x882b2c38223221ab:0xbf5d5d1b256612af!2sGreen+Bamboo+Restaurant!3b1!3m1!1s0x882b2c38223221ab:0xbf5d5d1b256612af"
@@ -70,13 +70,13 @@
 				</span>
 			</button>
 			
-			<article ng-show="showDeliveryMap">
+			<article ng-show="showDeliveryMap" style="margin-top: 0.5em">
 				Add delivery map here
 			</article>
 			
 		</section>
 		
-		<section>
+		<section style="background-color: #EEEEEE; padding:16px 1em">
 			<!-- hours icon-->
 			<span>Mon - Sun: </span>
 			<span>11:00am - 10:00pm</span>
@@ -85,7 +85,7 @@
 	
 		<article>
 			
-			<h1 style="text-align: center; font-weight: bold; font-size: 4em; margin-bottom:1em">Menu</h1>
+			<h1 style="text-align: center; font-weight: bold; font-size: 4em; margin-bottom:16px">Menu</h1>
 			
 			<gb-menu>
 				
