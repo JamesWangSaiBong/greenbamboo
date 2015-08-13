@@ -54,7 +54,16 @@
 				</div>
 			</article>
 			
-			<button class="btn btn-default" ng-click="toggleDeliveryMap">View Delivery Area</button>
+			<button class="btn btn-default" ng-click="toggleDeliveryMap()">
+				<span ng-hide="showDeliveryMap">
+					View Delivery Area
+					<i class="glyphicon glyphicon-chevron-down"></i>
+				</span>
+				<span ng-show="showDeliveryMap">
+					Hide Delivery Area
+					<i class="glyphicon glyphicon-chevron-up"></i>
+				</span>
+			</button>
 			
 			<article ng-show="showDeliveryMap">
 				Add delivery map here

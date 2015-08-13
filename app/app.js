@@ -3,6 +3,12 @@
 var app = angular.module('GBWeb',['ui.bootstrap']);
 
 app.controller('menuCtrl', function($scope, $modal, Menu, Order) {
+	
+	$scope.showDeliveryMap = false;
+	
+	$scope.toggleDeliveryMap = function() {
+		$scope.showDeliveryMap = !$scope.showDeliveryMap
+	}
 
 	Menu.getAllItems().then(function(items) {
 		$scope.menu = items;
