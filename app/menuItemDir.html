@@ -5,7 +5,7 @@
 		<span class="item-price">${{ item.price }}</span>
 		
 		<div class="item-ctrl">
-			<input type="checkbox" class="center" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-if="!item.isSelected"/>
+			<div type="button" class="item-checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-if="!item.isSelected"></div>
 				
 			<div ng-if="item.isSelected" class="quantity-btn">
 				<button ng-click="addQuantity(item)" ng-disabled="disableButton">
