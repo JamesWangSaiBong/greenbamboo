@@ -1,19 +1,24 @@
 <div class="menu-item">
 	<div ng-click="order(item)" ng-class="{'pointer-hover' : !item.isSelected}">
+		<div style="flex-grow:4">
+			<span class="item-name">{{ item.enName }}</span>
+				
+			<span class="item-price">${{ item.price }}</span>
+		</div>
 		
-		<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-hide="item.isSelected" />
-		
-		<span id="quantity-ctrl" ng-show="item.isSelected">
-			<span>{{ item.orderQuantity }}</span>
-			<button class="btn btn-success" ng-click="addQuantity(item)" ng-disabled="disableButton"><i class="glyphicon glyphicon-plus"></i></button>
-		</span>
-		
-		<span class="item-name">{{ item.enName }}</span>
-		
-		<span class="item-price">${{ item.price }}</span>
+		<div>
+			<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-if="!item.isSelected"/>
+				
+			<div ng-if="item.isSelected" class="quantity-btn">
+				<button ng-click="addQuantity(item)" ng-disabled="disableButton">
+					<i class="glyphicon glyphicon-plus"></i>
+				</button>
+				<div>{{ item.orderQuantity }}</div>
+			</div>
+		</div>
 	</div>
 	
-	<div>{{ alertMsg }}</div>
+	<div class="notification">{{ alertMsg }}</div>
 	
 	<!-- Option Section -->
 	<div ng-if="!isCollapsed" class="well well-lg">

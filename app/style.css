@@ -24,8 +24,8 @@ h3 {
 }
 
 .menu-section {
-	border-top: 0.125em solid #FF9800;
-	border-bottom: 0.125em solid #FF9800;
+	border-top: 0.5px solid #FF9800;
+	border-bottom: 0.5px solid #FF9800;
 }
 
 .list-heading {
@@ -45,8 +45,8 @@ h3 {
 
 .menu-item {
 	background-color: #EEEEEE;
-	padding:1em 2em;
-	border-top: 0.125em solid #E0E0E0;
+	padding:16px 1em;
+	border-top: 1px solid #E0E0E0;
 }
 
 .item-name {
@@ -55,6 +55,52 @@ h3 {
 
 .item-price {
 	color: #616161;
+}
+
+.quantity-btn {
+	width: 30px;
+	height: 55px;
+	color: #424242;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 2px #4CAF50;
+	-moz-box-shadow: 0 0 2px #4CAF50;
+	-webkit-box-shadow: 0 0 2px #4CAF50;
+}
+
+.quantity-btn>div {
+	padding:2px 6px;
+	text-align: center;
+	font-weight: bold;
+	
+	border-right: 1px solid #81C784;
+	border-bottom: 1px solid #81C784;
+	border-left: 1px solid #81C784;
+	
+	border-bottom-left-radius: 5px;
+	-moz-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	
+	border-bottom-right-radius: 5px;
+	-moz-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+}
+
+.quantity-btn>button {
+	padding:2px 6px;
+	background-color:#00E676;
+	border-left: 1px solid #81C784;
+	border-right: 1px solid #81C784;
+	border-top: 1px solid #81C784;
+	border-bottom: 1px solid #81C784;
+	border-top-left-radius: 5px;
+	-moz-border-top-left-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	-moz-border-top-right-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+
 }
 
 .pointer-hover:hover {
