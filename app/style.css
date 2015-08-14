@@ -23,6 +23,24 @@ h3 {
 	font-size: 1.5em;
 }
 
+#logo {
+	height:120px;
+	width:120px;
+	float:left;
+	margin-top: 10px;
+	margin-left:10px;
+	margin-bottom:10px;
+	border: 10px solid #00E676;
+	background-color: #E0E0E0;
+	border-radius: 120px;
+	-moz-border-radius: 120px;
+	-webkit-border-radius: 120px;
+}
+
+#brand-name {
+	text-align: center;
+}
+
 .menu-section {
 	border-top: 0.5px solid #FF9800;
 	border-bottom: 0.5px solid #FF9800;
