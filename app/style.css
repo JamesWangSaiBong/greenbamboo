@@ -49,12 +49,46 @@ h3 {
 	border-top: 1px solid #E0E0E0;
 }
 
-.item-name {
-	color: #212121;
+.menu-item {
+	
 }
 
-.item-price {
+.menu-item>.main {
+	display:-webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.main>.item-name {
+	color: #212121;
+	-webkit-flex: 3 1 auto;
+	-ms-flex: 3 1 auto;
+	flex: 3 1 auto;
+}
+
+.main>.item-price {
 	color: #616161;
+	-webkit-flex: 0 0 56px;
+	-ms-flex: 0 0 56px;
+	flex: 0 0 56px;
+	padding-left: 5px;
+	text-align: right;
+}
+
+.main>.item-ctrl {
+	-webkit-flex: 0 0 50px;
+	-ms-flex: 0 0 50px;
+	flex: 0 0 50px;
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	align-self: center;
+	padding: 0 10px;
 }
 
 .quantity-btn {

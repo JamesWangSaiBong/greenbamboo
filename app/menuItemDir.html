@@ -1,13 +1,11 @@
 <div class="menu-item">
-	<div ng-click="order(item)" ng-class="{'pointer-hover' : !item.isSelected}">
-		<div style="flex-grow:4">
-			<span class="item-name">{{ item.enName }}</span>
+	<div class="main" ng-click="order(item)" ng-class="{'pointer-hover' : !item.isSelected}">
+		<span class="item-name">{{ item.enName }}</span>
 				
-			<span class="item-price">${{ item.price }}</span>
-		</div>
+		<span class="item-price">${{ item.price }}</span>
 		
-		<div>
-			<input type="checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-if="!item.isSelected"/>
+		<div class="item-ctrl">
+			<input type="checkbox" class="center" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-if="!item.isSelected"/>
 				
 			<div ng-if="item.isSelected" class="quantity-btn">
 				<button ng-click="addQuantity(item)" ng-disabled="disableButton">
