@@ -237,3 +237,30 @@ h3 {
 	flex: 1 1 auto;
 	text-align: left
 }
+
+/* ============================================================================
+	Delivery info section
+============================================================================= */
+
+#gb-deli-info {
+	padding: 16px 1em;
+}
+
+#free-delivery {
+	margin:0 auto;
+	width: 268px;
+}
+
+#free-delivery >h2{
+	display: inline-block;
+	font-size: 1.75em;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	word-spacing: 0.3em;
+	
+}
+
+.note {
+	font-size: 0.75em;
+	text-align:right;
+}

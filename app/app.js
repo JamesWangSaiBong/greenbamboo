@@ -4,17 +4,36 @@ var app = angular.module('GBWeb',['ui.bootstrap']);
 
 app.controller('menuCtrl', function($scope, $modal, Menu, Order) {
 	
-	$scope.showDeliveryMap = false;
-	
-	$scope.toggleDeliveryMap = function() {
-		$scope.showDeliveryMap = !$scope.showDeliveryMap
-	}
-
 	Menu.getAllItems().then(function(items) {
 		$scope.menu = items;
 	});
 	
 	$scope.order = Order;
+	
+	$scope.showDeliveryMap = false;
+	
+	var deliButton = {
+		open: {
+			text: 'View Delivery Area',
+			icon: 'glyphicon glyphicon-chevron-down'			
+		},
+		close: {
+			text: 'Hide Delivery Area',
+			icon: 'glyphicon glyphicon-chevron-up'
+		}
+	}
+	
+	$scope.deliveryBtn = deliButton.open;
+	
+	$scope.toggleDeliveryMap = function() {
+		if($scope.showDeliveryMap) {
+			$scope.showDeliveryMap = false;
+			$scope.deliveryBtn = deliButton.open;
+		} else {
+			$scope.showDeliveryMap = true;
+			$scope.deliveryBtn = deliButton.close;
+		}
+	}
 	
 	$scope.open = false;
 	
