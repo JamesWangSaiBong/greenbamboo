@@ -25,6 +25,7 @@
 		<script src="advanceOrderItemFactory.js"></script>
 		<script src="itemIdentifierSvc.js"></script>
 		<script src="menuDir.js"></script>
+		<script src="headerSlideDir.js"></script>
 	</head>
 
 	<body ng-controller="menuCtrl">
@@ -35,28 +36,39 @@
 			<hgroup id="brand-name">
 				<h2 style="">Vietnamese Cuisine</h2>
 				<h2 style="">青竹越南美食</h2>
-			</hgroup>
+			</hgroup>		
 		
 		</header>
+		<gb-header-slides style="height: 310px;" ng-cloak></gb-header-slides>
 		
-		<section style="background-color:#EEEEEE; padding:1em 1em">
-			<div style="margin-bottom:1em">
-			<!-- location icon -->
-				<a href="https://www.google.ca/maps/place/Green+Bamboo+Restaurant/@43.785257,-79.2759064,16.71z/data=!4m7!1m4!3m3!1s0x882b2c38223221ab:0xbf5d5d1b256612af!2sGreen+Bamboo+Restaurant!3b1!3m1!1s0x882b2c38223221ab:0xbf5d5d1b256612af"
-				target="_blank">
-					Midtown Plaza, 4221 Shepppard Ave E., Scarborough
-				</a>
-			</div>
-			
-			<article>
-				<hgroup style="margin-bottom:1em">
-					<h2 style="margin-bottom:0.5em">Free Delivery</h2>
-					<h4>免費送餐服務</h4>
-				</hgroup>
-				<div style="margin-bottom:1em">
-					<p style="margin: 0 0 0.5em">Free delivery with minimum $25 cash order (before tax)</p>
-					<p>凡惠顧滿現金$25(稅前)可獲免費送餐</p>
+		<section id="gb-info"><!-- info section that includes phone number, location and hours -->
+			<article class="item info-container">
+				<i class="glyphicon glyphicon-phone-alt"></i>
+				<div>(416)-292-7961</div>
+			</article>
+			<article class="item info-container">
+				<i class="glyphicon glyphicon-time"></i>
+				<div>
+					<div>Mon - Fri: </div>
+					<div>11:00AM - 10:00PM</div>
 				</div>
+			</article>
+			<article class="item info-container">
+				<image src="_assets/location.png" />
+				<div>
+					<a href="https://www.google.ca/maps/place/Green+Bamboo+Restaurant/@43.785257,-79.2759064,16.71z/data=!4m7!1m4!3m3!1s0x882b2c38223221ab:0xbf5d5d1b256612af!2sGreen+Bamboo+Restaurant!3b1!3m1!1s0x882b2c38223221ab:0xbf5d5d1b256612af"
+					target="_blank">
+						Midtown Plaza, 4221 Shepppard Ave E., Scarborough
+					</a>
+				</div>
+			</article>
+		</section>
+		
+		<section>
+			<article>
+				<h2 style="margin-bottom:4px">Free Delivery</h2>
+				<p style="margin-bottom: 16px">(min $25 cash order)</p>
+				<p>凡惠顧滿現金$25(稅前)可獲免費送餐</p>
 			</article>
 			
 			<button class="btn btn-default" ng-click="toggleDeliveryMap()">
@@ -76,13 +88,6 @@
 			
 		</section>
 		
-		<section style="background-color: #EF6C00; color:white;padding:16px 1em">
-			<!-- hours icon-->
-			<span>Mon - Sun: </span>
-			<span>11:00am - 10:00pm</span>
-		</section>
-	
-	
 		<article>
 			
 			<h1 style="text-align: center; font-weight: bold; font-size: 4em; margin-bottom:16px">Menu</h1>
