@@ -182,15 +182,21 @@ h3 {
 ============================================================================= */
 #gb-info {
 	padding: 16px 1em;
+	background-color: #4E342E;
+	color:#EDE8E1;
+	
 	display:-webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	
 	-webkit-flex-direction: column;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	
 	-webkit-justify-content: flex-start;
 	-ms-flex-pack: start;
 	justify-content: flex-start;
+	
 	-webkit-align-items: stretch;
 	-ms-flex-align: stretch;
 	align-items: stretch;
@@ -227,15 +233,20 @@ h3 {
 	-webkit-flex: 0 0 2em;
 	-ms-flex: 0 0 2em;
 	flex: 0 0 2em;
-	height: 3em;
+	height: 2em;
 	margin-right: 8%;
 }
 
-.info-container > div {
+.info-container > a {
+	display: block;
+	color:#EDE8E1;
 	-webkit-flex: 1 1 auto;
 	-ms-flex: 1 1 auto;
 	flex: 1 1 auto;
-	text-align: left
+}
+
+.info-container > a:visited {
+	text-decoration: none;
 }
 
 /* ============================================================================

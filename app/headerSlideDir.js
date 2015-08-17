@@ -8,10 +8,15 @@ app.directive('gbHeaderSlides', function() {
 			$scope.noWrap = false;
 			
 			$scope.slides = [{
-				image: '_assets/beef-roll2.jpg',
+				image: '_assets/beef-roll.jpg',
 				text: ''
 			}, {
-				image: '_assets/spring-roll2.jpg'
+				image: '_assets/spring-roll.jpg',
+				text: ''
+			},
+			{
+				image: '_assets/thai-beef-noodle.jpg',
+				text: ''
 			}]
 		}
 	}
