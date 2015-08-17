@@ -11,7 +11,8 @@
 		<script src="../bower_components/angular/angular.js"></script>
 		<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="mobile-default.css">
+		<link rel="stylesheet" href="web-style.css">
 		<script src="app.js"></script>
 		<script src="menuSvc.js"></script>
 		<script src="menuItemFactory.js"></script>
@@ -69,10 +70,10 @@
 		</section>
 		
 		
-		<article>
-			<h2>Meuu</h2>
+		<article id="menu">
+			<h1 id="menu-heading">MENU</h1>
 			
-			<gb-menu>
+			<gb-menu style="margin-bottom: 46px;">
 				
 				<gb-menu-section title="Appetizers" section="menu.appetizers"></gb-menu-section>
 				
@@ -86,14 +87,13 @@
 				
 			</gb-menu>
 			
+			<section ng-click="openModal()" id="order-tab" style="cursor:pointer">
+				<p ng-show="!order.info.quantity" style="display:inline">Place your order</p>
+				<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
+				<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
+			</section>	
+			
 		</article>
 
-		<article ng-click="openModal()" style="cursor:pointer">
-			
-			<h2 ng-show="!order.info.quantity" style="display:inline">Place your order</h2>
-			<h2 ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </h2>
-			<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
-			
-		</article>	
 	</body>
 </html>

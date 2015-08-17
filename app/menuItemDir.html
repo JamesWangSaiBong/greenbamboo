@@ -5,7 +5,7 @@
 		<span class="item-price">${{ item.price }}</span>
 		
 		<div class="item-ctrl">
-			<div type="button" class="item-checkbox" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-if="!item.isSelected"></div>
+			<a class="order-btn" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-if="!item.isSelected"></a>
 				
 			<div ng-if="item.isSelected" class="quantity-btn">
 				<button ng-click="addQuantity(item)" ng-disabled="disableButton">
@@ -19,8 +19,8 @@
 	<div class="notification">{{ alertMsg }}</div>
 	
 	<!-- Option Section -->
-	<div ng-if="!isCollapsed" class="well well-lg">
-		<div>Pick your options for {{ item.numOfStagingItems }} {{ item.enName }}</div>
+	<div ng-if="!isCollapsed" class="option-panel well well-lg">
+		<p>Pick your options for <span>{{ item.numOfStagingItems }} {{ item.enName }}</span></p>
 		<option-panel ng-repeat="optSet in item.options" option-set="optSet" pick-option="pickOption(choice)"></option-panel>
 	</div>
 </div>
