@@ -243,12 +243,37 @@ h3 {
 ============================================================================= */
 
 #gb-deli-info {
-	padding: 16px 1em;
+	padding: 16px 0.625em;
 }
 
-#free-delivery {
+a#free-delivery {
+	display: block;
 	margin:0 auto;
-	width: 268px;
+	padding: 16px 10px;
+	width: 292px;
+	
+	color: orange;
+	background-color: white;
+	
+	border: 1px solid #424242;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	box-shadow: 0 0 5px #616161;
+	-moz-box-shadow: 0 0 5px #616161;
+	-webkit-box-shadow: 0 0 5px #616161;
+}
+
+a#free-delivery:hover {
+	text-decoration: none;
+	color: white;
+	background-color: orange;
+}
+
+a#free-delivery:active {
+	box-shadow: inset 0 0 10px #616161;
+	-moz-box-shadow: inset 0 0 10px #616161;
+	-webkit-box-shadow: inset 0 0 10px #616161;
 }
 
 #free-delivery >h2{
@@ -257,7 +282,14 @@ h3 {
 	font-weight: bold;
 	letter-spacing: 0.1em;
 	word-spacing: 0.3em;
-	
+}
+
+#free-delivery >div{
+	text-align:center;
+}
+
+#free-delivery  > div > i {
+	font-size: 2em;
 }
 
 .note {

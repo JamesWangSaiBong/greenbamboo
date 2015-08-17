@@ -65,17 +65,19 @@
 			</article>
 		</section>
 		
-		<section id="gb-deli-info"><!-- info section that includes delivery info -->
-			<article id="free-delivery">
+		<section id="gb-deli-info" ng-click="toggleDeliveryMap()"><!-- info section that includes delivery info -->
+			<a id="free-delivery">
 				<h2>FREE DELIVERY</h2>
 				<p class="note">(min $25 cash order)</p>
 				<p>凡惠顧滿現金$25(稅前)可獲免費送餐</p>
-			</article>
+				<div><i ng-class="showDeliveryMap ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-up' "></i></div>
+			</a>
 			
-			<button class="btn btn-default" ng-click="toggleDeliveryMap()">
+			<!--<button class="btn btn-default" ng-click="toggleDeliveryMap()">
 				<span>{{ deliveryBtn.text }}</span>
 				<i ng-class="deliveryBtn.icon"></i>
-			</button>
+			</button>-->
+			
 			
 			<article ng-show="showDeliveryMap" style="margin-top: 0.5em">
 				Add delivery map here
