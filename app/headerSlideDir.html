@@ -1,5 +1,5 @@
 <div ng-show="slides.length > 0">
-    <carousel interval="'2000'" no-wrap="noWrap" style="">
+    <carousel interval="'2000'" no-wrap="noWrap">
       <slide ng-repeat="slide in slides" active="slide.active" >
         <img ng-src="{{slide.image}}" style="height:auto;margin:auto; max-width:100%">
         <div class="carousel-caption">

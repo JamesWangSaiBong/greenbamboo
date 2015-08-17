@@ -30,15 +30,8 @@
 	</head>
 
 	<body ng-controller="menuCtrl">
-		<header style="background-color: #FFA000; color:#B9F6CA; height:140px">
-			<!-- logo -->
-			<div id="logo"></div>
-			
-			<hgroup id="brand-name">
-				<h2>Vietnamese Cuisine</h2>
-				<h2>青竹越南美食</h2>
-			</hgroup>		
-		
+		<header>
+			<image src="_assets/banner.jpg" style="height:auto; max-width:100%"/>
 		</header>
 		<gb-header-slides style="height: 310px;" ng-cloak></gb-header-slides>
 		
@@ -48,18 +41,18 @@
 				<div>(416)-292-7961</div>
 			</article>
 			<article class="item info-container">
-				<image src="_assets/hours-icon.png" />
-				<div>
-					<div>Mon - Fri: </div>
-					<div>11:00AM - 10:00PM</div>
-				</div>
-			</article>
-			<article class="item info-container">
 				<image src="_assets/location-icon.png" />
 				<a href="https://www.google.ca/maps/place/Green+Bamboo+Restaurant/@43.785257,-79.2759064,16.71z/data=!4m7!1m4!3m3!1s0x882b2c38223221ab:0xbf5d5d1b256612af!2sGreen+Bamboo+Restaurant!3b1!3m1!1s0x882b2c38223221ab:0xbf5d5d1b256612af"
 				target="_blank">
 					Midtown Plaza, 4221 Shepppard Ave E., Scarborough
 				</a>
+			</article>
+			<article class="item info-container">
+				<image src="_assets/hours-icon.png" />
+				<div>
+					<div>Mon - Sun: </div>
+					<div>11:00AM - 10:00PM</div>
+				</div>
 			</article>
 		</section>
 		
@@ -71,21 +64,13 @@
 				<div><i ng-class="showDeliveryMap ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-up' "></i></div>
 			</a>
 			
-			<!--<button class="btn btn-default" ng-click="toggleDeliveryMap()">
-				<span>{{ deliveryBtn.text }}</span>
-				<i ng-class="deliveryBtn.icon"></i>
-			</button>-->
-			
-			
-			<article ng-show="showDeliveryMap" style="margin-top: 0.5em">
-				Add delivery map here
-			</article>
+			<image ng-show="showDeliveryMap" src="_assets/delivery-map.png" style="height:auto; max-width:100%"/>
 			
 		</section>
 		
+		
 		<article>
-			
-			<h1 style="text-align: center; font-weight: bold; font-size: 4em; margin-bottom:16px">Menu</h1>
+			<h2>Meuu</h2>
 			
 			<gb-menu>
 				
