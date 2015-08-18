@@ -9,7 +9,7 @@
 		display: none !important;
 	}
 	/* =====================================================================
-		Main info section 
+		Contact info section 
 	====================================================================== */
 	
 	#gb-main-info {
@@ -25,21 +25,55 @@
 	
 	#web-contact-info {
 		padding: 1em;
-		background-color: white;
+		background-color: #EDE8E1;
+		color: #412518;
 		
 		flex: 1 1 auto;
 		-webkit-flex: 1 1 auto;
 		-ms-flex: 1 1 auto;
 		min-width: 320px;
 		max-width: 480px;
+		
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+	}
+	
+	.info-container > a {
+		color:#412518;
+	}
+	
+	.info-container > span.phone-icon {
+		background-image: url('../_assets/phone-icon.png');
+		background-position: 0px -48px;
+		width:32px;
+		height: 32px;
+	}
+
+	.info-container > span.location-icon {
+		background-image: url('../_assets/location-icon.png');
+		background-position: 0px -48px;
+		width:32px;
+		height: 32px;
+	}
+	
+	.info-container > span.hours-icon {
+		background-image: url('../_assets/hours-icon.png');
+		background-position: 0px -48px;
+		width:32px;
+		height: 32px;
 	}
 	
 	#exterior-img {
 		margin-bottom: 16px;
 	}
 	
+	/* =====================================================================
+		Delivery info section 
+	====================================================================== */
+	
 	#web-delivery-info {
-		background-color: white;
+		background-color: #EDE8E1;
 		padding: 1em;
 		
 		flex: 1 1 auto;
@@ -47,6 +81,10 @@
 		-ms-flex: 1 1 auto;
 		min-width: 320px;
 		max-width: 480px;
+		
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
 	}
 	
 	/* Override ng-hide class for element */

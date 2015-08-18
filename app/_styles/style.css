@@ -39,8 +39,6 @@ ul {
 ============================================================================= */
 #gb-contact-info {
 	padding: 16px 1em 0 1em;
-	background-color: #412518;
-	color:#EDE8E1;
 	
 	display:-webkit-flex;
 	display: -ms-flexbox;
@@ -86,7 +84,7 @@ ul {
 	margin-right: 8%;
 }
 
-.info-container > img {
+.info-container > span {
 	-webkit-flex: 0 0 2em;
 	-ms-flex: 0 0 2em;
 	flex: 0 0 2em;
@@ -216,7 +214,7 @@ a.order-btn {
 
 a.order-btn:hover {
 	display: inline-block;
-	background-image: url("_assets/order-btn.png");
+	background-image: url("../_assets/order-btn.png");
 	background-position: 0px -48px;
 	width:32px;
 	height: 32px;
@@ -224,7 +222,7 @@ a.order-btn:hover {
 
 a.order-btn:active {
 	display: inline-block;
-	background-image: url("_assets/order-btn.png");
+	background-image: url("../_assets/order-btn.png");
 	background-position: 0px -96px;
 	width:32px;
 	height: 32px;

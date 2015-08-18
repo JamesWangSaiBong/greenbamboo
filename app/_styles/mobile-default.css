@@ -14,6 +14,35 @@
 	#exterior-img {
 		display: none !important;
 	}
+	
+	/* ============================================================================
+		Contact info 
+	============================================================================ */
+	#gb-contact-info {
+		background-color: #412518;
+		color:#EDE8E1;
+	}
+	
+	.info-container > span.phone-icon {
+		background-image: url('../_assets/phone-icon.png');
+		background-position: 0px 0px;
+		width:32px;
+		height: 32px;
+	}
+
+	.info-container > span.location-icon {
+		background-image: url('../_assets/location-icon.png');
+		background-position: 0px 0px;
+		width:32px;
+		height: 32px;
+	}
+	
+	.info-container > span.hours-icon {
+		background-image: url('../_assets/hours-icon.png');
+		background-position: 0px 0px;
+		width:32px;
+		height: 32px;
+	}
 
 	/* ============================================================================
 		Delivery info section
