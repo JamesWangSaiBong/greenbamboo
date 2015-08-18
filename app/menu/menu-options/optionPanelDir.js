@@ -3,7 +3,7 @@
 app.directive('optionPanel', function() {
 	return {
 		restrict: 'E',
-		templateUrl: 'optionPanel.html',
+		templateUrl: 'menu/menu-options/optionPanel.html',
 		scope: {
 			optSet: '=optionSet',
 			notifyParent: '&pickOption'

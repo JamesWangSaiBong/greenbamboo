@@ -5,7 +5,7 @@ app.directive('gbMenu', function() {
 		restrict: 'E',
 		transclude: true,
 		scope: {},
-		templateUrl: 'menuDir.html',
+		templateUrl: 'menu/directives/menuDir.html',
 		controller: function($scope) {
 			this.sections = [];
 			
@@ -30,24 +30,3 @@ app.directive('gbMenu', function() {
 		}
 	}
 });
-
-app.directive('gbMenuSection', function() {
-	return {
-		restrict: 'E',
-		transclude: true,
-		scope: {
-			title: '@',
-			section: '='
-		},
-		require: '^gbMenu',
-		templateUrl: 'menuSectionDir.html',
-		link: function(scope, el, attrs, gbMenuCtrl) {
-			
-			gbMenuCtrl.addSection(scope);
-			
-			scope.select = function() {
-				gbMenuCtrl.select(scope);
-			}
-		}
-	}
-})

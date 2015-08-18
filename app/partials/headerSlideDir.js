@@ -3,7 +3,7 @@
 app.directive('gbHeaderSlides', function() {
 	return {
 		restrict: 'E',
-		templateUrl: 'headerSlideDir.html',
+		templateUrl: 'partials/headerSlideDir.html',
 		controller: function($scope) {
 			$scope.noWrap = false;
 			

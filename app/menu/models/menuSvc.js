@@ -19,7 +19,7 @@ app.service('Menu', function($http, $q, ItemIdentifier) {
 	this.getAllItems = function() {
 		var deferred = $q.defer();
 		var that = this;
-		$http.get('menu.json').success(function(data) {
+		$http.get('menu/menu.json').success(function(data) {
 			that.items = ItemIdentifier.identifyMenuItem(data);
 			deferred.resolve(that.items);
 		}).error(function(response) {

@@ -281,7 +281,7 @@ a#free-delivery:active {
 
 a.order-btn {
 	display: inline-block;
-	background-image: url("_assets/order-btn.png");
+	background-image: url("../_assets/order-btn.png");
 	background-position: 0px 0px;
 	width:32px;
 	height: 32px;

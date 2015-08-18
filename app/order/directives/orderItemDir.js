@@ -3,7 +3,7 @@
 app.directive('gbOrderItem', function(Order, Menu) {
 	return {
 		restrict: 'E',
-		templateUrl: 'orderItemDir.html',
+		templateUrl: 'order/directives/orderItemDir.html',
 		scope: {
 			item: '='
 		},

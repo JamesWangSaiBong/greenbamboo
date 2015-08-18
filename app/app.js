@@ -23,7 +23,7 @@ app.controller('menuCtrl', function($scope, $modal, Menu, Order) {
 		
 		var modalInstance = $modal.open({
 			animation: true,
-			templateUrl: 'orderModal.html',
+			templateUrl: 'order/orderModal.html',
 			controller: 'OrderModalCtrl',
 			size: 'lg',
 			resolve: {

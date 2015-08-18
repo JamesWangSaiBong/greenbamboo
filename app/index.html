@@ -11,23 +11,42 @@
 		<script src="../bower_components/angular/angular.js"></script>
 		<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-		<link rel="stylesheet" href="mobile-default.css">
-		<link rel="stylesheet" href="web-style.css">
+		
+		<link rel="stylesheet" href="_styles/mobile-default.css">
+		<link rel="stylesheet" href="_styles/web-style.css">
+		
 		<script src="app.js"></script>
-		<script src="menuSvc.js"></script>
-		<script src="menuItemFactory.js"></script>
-		<script src="orderSvc.js"></script>
-		<script src="menuItemDir.js"></script>
-		<script src="orderItemFactory.js"></script>
-		<script src="orderItemDir.js"></script>
-		<script src="advanceMenuItemFactory.js"></script>
-		<script src="optionPanelDir.js"></script>
-		<script src="optionFactory.js"></script>
-		<script src="optionSetFactory.js"></script>
-		<script src="advanceOrderItemFactory.js"></script>
-		<script src="itemIdentifierSvc.js"></script>
-		<script src="menuDir.js"></script>
-		<script src="headerSlideDir.js"></script>
+		
+		<!-- partials -->
+		<script src="partials/headerSlideDir.js"></script>
+		
+		<!-- menu -->
+			<!-- menu-model -->
+			<script src="menu/models/menuSvc.js"></script>
+			<script src="menu/models/menuItemFactory.js"></script>
+			<script src="menu/models/advanceMenuItemFactory.js"></script>
+			<script src="menu/models/itemIdentifierSvc.js"></script>
+			
+			<!-- menu-directives -->
+			<script src="menu/directives/menuDir.js"></script>
+			<script src="menu/directives/menuSectionDir.js"></script>
+			<script src="menu/directives/menuItemDir.js"></script>
+			
+			<!-- menu-options -->
+			<script src="menu/menu-options/optionFactory.js"></script>
+			<script src="menu/menu-options/optionSetFactory.js"></script>
+			<script src="menu/menu-options/optionPanelDir.js"></script>
+		
+		<!-- order -->
+			<!-- order models -->
+			<script src="order/models/orderSvc.js"></script>
+			<script src="order/models/orderItemFactory.js"></script>
+			<script src="order/models/advanceOrderItemFactory.js"></script>
+			
+			<!-- order directives -->
+			<script src="order/directives/orderItemDir.js"></script>
+		
+		
 	</head>
 
 	<body ng-controller="menuCtrl">
