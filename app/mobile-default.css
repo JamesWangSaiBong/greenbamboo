@@ -303,25 +303,6 @@ a.order-btn:active {
 	height: 32px;
 }
 
-.option-panel.well {
-	margin: 10px 0;
-}
-
-.option-panel.well-lg {
-	padding: 8px 0.5em;
-}
-
-.option-panel > p {
-	font-size: 0.75em;
-	font-style: italic;
-	margin-bottom: 8px;
-}
-
-.option-panel > p > span {
-	font-size: 1em;
-	font-weight: bold;
-}
-
 .quantity-btn {
 	width: 30px;
 	height: 55px;
@@ -371,6 +352,49 @@ a.order-btn:active {
 .pointer-hover:hover {
 	cursor: hand;
 	cursor: pointer
+}
+
+/* ============================================================================
+	Option Panel
+============================================================================= */
+
+.option-panel.well {
+	margin: 10px 0;
+}
+
+.option-panel.well-lg {
+	padding: 8px 0.5em;
+}
+
+.option-panel > p {
+	font-size: 0.75em;
+	font-style: italic;
+	margin-bottom: 8px;
+}
+
+.option-panel > p > span {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.options.btn-group {
+	margin-top: 8px;
+	display:-webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+
+.options.btn-group  > .btn {
+	white-space: normal;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
 }
 
 /* ============================================================================
