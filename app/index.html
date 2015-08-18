@@ -20,6 +20,7 @@
 		<!-- partials -->
 		<script src="partials/headerSlideDir.js"></script>
 		<script src="partials/contactInfoSectionDir.js"></script>
+		<script src="partials/deliveryInfoSectionDir.js"></script>
 		
 		<!-- menu -->
 			<!-- menu-model -->
@@ -53,20 +54,12 @@
 		<header>
 			<image src="_assets/banner.jpg" style="height:auto; max-width:100%"/>
 		</header>
-		<gb-header-slides style="height: 310px;" ng-cloak></gb-header-slides>
+		
+		<gb-header-slides></gb-header-slides>
 		
 		<gb-contact-info></gb-contact-info>
 		
-		<section id="gb-deli-info" ng-click="toggleDeliveryMap()"><!-- info section that includes delivery info -->
-			<a id="free-delivery">
-				<h2>FREE DELIVERY</h2>
-				<p class="note">(min $25 cash order)</p>
-				<p>凡惠顧滿現金$25(稅前)可獲免費送餐</p>
-				<div><i ng-class="showDeliveryMap ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-up' "></i></div>
-			</a>
-			<image ng-show="showDeliveryMap" src="_assets/delivery-map.png" style="height:auto; max-width:100%"/>
-		</section>
-		
+		<gb-delivery-info></gb-delivery-info>
 		
 		<article id="menu">
 			<h1 id="menu-heading">MENU</h1>
