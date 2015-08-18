@@ -24,7 +24,6 @@
 	}
 	
 	#web-contact-info {
-		padding: 1em;
 		background-color: #EDE8E1;
 		color: #412518;
 		
@@ -65,7 +64,7 @@
 	}
 	
 	#exterior-img {
-		margin-bottom: 16px;
+		margin-top: 42px;
 	}
 	
 	/* =====================================================================
@@ -85,6 +84,24 @@
 		border-radius: 10px;
 		-webkit-border-radius: 10px;
 		-moz-border-radius: 10px;
+	}
+	
+	#free-delivery {
+		color: #9E9E9E;
+		font-size:0.825em;
+	}
+	
+	#free-delivery > h2 {
+		color: #E65100;
+		font-size: 2.5em;
+		margin-bottom: 10px;
+		font-weight: bold;
+		letter-spacing: 0.1em;
+		word-spacing: 0.3em;
+	}
+	
+	a#free-delivery:hover {
+		text-decoration: none;
 	}
 	
 	/* Override ng-hide class for element */
@@ -112,9 +129,16 @@
 	}
 	
 	#web-menu {
+		position:relative;
+	}
+	
+	#web-menu > h1#menu-heading{
+		font-size: 4em;
+	}
+	
+	#web-menu > .menu-flex-columns {
 		width: 50%;
 		height: 960px;
-		
 		display:-webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
@@ -127,5 +151,16 @@
 		margin: 1em 1em 0 1em;
 		min-width: 320px;
 		max-width: 480px;
+	}
+	
+	/* ============================================================================
+		Order tab
+	============================================================================= */
+
+	#order-tab {
+		font-size: 1.5em;
+		background-color: #412518;
+		color: #EDE8E1;
+		border: 1px solid #412518;
 	}
 }

@@ -74,7 +74,7 @@
 		<article id="mobile-menu">
 			<h1 id="menu-heading">MENU</h1>
 			
-			<gb-menu style="margin-bottom: 46px;">
+			<gb-menu style="margin-bottom: 40px;">
 				
 				<gb-menu-section title="Appetizers" section="menu.appetizers"></gb-menu-section>
 				
@@ -87,24 +87,33 @@
 				<gb-menu-section title="Salads" section="menu.salads"></gb-menu-section>
 				
 			</gb-menu>
-			
 			<section ng-click="openModal()" id="order-tab" style="cursor:pointer">
 				<p ng-show="!order.info.quantity" style="display:inline">Place your order</p>
 				<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
 				<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
-			</section>
+			</section>			
 		</article>
 		
 		<article id="web-menu">
-			<gb-menu-section title="Appetizers" section="menu.appetizers"></gb-menu-section>
 			
-			<gb-menu-section title="Vegetables" section="menu.vegetables"></gb-menu-section>
-			
-			<gb-menu-section title="Light Courses" section="menu.lightCourses"></gb-menu-section>
-			
-			<gb-menu-section title="Soup Noodles" section="menu.noodles"></gb-menu-section>
-			
-			<gb-menu-section title="Salads" section="menu.salads"></gb-menu-section>
+			<h1 id="menu-heading">MENU</h1>
+			<section class="menu-flex-columns">
+				<gb-menu-section title="Appetizers" section="menu.appetizers"></gb-menu-section>
+				
+				<gb-menu-section title="Vegetables" section="menu.vegetables"></gb-menu-section>
+				
+				<gb-menu-section title="Light Courses" section="menu.lightCourses"></gb-menu-section>
+				
+				<gb-menu-section title="Soup Noodles" section="menu.noodles"></gb-menu-section>
+				
+				<gb-menu-section title="Salads" section="menu.salads"></gb-menu-section>
+			</section>
+			<section ng-click="openModal()" id="order-tab" style="cursor:pointer">
+				<p ng-show="!order.info.quantity" style="display:inline">Place your order</p>
+				<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
+				<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
+			</section>	
 		</article>
+		
 	</body>
 </html>
