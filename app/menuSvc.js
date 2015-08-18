@@ -28,14 +28,6 @@ app.service('Menu', function($http, $q, ItemIdentifier) {
 		return deferred.promise;
 	};
 	
-	//Deprecated
-	this.dropItemFromOrder = function(orderItem) {
-		var menuItem = _searchItem(orderItem);
-		if(menuItem) {
-			menuItem.dropFromOrder();
-		}
-	};
-	
 	this.decrementItemOrderQuantity = function(OrderItem) {
 		var menuItem = _searchItem(OrderItem);
 		if(menuItem) {

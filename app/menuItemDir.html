@@ -2,10 +2,10 @@
 	<div class="main" ng-click="order(item)" ng-class="{'pointer-hover' : !item.isSelected}">
 		<span class="item-name">{{ item.enName }}</span>
 				
-		<span class="item-price">${{ item.price }}</span>
+		<span class="item-price">{{ item.price | currency }}</span>
 		
 		<div class="item-ctrl">
-			<a class="order-btn" ng-checked="item.isSelected" ng-disabled="item.isSelected" ng-if="!item.isSelected"></a>
+			<a class="order-btn" ng-if="!item.isSelected"></a>
 				
 			<div ng-if="item.isSelected" class="quantity-btn">
 				<button ng-click="addQuantity(item)" ng-disabled="disableButton">
