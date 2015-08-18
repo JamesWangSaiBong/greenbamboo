@@ -11,7 +11,7 @@
 		<script src="../bower_components/angular/angular.js"></script>
 		<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-		
+		<link rel="stylesheet" href="_styles/style.css">
 		<link rel="stylesheet" href="_styles/mobile-default.css">
 		<link rel="stylesheet" href="_styles/web-style.css">
 		
@@ -51,17 +51,27 @@
 	</head>
 
 	<body ng-controller="menuCtrl">
-		<header>
+		<header id="mobile-banner">
 			<image src="_assets/banner.jpg" style="height:auto; max-width:100%"/>
 		</header>
 		
-		<gb-header-slides></gb-header-slides>
+		<header id="web-banner">
+			<image src="_assets/website-banner.jpg" style="height:auto; max-width:100%"/>
+		</header>
 		
-		<gb-contact-info></gb-contact-info>
+		<gb-header-slides id="mobile-img-slides"></gb-header-slides>
 		
-		<gb-delivery-info></gb-delivery-info>
+		<section id="web-img-slides">
+			<image src="_assets/images-banner.jpg" style="height:auto; max-width:100%" />
+		</section>
 		
-		<article id="menu">
+		<section id="gb-main-info">
+			<gb-contact-info id="web-contact-info"></gb-contact-info>
+			
+			<gb-delivery-info id="web-delivery-info"></gb-delivery-info>
+		</section>
+				
+		<article id="mobile-menu">
 			<h1 id="menu-heading">MENU</h1>
 			
 			<gb-menu style="margin-bottom: 46px;">
@@ -83,6 +93,18 @@
 				<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
 				<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
 			</section>
+		</article>
+		
+		<article id="web-menu">
+			<gb-menu-section title="Appetizers" section="menu.appetizers"></gb-menu-section>
+			
+			<gb-menu-section title="Vegetables" section="menu.vegetables"></gb-menu-section>
+			
+			<gb-menu-section title="Light Courses" section="menu.lightCourses"></gb-menu-section>
+			
+			<gb-menu-section title="Soup Noodles" section="menu.noodles"></gb-menu-section>
+			
+			<gb-menu-section title="Salads" section="menu.salads"></gb-menu-section>
 		</article>
 	</body>
 </html>

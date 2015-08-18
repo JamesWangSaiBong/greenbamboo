@@ -1,3 +1,93 @@
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 640px) {
 	
+	/* Banner display control */
+	#mobile-banner {
+		display: none !important;
+	}
+	
+	#mobile-img-slides {
+		display: none !important;
+	}
+	/* =====================================================================
+		Main info section 
+	====================================================================== */
+	
+	#gb-main-info {
+		background-color: #412518;
+		padding: 50px 0;
+		display:-webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-justify-content: space-around;
+		-ms-flex-pack: justify;
+		justify-content: space-around;
+	}
+	
+	#web-contact-info {
+		padding: 1em;
+		background-color: white;
+		
+		flex: 1 1 auto;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		min-width: 320px;
+		max-width: 480px;
+	}
+	
+	#exterior-img {
+		margin-bottom: 16px;
+	}
+	
+	#web-delivery-info {
+		background-color: white;
+		padding: 1em;
+		
+		flex: 1 1 auto;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		min-width: 320px;
+		max-width: 480px;
+	}
+	
+	/* Override ng-hide class for element */
+	#gb-deli-info > img.ng-hide {
+		display: block !important;
+	}
+	
+	/* Hide toggle-map-open button in element */
+	#free-delivery > div {
+		display: none !important;
+	}
+	
+	/* ====================================================================
+		Menu
+	==================================================================== */
+	
+	/* Hide mobile menu */
+	#mobile-menu {
+		display: none !important;
+	}
+	
+	/* Override menu-section ng-hide class */
+	.menu-section > div.ng-hide {
+		display: block !important;
+	}
+	
+	#web-menu {
+		width: 50%;
+		height: 960px;
+		
+		display:-webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-flow: column wrap;
+		-ms-flex-flow: column wrap;
+		flex-flow: column wrap;
+	}
+	
+	.menu-section {
+		margin: 1em 1em 0 1em;
+		min-width: 320px;
+		max-width: 480px;
+	}
 }
