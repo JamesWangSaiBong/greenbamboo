@@ -1,10 +1,14 @@
-<div>
-	<span>{{ item.enName }}</span>
-	<span>${{ item.price }}</span>
-	<span>x{{ item.quantity }}</span>
+<div class="order-item">
+
+	<span class="name">{{ item.enName }}</span>
+	<span class="price">${{ item.price }}</span>
 	
-	<button class="btn btn-sm" style="cursor:pointer" ng-click="removeDish(item)">
-		<i ng-show="allowRemove" class="glyphicon glyphicon-remove" ></i>
-		<i ng-hide="allowRemove" class="glyphicon glyphicon-minus"></i>
-	</button>
+	<div class="item-qty-ctrl">
+		<p>x{{ item.quantity }}</p>
+		<button class="btn" style="cursor:pointer" ng-click="removeDish(item)">
+			<i ng-show="allowRemove" class="glyphicon glyphicon-remove" ></i>
+			<i ng-hide="allowRemove" class="glyphicon glyphicon-minus"></i>
+		</button>
+	</div>
+	
 </div> 
