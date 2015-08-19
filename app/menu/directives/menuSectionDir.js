@@ -1,6 +1,7 @@
 'use strict'
 app.directive('gbMenuSection', function() {
 	return {
+		replace: true,
 		restrict: 'E',
 		transclude: true,
 		scope: {

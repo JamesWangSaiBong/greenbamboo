@@ -139,6 +139,7 @@
 	#web-menu > .menu-flex-columns {
 		width: 50%;
 		height: 960px;
+		padding-bottom: 54px;
 		display:-webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
@@ -147,10 +148,25 @@
 		flex-flow: column wrap;
 	}
 	
-	.menu-section {
-		margin: 1em 1em 0 1em;
-		min-width: 320px;
-		max-width: 480px;
+	.menu-flex-columns > section.menu-section {
+		margin: 1em 2% 0em 2%;
+		width: 96%;
+	}
+	
+	@media only screen and (min-width: 960px) {
+		#web-menu > .menu-flex-columns {
+			width: 33.3333%;
+			height: 600px;
+			display:-webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-flow: column wrap;
+			-ms-flex-flow: column wrap;
+			flex-flow: column wrap;
+			-webkit-align-contact: flex-start;
+			-ms-flex-pack: flex-start;
+			align-content: flex-start;
+		}
 	}
 	
 	/* ============================================================================
