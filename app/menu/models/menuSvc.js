@@ -1,8 +1,9 @@
 'use strict'
 
-app.service('Menu', function($http, $q, ItemIdentifier) {
+app.service('Menu', function($http, $q, ItemIdentifier, Option) {
 	
 	this.items = {};
+	this.cyoOptions = [];
 	
 	var that = this;
 	
@@ -34,4 +35,18 @@ app.service('Menu', function($http, $q, ItemIdentifier) {
 			menuItem.decrementOrderQuantity();
 		}
 	};
+	
+	this.getCYOOptions = function() {
+		var deferred = $q.defer();
+		var that = this;
+		$http.get('menu/cyo-options.json').success(function(data) {
+			for(var i=0; i < data.length; i++) {
+				that.cyoOptions.push(new Option(data[i]));
+				deferred.resolve(that.cyoOptions);
+			}
+		}).error(function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
 })

@@ -8,6 +8,11 @@ app.controller('menuCtrl', function($scope, $modal, Menu, Order) {
 		$scope.menu = items;
 	});
 	
+	Menu.getCYOOptions().then(function(optArray) {
+		$scope.cyoOptions = optArray;
+		console.log($scope.cyoOptions);
+	})
+	
 	$scope.order = Order;
 	
 	$scope.showDeliveryMap = false;

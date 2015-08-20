@@ -10,8 +10,6 @@ app.directive('gbMenuItem', function(Order) {
 		},
 		controller: function($scope) {
 			
-			console.log($scope.item);
-			
 			$scope.isCollapsed = true;
 			
 			$scope.order = function(item) {

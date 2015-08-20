@@ -52,12 +52,9 @@
 	</head>
 
 	<body ng-controller="menuCtrl">
-		<header id="mobile-banner">
-			<image src="_assets/banner.jpg" style="height:auto; max-width:100%"/>
-		</header>
-		
-		<header id="web-banner">
-			<image src="_assets/website-banner.jpg" style="height:auto; max-width:100%"/>
+		<header>
+			<image id="mobile-banner" src="_assets/banner.jpg" style="height:auto; max-width:100%"/>
+			<image id="web-banner" src="_assets/website-banner.jpg" style="height:auto; max-width:100%"/>
 		</header>
 		
 		<gb-header-slides id="mobile-img-slides"></gb-header-slides>
@@ -95,6 +92,17 @@
 				
 				<gb-menu-section title="Salads">
 					<gb-menu-item ng-repeat="item in menu.salads" item="item"></gb-menu-item>
+				</gb-menu-section>
+				
+				<gb-menu-section title="Salads">
+					<gb-menu-item ng-repeat="item in menu.salads" item="item"></gb-menu-item>
+				</gb-menu-section>
+				
+				<gb-menu-section title="Choose Your Own">
+					<gb-menu-item ng-repeat="item in menu.cyo" item="item"></gb-menu-item>
+					<ul id="cyo-options">
+						<li ng-repeat="opt in cyoOptions">{{ opt.text }}</li>
+					</ul>
 				</gb-menu-section>
 				
 			</gb-menu>

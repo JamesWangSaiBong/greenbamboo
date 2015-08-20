@@ -1,0 +1,69 @@
+[{
+	"id": 1,
+	"opt_cn_name": "越式炸春卷",
+	"opt_name": "Spring Roll",
+	"add_price": 0
+},
+{
+	"id": 2,
+	"opt_cn_name": "烤豬肉",
+	"opt_name": "Grilled Lemongrass Pork",
+	"add_price": 0
+},
+{
+	"id": 3,
+	"opt_cn_name": "烤豬扒",
+	"opt_name": "Grilled Lemongrass Pork Chop",
+	"add_price": 0
+},
+{
+	"id": 4,
+	"opt_cn_name": "烤牛肉",
+	"opt_name": "Grilled Lemongrass Beef",
+	"add_price": 0
+},
+{
+	"id": 5,
+	"opt_cn_name": "烤雞肉",
+	"opt_name": "Grilled Lemongrass Chicken",
+	"add_price": 0
+},
+{
+	"id": 6,
+	"opt_cn_name": "烤稔肉",
+	"opt_name": "Grilled Vietnamese Pork Balls",
+	"add_price": 0
+},
+{
+	"id": 7,
+	"opt_cn_name": "肉絲, 豬皮絲",
+	"opt_name": "Shredded Pork with Skin",
+	"add_price": 0
+},
+{
+	"id": 8,
+	"opt_cn_name": "扎肉",
+	"opt_name": "Vietnamese Sausage",
+	"add_price": 0
+},
+{
+	"id": 9,
+	"opt_cn_name": "越式肉蛋餅",
+	"opt_name": "Steamed Egg Loaf",
+	"add_price": 0
+},
+{
+	"id": 10,
+	"opt_cn_name": "煎蛋",
+	"opt_name": "Sunny-Side-Up Egg",
+	"add_price": 0
+},
+{"id":11,"opt_cn_name":"白菜/芥蘭","opt_name":"Bok Choy / Chinese Broccoli","add_price":0},
+{"id":12,"opt_cn_name":"炸豆腐","opt_name":"Fried Tofu","add_price":0},
+{"id":13,"opt_cn_name":"雞胸肉","opt_name":"Grilled Chicken Breast","add_price":0},
+{"id":14,"opt_cn_name":"烤牛仔骨","opt_name":"Grilled Lemongrass Beef Short Ribs","add_price":0.8},
+{"id":15,"opt_cn_name":"烤香葉牛肉卷","opt_name":"Fgrilled Beef Wrapped in Betel Leaves","add_price":1},
+{"id":16,"opt_cn_name":"烤蝦","opt_name":"Grilled Black Tiger Shrimps","add_price":1.5},
+{"id":17,"opt_cn_name":"蔗蝦","opt_name":"Grilled Shrimp Pate on Sugar Cane","add_price":0.75},
+{"id":18,"opt_cn_name":"烤三文魚","opt_name":"Grilled Salmon","add_price":0.75}
+]
