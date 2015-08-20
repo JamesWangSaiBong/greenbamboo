@@ -6,13 +6,8 @@
 		
 		<div class="item-ctrl">
 			<a class="order-btn" ng-if="!item.isSelected"></a>
-				
-			<div ng-if="item.isSelected" class="quantity-btn">
-				<button ng-click="addQuantity(item)" ng-disabled="disableButton">
-					<i class="glyphicon glyphicon-plus"></i>
-				</button>
-				<div>{{ item.orderQuantity }}</div>
-			</div>
+			
+			<qty-btn ng-if="item.isSelected" qty="item.orderQuantity" add-quantity="addQuantity(item)"></qty-btn>
 		</div>
 	</div>
 	

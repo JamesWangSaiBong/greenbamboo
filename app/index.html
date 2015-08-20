@@ -30,6 +30,7 @@
 			<script src="menu/models/itemIdentifierSvc.js"></script>
 			
 			<!-- menu-directives -->
+			<script src="menu/directives/qtyBtnDir.js"></script>
 			<script src="menu/directives/menuDir.js"></script>
 			<script src="menu/directives/menuSectionDir.js"></script>
 			<script src="menu/directives/menuItemDir.js"></script>
@@ -87,6 +88,7 @@
 				<gb-menu-section title="Salads" section="menu.salads"></gb-menu-section>
 				
 			</gb-menu>
+			
 			<section ng-click="openModal()" id="order-tab" style="cursor:pointer">
 				<p ng-show="!order.info.quantity" style="display:inline">Place your order</p>
 				<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
