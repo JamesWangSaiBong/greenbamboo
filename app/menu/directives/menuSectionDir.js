@@ -5,8 +5,7 @@ app.directive('gbMenuSection', function() {
 		restrict: 'E',
 		transclude: true,
 		scope: {
-			title: '@',
-			section: '='
+			title: '@'
 		},
 		require: '^gbMenu',
 		templateUrl: 'menu/directives/menuSectionDir.html',

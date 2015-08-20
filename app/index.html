@@ -77,15 +77,25 @@
 			
 			<gb-menu style="margin-bottom: 40px;">
 				
-				<gb-menu-section title="Appetizers" section="menu.appetizers"></gb-menu-section>
+				<gb-menu-section title="Appetizers">
+					<gb-menu-item ng-repeat="item in menu.appetizers" item="item"></gb-menu-item>
+				</gb-menu-section>
 				
-				<gb-menu-section title="Vegetables" section="menu.vegetables"></gb-menu-section>
+				<gb-menu-section title="Vegetables">
+					<gb-menu-item ng-repeat="item in menu.vegetables" item="item"></gb-menu-item>
+				</gb-menu-section>
 				
-				<gb-menu-section title="Light Courses" section="menu.lightCourses"></gb-menu-section>
+				<gb-menu-section title="Light Courses">
+					<gb-menu-item ng-repeat="item in menu.lightCourses" item="item"></gb-menu-item>
+				</gb-menu-section>
 				
-				<gb-menu-section title="Soup Noodles" section="menu.noodles"></gb-menu-section>
+				<gb-menu-section title="Soup Noodles">
+					<gb-menu-item ng-repeat="item in menu.noodles" item="item"></gb-menu-item>
+				</gb-menu-section>
 				
-				<gb-menu-section title="Salads" section="menu.salads"></gb-menu-section>
+				<gb-menu-section title="Salads">
+					<gb-menu-item ng-repeat="item in menu.salads" item="item"></gb-menu-item>
+				</gb-menu-section>
 				
 			</gb-menu>
 			
