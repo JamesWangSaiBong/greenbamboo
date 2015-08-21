@@ -325,6 +325,15 @@ a.order-btn:active {
 /* ============================================================================
 	CYO options
 ============================================================================= */
+h5#cyo-options-heading {
+	padding: 1em 0 0 0;
+	font-size: 1em;
+	font-weight: bold;
+	background-color: #EEE;
+	color: #FFB74D;
+	text-align: center;
+}
+
 ul#cyo-options {
 	list-style-type: none;
 	background-color: #EEE;
@@ -343,7 +352,7 @@ ul#cyo-options  > li {
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	padding: 0.5em;
+	padding: 1em;
 	margin: 1%;
 	width:31.33%;
 	font-size: 0.75em;

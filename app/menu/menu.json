@@ -129,4 +129,49 @@
 	"en_name": "Lime Beef Salad",
 	"type": "salads",
 	"price": 12.50
+},
+{
+	"id": 51,
+	"type": "cyo",
+	"cn_name": "檬/飯或粉 加 自選兩樣",
+	"en_name": "Vermicelli / Rice / Rice Noodle in Soup with Choice of 2 items",
+	"price": 8.95,
+	"options": [
+		[{
+			"opt_name": "Vermicelli",
+			"opt_cn_name": "檬"
+		},{
+			"opt_name": "Rice Noodle",
+			"opt_cn_name": "粉"
+		},{
+			"opt_name": "Rice",
+			"opt_cn_name":"飯"
+		}]
+	]
+},
+{
+	"id": 52,
+	"type": "cyo",
+	"cn_name": "檬/飯或粉 加 自選三味配菜",
+	"en_name": "Vermicelli / Rice / Rice Noodle in Soup with Choice of 3 items",
+	"price": 10.95,
+	"options":[
+		[{
+			"opt_name": "Vermicelli",
+			"opt_cn_name":"檬"
+		},{
+			"opt_name": "Rice Noodle",
+			"opt_cn_name": "粉"
+		},{
+			"opt_name": "Rice",
+			"opt_cn_name": "飯"
+		}]
+	]
+},
+{
+	"id": 53,
+	"type": "cyo",
+	"cn_name": "賓海 加 自選三味配菜",
+	"en_name": "Vietnamese Wrap & Roll Plattter with Choice of 3 Items",
+	"price": 12.95
 }]

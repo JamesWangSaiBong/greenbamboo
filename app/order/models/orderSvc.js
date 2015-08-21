@@ -7,7 +7,8 @@ app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
 		vegetables: [],
 		lightCourses: [],
 		noodles: [],
-		salads: []
+		salads: [],
+		cyo: []
 	};
 	
 	this.info = {
