@@ -14,7 +14,8 @@ app.directive('gbOrderItem', function(Order, Menu) {
 			});
 			
 			$scope.removeDish = function(item) {
-				Order.dropItem(item)
+				Order.dropItem(item);
+				Menu.decrementItemOrderQuantity(item);
 			};
 		}
 	}

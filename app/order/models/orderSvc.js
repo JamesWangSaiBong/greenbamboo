@@ -1,6 +1,6 @@
 'use strict'
 
-app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
+app.service('Order', function() {
 	
 	this.items = {
 		appetizers: [],
@@ -21,10 +21,11 @@ app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
 	var self = this;
 	
 	//Private method to search item in this.items
-	var _searchItem = function(item, name) {
-		var itemType = item.getType();
+	var _searchItem = function(orderItem) {
+		var itemType = orderItem.getType();
+		var itemName = orderItem.getName();
 		for(var i=0; i<self.items[itemType].length; i++) {
-			if(self.items[itemType][i].enName === name) {
+			if(self.items[itemType][i].enName === itemName) {
 				return self.items[itemType][i];
 			}
 		}
@@ -62,25 +63,15 @@ app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
 	}
 	
 	
-	this.addItem = function(menuItem) {
-		var orderItem = _searchItem(menuItem, _getMenuItemName(menuItem));
-		if(orderItem) {
-			orderItem.incrementQuantity();
-			_addPriceAndQuantity(orderItem);
-			if(!!menuItem.options) { menuItem.clearSelectedOptions(); } //Call this method to reset all the selected options
+	this.addItem = function(orderItem) {
+		var item = _searchItem(orderItem);
+		if(item) {
+			item.incrementQuantity();
+			_addPriceAndQuantity(item);
 			return;
 		}
-		if(!menuItem.options) {
-			menuItem.addToOrder();
-			var orderItem = new OrderItem(menuItem);
-			this.items[orderItem.getType()].push(orderItem);
-			_addPriceAndQuantity(orderItem);
-		} else {
-			var advanceOrderItem = new AdvanceOrderItem(menuItem);
-			this.items[advanceOrderItem.getType()].push(advanceOrderItem);
-			_addPriceAndQuantity(advanceOrderItem);
-			menuItem.clearSelectedOptions(); //Call this method to reset all the selected options
-		}
+		this.items[orderItem.getType()].push(orderItem);
+		_addPriceAndQuantity(orderItem);
 	};
 		
 	this.dropItem = function(orderItem) {
@@ -90,11 +81,9 @@ app.service('Order', function(Menu, OrderItem, AdvanceOrderItem) {
 			if(orderItem.quantity == 1) {
 				this.items[itemType].splice(i,1);
 				_deductPriceAndQuantity(orderItem);
-				Menu.decrementItemOrderQuantity(orderItem);
 			} else if(orderItem.quantity > 1) {
 				orderItem.decrementQuantity();
 				_deductPriceAndQuantity(orderItem);
-				Menu.decrementItemOrderQuantity(orderItem);
 			}
 		}
 	};

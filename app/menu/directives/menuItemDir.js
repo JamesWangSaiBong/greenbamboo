@@ -10,19 +10,10 @@ app.directive('gbMenuItem', function(Order) {
 		},
 		controller: function($scope) {
 			
-			$scope.isCollapsed = true;
-			
 			$scope.order = function(item) {
 				//Disable it if item has already been selected
-				if(item.isSelected) {
-					return;
-				}
-				if(!!item.options) {
-					item.addToStaging(); //If item.options is not null, then it's an AdvanceMenuItem
-					$scope.isCollapsed = false;
-				} else {
-					Order.addItem(item);
-				}
+				if(item.isSelected) { return;}
+				item.addToOrder();
 			};
 			
 			$scope.addQuantity = function(item) {
@@ -32,23 +23,14 @@ app.directive('gbMenuItem', function(Order) {
 					$scope.alertMsg = 'Please pick your option first';
 					return;
 				}
-				item.incrementOrderQuantity();
-				//If item.options is not null, it's an advanceMenuItem. Thus, expand the option-panel
-				if(!!item.options) {
-					$scope.isCollapsed = false;
-				} else {
-				//Otherwise, simply increment the item's order quantity and add it to the order.
-					Order.addItem(item);
-				}
+				item.addToOrder();
 			};
 			
 			$scope.pickOption = function() {
-				var isCompleted = $scope.item.isCompleted();
+				var isCompleted = $scope.item.completeOrder();
 				if(isCompleted) {
 					$scope.alertMsg = '';
 					$scope.disableButton = false;
-					Order.addItem($scope.item);
-					$scope.isCollapsed = true;
 				}
 			}
 		}

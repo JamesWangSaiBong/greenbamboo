@@ -1,6 +1,6 @@
 'use strict'
 
-app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
+app.factory('AdvanceMenuItem', function(MenuItem, OptionSet, AdvanceOrderItem, Order) {
 	
 	var setOptSetArray = function(optSets) {
 		var optSetArray = [];
@@ -9,6 +9,13 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
 		}
 		return optSetArray;
 	}
+	
+	//Private function; called when order is completed (see AdvanceMenuItem.prototype.completeOrder())
+	var clearSelectedOptions = function(menuItem) {
+		for(var i=0; i<menuItem.options.length; i++) {
+			menuItem.options[i].clearOption();
+		}
+	};
 	
 	function AdvanceMenuItem() {
 		MenuItem.apply(this, arguments); //Using the MenuItem constructor as part of this constructor
@@ -21,17 +28,29 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
 	AdvanceMenuItem.prototype = Object.create(MenuItem.prototype);
 	AdvanceMenuItem.prototype.constructor = AdvanceMenuItem;
 	
+	AdvanceMenuItem.prototype.addToOrder = function() {
+		/*D espite its name, the function is called from menuItemDir when user click the order-btn. 
+		The menuItem is added when all options have been picked (see AdvanceMenuItem.prototype.completeOrder())*/
+		
+		this.orderQuantity++;
+		this.isSelected = true;
+		this.isStaging = true;
+	};
+	
+	//Depracated
 	AdvanceMenuItem.prototype.addToStaging = function() {
-		this.addToOrder(); //Used to keep track of isSelected and selectedQuantity
+		this.orderQuantity = 1;
+		this.isSelected = true; 
 		this.isStaging = true;
 	}
 	
+	//Depracated
 	AdvanceMenuItem.prototype.incrementOrderQuantity = function() {
 		this.orderQuantity++; //Used to keep track of selectedQuantity
 		this.isStaging = true;
 	}
 	
-	AdvanceMenuItem.prototype.isCompleted = function() {
+	AdvanceMenuItem.prototype.completeOrder = function() {
 		var isCompleted = false;
 		//This function can only be used when item is staging
 		if(!this.isStaging) { return; }
@@ -39,18 +58,16 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet) {
 		for(var i=0; i<this.options.length; i++) {
 			if(!this.options[i].isSelected) { return isCompleted; }
 		};
-		isCompleted = true;
 		//Set isStaging back to false once the item has been completed (all options selected)
+		var orderItem = new AdvanceOrderItem(this);
+		Order.addItem(orderItem);
+		clearSelectedOptions(this);
 		this.isStaging = false;
+		isCompleted = true;
 		return isCompleted;
 	}
 	
-	//This is called in OrderSvc after the menuItem has been added to the Order.
-	AdvanceMenuItem.prototype.clearSelectedOptions = function() {
-		for(var i=0; i<this.options.length; i++) {
-			this.options[i].clearOption();
-		}
-	};
+	
 	
 	return AdvanceMenuItem;
 });

@@ -14,7 +14,7 @@
 	<div class="notification">{{ alertMsg }}</div>
 	
 	<!-- Option Section -->
-	<div ng-if="!isCollapsed" class="option-panel well well-lg">
+	<div ng-if="item.isStaging" class="option-panel well well-lg">
 		<p>Pick your options for <span>{{ item.numOfStagingItems }} {{ item.enName }}</span></p>
 		<option-panel ng-repeat="optSet in item.options" option-set="optSet" pick-option="pickOption(choice)"></option-panel>
 	</div>

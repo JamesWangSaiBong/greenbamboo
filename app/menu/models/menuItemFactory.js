@@ -1,6 +1,6 @@
 'use strict'
 
-app.factory('MenuItem', function() {
+app.factory('MenuItem', function(OrderItem, Order) {
 	function MenuItem(item) {
 		this.id = item.id;
 		this.enName = item.en_name;
@@ -8,15 +8,18 @@ app.factory('MenuItem', function() {
 		this.price = item.price;
 		this.orderQuantity = 0;
 		this.isSelected = false;
-		if(!!item.options) {
-			this.numOfoptions = item.options.length;
-			this.options = item.options;
-		}
 	};
 	
+	MenuItem.prototype.getIsSelected = function() {
+		return this.isSelected;
+	}
+	
 	MenuItem.prototype.addToOrder = function() {
-		this.orderQuantity = 1;
+		this.orderQuantity++;
 		this.isSelected = true;
+		// return an order object to be registered into the Order by the OrderSvc
+		var orderItem = new OrderItem(this);
+		Order.addItem(orderItem);
 	};
 	
 	//Deprecated
@@ -25,6 +28,7 @@ app.factory('MenuItem', function() {
 		this.isSelected = false;
 	};
 	
+	//Deprecated
 	MenuItem.prototype.incrementOrderQuantity = function() {
 		this.orderQuantity++;
 	};
@@ -32,7 +36,7 @@ app.factory('MenuItem', function() {
 	MenuItem.prototype.decrementOrderQuantity = function() {
 		this.orderQuantity--;
 		if(this.orderQuantity === 0) { 
-			this.isSelected = false 
+			this.isSelected = false;
 		};
 	};
 	

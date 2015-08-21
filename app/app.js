@@ -10,10 +10,11 @@ app.controller('menuCtrl', function($scope, $modal, Menu, Order) {
 	
 	Menu.getCYOOptions().then(function(optArray) {
 		$scope.cyoOptions = optArray;
-		console.log($scope.cyoOptions);
 	})
 	
 	$scope.order = Order;
+	
+	console.log($scope.order);
 	
 	$scope.showDeliveryMap = false;
 	

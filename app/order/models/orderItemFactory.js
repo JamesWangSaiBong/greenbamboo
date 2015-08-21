@@ -9,6 +9,10 @@ app.factory('OrderItem', function() {
 		this.quantity = 1
 	};
 	
+	OrderItem.prototype.getName = function() {
+		return this.enName;
+	}
+	
 	OrderItem.prototype.getQuantity = function() {
 		return this.quantity;
 	}
