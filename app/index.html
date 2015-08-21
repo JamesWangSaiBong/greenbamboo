@@ -101,7 +101,10 @@
 				<gb-menu-section title="Choose Your Own">
 					<gb-menu-item ng-repeat="item in menu.cyo" item="item"></gb-menu-item>
 					<ul id="cyo-options">
-						<li ng-repeat="opt in cyoOptions">{{ opt.text }}</li>
+						<li ng-repeat="opt in cyoOptions">
+							<a>{{ opt.optName }} <span ng-if="opt.addPrice">+{{ opt.addPrice | currency }}</span>
+							</a>
+						</li>
 					</ul>
 				</gb-menu-section>
 				
