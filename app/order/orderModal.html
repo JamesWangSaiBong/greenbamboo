@@ -27,6 +27,10 @@
 				<h3>Salads</h3>
 				<gb-order-item ng-repeat="item in order.items.salads" item="item" method="removeDish(item)"></gb-order-item>
 			</article>
+			<article ng-show="order.items.cyo.length != 0" class="order-section">
+				<h3>Choose Your Own</h3>
+				<gb-order-item ng-repeat="item in order.items.cyo" item="item" method="removeDish(item)"></gb-order-item>
+			</article>
 		</ul>
 		<div class="order-price">
 			<h5>{{ order.info.quantity }} items:</h5>

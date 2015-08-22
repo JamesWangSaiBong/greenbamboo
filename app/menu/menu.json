@@ -135,6 +135,7 @@
 	"type": "cyo",
 	"cn_name": "檬/飯或粉 加 自選兩樣",
 	"en_name": "Vermicelli / Rice / Rice Noodle in Soup with Choice of 2 items",
+	"num_of_choices": 2,
 	"price": 8.95,
 	"options": [
 		[{
@@ -154,6 +155,7 @@
 	"type": "cyo",
 	"cn_name": "檬/飯或粉 加 自選三味配菜",
 	"en_name": "Vermicelli / Rice / Rice Noodle in Soup with Choice of 3 items",
+	"num_of_choices": 3,
 	"price": 10.95,
 	"options":[
 		[{
@@ -173,5 +175,6 @@
 	"type": "cyo",
 	"cn_name": "賓海 加 自選三味配菜",
 	"en_name": "Vietnamese Wrap & Roll Plattter with Choice of 3 Items",
+	"num_of_choices": 3,
 	"price": 12.95
 }]

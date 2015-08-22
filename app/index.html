@@ -27,6 +27,7 @@
 			<script src="menu/models/menuSvc.js"></script>
 			<script src="menu/models/menuItemFactory.js"></script>
 			<script src="menu/models/advanceMenuItemFactory.js"></script>
+			<script src="menu/models/CYOMenuItemFactory.js"></script>
 			<script src="menu/models/itemIdentifierSvc.js"></script>
 			
 			<!-- menu-directives -->
@@ -45,6 +46,7 @@
 			<script src="order/models/orderSvc.js"></script>
 			<script src="order/models/orderItemFactory.js"></script>
 			<script src="order/models/advanceOrderItemFactory.js"></script>
+			<script src="order/models/cyoOrderItemFactory.js"></script>
 			
 			<!-- order directives -->
 			<script src="order/directives/orderItemDir.js"></script>
@@ -70,6 +72,13 @@
 		</section>
 				
 		<article id="mobile-menu">
+		
+			<section ng-click="openModal()" id="order-tab" style="cursor:pointer">
+				<p ng-show="!order.info.quantity" style="display:inline">Place your order</p>
+				<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
+				<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
+			</section>			
+		
 			<h1 id="menu-heading">MENU</h1>
 			
 			<gb-menu style="margin-bottom: 40px;">
@@ -94,29 +103,24 @@
 					<gb-menu-item ng-repeat="item in menu.salads" item="item"></gb-menu-item>
 				</gb-menu-section>
 				
-				<gb-menu-section title="Salads">
-					<gb-menu-item ng-repeat="item in menu.salads" item="item"></gb-menu-item>
-				</gb-menu-section>
-				
 				<gb-menu-section title="Choose Your Own">
-					<gb-menu-item ng-repeat="item in menu.cyo" item="item"></gb-menu-item>
-					<h5 id="cyo-options-heading">Pick 2 items of your choice<h5>
+					<gb-menu-item ng-repeat="item in menu.cyo" item="item" emit-item="setCYOItem(item)"></gb-menu-item>
+					<h5 id="cyo-options-heading" ng-show="activeCYO">Pick {{ activeCYO.numOfChoices }} items of your choice</h5>
+					<p ng-if="alertMsg">{{ alertMsg }}</p>
 					<ul id="cyo-options">
-						<li ng-repeat="opt in cyoOptions">
-							<a>{{ opt.optName }} <span ng-if="opt.addPrice">+{{ opt.addPrice | currency }}</span>
-							</a>
+						<li ng-repeat="opt in cyoOptions" ng-click="toggleCYOChoice(opt)" ng-class="opt.isSelected ? 'selected-option' : ''">
+							<a>{{ opt.optName }} <span ng-if="opt.addPrice">+{{ opt.addPrice | currency }}</span></a>
 						</li>
 					</ul>
+					<div id="cyo-complete">
+						<p ng-if="completeCYOMsg">{{ completeCYOMsg }}</p>
+						<button class="btn btn-success" ng-click="completeCYO()">Complete</button>
+					</div>
 				</gb-menu-section>
 				
 			</gb-menu>
 			
 		</article>
-			<section ng-click="openModal()" id="order-tab" style="cursor:pointer">
-				<p ng-show="!order.info.quantity" style="display:inline">Place your order</p>
-				<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
-				<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
-			</section>			
 		
 		<article id="web-menu">
 			<h1 id="menu-heading">MENU</h1>

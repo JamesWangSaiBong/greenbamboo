@@ -365,6 +365,26 @@ ul#cyo-options  > li > a {
 	text-decoration: none;
 }
 
+ul#cyo-options  > li.selected-option {
+	background-color: #FFB74D;
+}
+
+ul#cyo-options  > li.selected-option  > a{
+	color: white;
+}
+
+div#cyo-complete {
+	background-color: #EEE;
+	text-align: right;
+}
+
+div#cyo-complete > button {
+	font-size: 1.25em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 3%;
+}
+
 /* ============================================================================
 	Order tab
 ============================================================================= */

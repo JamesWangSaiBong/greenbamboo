@@ -6,13 +6,17 @@ app.directive('gbMenuItem', function(Order) {
 		templateUrl: 'menu/directives/menuItemDir.html',
 		transclude: true,
 		scope: {
-			item: '='
+			item: '=',
+			sendItem: '&emitItem'
 		},
 		controller: function($scope) {
 			
 			$scope.order = function(item) {
 				//Disable it if item has already been selected
 				if(item.isSelected) { return;}
+				if(item.getType() === 'cyo') { 
+					$scope.sendItem();
+				}
 				item.addToOrder();
 			};
 			
@@ -23,10 +27,14 @@ app.directive('gbMenuItem', function(Order) {
 					$scope.alertMsg = 'Please pick your option first';
 					return;
 				}
+				if(item.getType() === 'cyo') { 
+					$scope.sendItem();
+				}
 				item.addToOrder();
 			};
 			
 			$scope.pickOption = function() {
+				if($scope.item.getType() === 'cyo') { return; }
 				var isCompleted = $scope.item.completeOrder();
 				if(isCompleted) {
 					$scope.alertMsg = '';

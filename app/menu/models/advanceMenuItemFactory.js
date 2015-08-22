@@ -29,26 +29,12 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet, AdvanceOrderItem, O
 	AdvanceMenuItem.prototype.constructor = AdvanceMenuItem;
 	
 	AdvanceMenuItem.prototype.addToOrder = function() {
-		/*D espite its name, the function is called from menuItemDir when user click the order-btn. 
+		/*Despite its name, the function is called from menuItemDir when user click the order-btn. 
 		The menuItem is added when all options have been picked (see AdvanceMenuItem.prototype.completeOrder())*/
-		
 		this.orderQuantity++;
 		this.isSelected = true;
 		this.isStaging = true;
 	};
-	
-	//Depracated
-	AdvanceMenuItem.prototype.addToStaging = function() {
-		this.orderQuantity = 1;
-		this.isSelected = true; 
-		this.isStaging = true;
-	}
-	
-	//Depracated
-	AdvanceMenuItem.prototype.incrementOrderQuantity = function() {
-		this.orderQuantity++; //Used to keep track of selectedQuantity
-		this.isStaging = true;
-	}
 	
 	AdvanceMenuItem.prototype.completeOrder = function() {
 		var isCompleted = false;
@@ -65,9 +51,20 @@ app.factory('AdvanceMenuItem', function(MenuItem, OptionSet, AdvanceOrderItem, O
 		this.isStaging = false;
 		isCompleted = true;
 		return isCompleted;
+	};
+
+	//Depracated
+	AdvanceMenuItem.prototype.addToStaging = function() {
+		this.orderQuantity = 1;
+		this.isSelected = true; 
+		this.isStaging = true;
 	}
 	
-	
-	
+	//Depracated
+	AdvanceMenuItem.prototype.incrementOrderQuantity = function() {
+		this.orderQuantity++; //Used to keep track of selectedQuantity
+		this.isStaging = true;
+	}
+
 	return AdvanceMenuItem;
 });

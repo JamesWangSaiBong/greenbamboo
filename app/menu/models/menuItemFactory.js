@@ -22,6 +22,17 @@ app.factory('MenuItem', function(OrderItem, Order) {
 		Order.addItem(orderItem);
 	};
 	
+	MenuItem.prototype.decrementOrderQuantity = function() {
+		this.orderQuantity--;
+		if(this.orderQuantity === 0) { 
+			this.isSelected = false;
+		};
+	};
+	
+	MenuItem.prototype.getType = function() {
+		return this.type;
+	};
+	
 	//Deprecated
 	MenuItem.prototype.dropFromOrder = function() {
 		this.orderQuantity = 0;
@@ -32,17 +43,6 @@ app.factory('MenuItem', function(OrderItem, Order) {
 	MenuItem.prototype.incrementOrderQuantity = function() {
 		this.orderQuantity++;
 	};
-	
-	MenuItem.prototype.decrementOrderQuantity = function() {
-		this.orderQuantity--;
-		if(this.orderQuantity === 0) { 
-			this.isSelected = false;
-		};
-	};
-	
-	MenuItem.prototype.getType = function() {
-		return this.type;
-	}
 	
 	return MenuItem;
 });
