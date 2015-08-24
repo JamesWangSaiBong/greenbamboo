@@ -1,58 +1,25 @@
-[{
-	"id": 1,
-	"en_name": "Spring Rolls (2)",
-	"type": "appetizers",
-	"price": 4.75
-},
-{
-	"id": 2,
-	"en_name": "Fresh Shrimp & Pork Salad Rolls (2)",
-	"type": "appetizers",
-	"price": 4.75
-},
-{
-	"id": 6,
-	"en_name": "Satay Skewers (4) Beef/Pork/Chicken",
-	"type": "appetizers",
-	"price": 7.95,
-	"options": [
-		[{
-			"opt_name": "Beef"
-		},
-		{
-			"opt_name": "Pork"
-		},
-		{
-			"opt_name": "Chicken"
-		}]
-	]
-},
-{
-	"id": 7,
-	"en_name": "Stir Fried Bok Choy or Chinese Green with Garlic",
-	"type": "vegetables",
-	"price": 8.50,
-	"options": [
-		[{
-			"opt_name": "Bok Choy"
-		},
-		{
-			"opt_name": "Chinese Green"
-		}]
-	]
-},
-{
-	"id": 8,
-	"en_name": "Deep-Fried Spicy Eggplant",
-	"type": "vegetables",
-	"price": 7.95
-},
-{
-	"id": 3,
-	"en_name": "Fresh Shredded Pork Rolls(2)",
-	"type": "appetizers",
-	"price": 4.75
-},
+[{"id":1,"type":"appetizers","cn_name":"越式炸春卷 (2)","en_name":"Sring Rolls (2)","price":4.75},
+{"id":2,"type":"appetizers","cn_name":"鮮蝦粉皮卷","en_name":"Fresh Shrimp & Pork Salad Rolls (2)","price":4.75},
+{"id":3,"type":"appetizers","cn_name":"越式豬皮肉絲卷","en_name":"Fresh Shredded Pork Rolls (2)","price":4.75},
+{"id":4,"type":"appetizers","cn_name":"沙爹牛/雞/豬肉","en_name":"Satay Beef / Chicken / Pork (4)","price":7.95},
+{"id":5,"type":"appetizers","cn_name":"烤豬/牛/雞肉","en_name":"Grilled Lemongrass Pork / Beef / Chicken","price":6.95},
+{"id":6,"type":"appetizers","cn_name":"考牛仔骨","en_name":"Grilled Lemongrass Beef Short Ribs","price":7.95},
+{"id":7,"type":"appetizers","cn_name":"烤肉稔肉","en_name":"Grilled Vietnamese Pork Balls (2)","price":5.95},
+{"id":8,"type":"appetizers","cn_name":"烤香葉牛肉卷","en_name":"Grilled Beef wrapped in Betel Leaves (2)","price":8.5},
+{"id":9,"type":"appetizers","cn_name":"蔗蝦","en_name":"Grilled Shrimp Pate On Sugar Cane (2)","price":6.95},
+{"id":10,"type":"appetizers","cn_name":"炸豆腐","en_name":"Lightly Battered Cripsy Tofu","price":6.95},
+{"id":11,"type":"appetizers","cn_name":"炸酥雞","en_name":"Deep-Fried Spicy Chicken","price":7.95},
+{"id":12,"type":"appetizers","cn_name":"法式牛油煎雞翼","en_name":"Deep-Fried Chicken Wings in Butter & Garlic","price":8.5},
+{"id":13,"type":"appetizers","cn_name":"天婦羅蝦","en_name":"Tempura Shrimp (10)","price":8.5},
+{"id":14,"type":"appetizers","cn_name":"辣炸蝦","en_name":"Deep-Fried Spicy Shrimp (10)","price":10.95},
+{"id":15,"type":"appetizers","cn_name":"酥炸魷魚","en_name":"Deep-Fried Spicy Calamari","price":8.5},
+{"id":16,"type":"appetizers","cn_name":"酥炸軟殼蟹","en_name":"Deep-Fried Spicy Soft Shell Crab","price":14.95},
+{"id":17,"type":"appetizers","cn_name":"香茅辣椒炒青口","en_name":"Stir-Fried New Zealand Mussels w/ Choice of Lemongrass/Light Coconut/Basil Curry","price":9.95},
+{"id":18,"type":"appetizers","cn_name":"酥脆鵪鶉","en_name":"Crispy Quail (2)","price":8.5},
+{"id":19,"type":"appetizers","cn_name":"青竹小食拼盤","en_name":"Green Bamboo Platter","price":20.95},
+{"id":20,"type":"vegetables","cn_name":"蒜蓉炒白菜/芥蘭","en_name":"Stir-Fried Bok Choy / Chinese Green with Garlic","price":8.5},
+{"id":21,"type":"vegetables","cn_name":"酥炸茄瓜","en_name":"Deep-Fried Spicy Eggplant","price":7.95},
+
 {
 	"id": 4,
 	"en_name": "Grilled Meat Wraps",

@@ -4,6 +4,7 @@ app.factory('MenuItem', function(OrderItem, Order) {
 	function MenuItem(item) {
 		this.id = item.id;
 		this.enName = item.en_name;
+		this.cnName = item.cn_name;
 		this.type = item.type;
 		this.price = item.price;
 		this.orderQuantity = 0;

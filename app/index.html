@@ -78,8 +78,13 @@
 				<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
 				<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
 			</section>			
-		
-			<h1 id="menu-heading">MENU</h1>
+			<div>
+				<h1 id="menu-heading">MENU</h1>
+				<div class="btn-group">
+					<label class="btn btn-primary" ng-model="menuLang" btn-radio="'cn'">CN</label>
+					<label class="btn btn-primary" ng-model="menuLang" btn-radio="'en'">EN</label>
+				</div>
+			</div>
 			
 			<gb-menu style="margin-bottom: 40px;">
 				

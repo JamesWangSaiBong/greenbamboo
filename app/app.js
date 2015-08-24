@@ -2,7 +2,7 @@
 
 var app = angular.module('GBWeb',['ui.bootstrap']);
 
-app.controller('menuCtrl', function($scope, $modal, Menu, Order) {
+app.controller('menuCtrl', function($scope, $modal, $rootScope, Menu, Order) {
 	
 	Menu.getAllItems().then(function(items) {
 		$scope.menu = items;
@@ -104,6 +104,12 @@ app.controller('menuCtrl', function($scope, $modal, Menu, Order) {
 			$scope.activeCYO = undefined;
 		}
 	}
+	
+	$scope.menuLang = 'cn';
+	
+	$scope.$watch('menuLang', function(newVal) {
+		$rootScope.$broadcast('CHANGE_LANG', newVal);
+	})
 	
 });
 

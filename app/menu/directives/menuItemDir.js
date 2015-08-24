@@ -11,6 +11,19 @@ app.directive('gbMenuItem', function(Order) {
 		},
 		controller: function($scope) {
 			
+			$scope.item.name = $scope.item.cnName;
+			
+			$scope.$on('CHANGE_LANG', function(event,newVal) {
+				switch (newVal) {
+					case 'cn':
+						$scope.item.name = $scope.item.cnName;
+						break;
+					case 'en':
+						$scope.item.name = $scope.item.enName;
+						break;
+				}
+			})
+			
 			$scope.order = function(item) {
 				//Disable it if item has already been selected
 				if(item.isSelected) { return;}
