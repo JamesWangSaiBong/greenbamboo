@@ -92,23 +92,23 @@
 					<gb-menu-item ng-repeat="item in menu.appetizers" item="item"></gb-menu-item>
 				</gb-menu-section>
 				
-				<gb-menu-section title="Vegetables">
+				<gb-menu-section title="Vegetables" cn-title="蔬菜">
 					<gb-menu-item ng-repeat="item in menu.vegetables" item="item"></gb-menu-item>
 				</gb-menu-section>
 				
-				<gb-menu-section title="Light Courses">
+				<gb-menu-section title="Light Courses" cn-title="各式粉卷,麵包類">
 					<gb-menu-item ng-repeat="item in menu.lightCourses" item="item"></gb-menu-item>
 				</gb-menu-section>
 				
-				<gb-menu-section title="Soup Noodles">
+				<gb-menu-section title="Soup Noodles" cn-title="各式湯粉,面,檬類">
 					<gb-menu-item ng-repeat="item in menu.noodles" item="item"></gb-menu-item>
 				</gb-menu-section>
 				
-				<gb-menu-section title="Salads">
+				<gb-menu-section title="Salads" cn-title="沙律">
 					<gb-menu-item ng-repeat="item in menu.salads" item="item"></gb-menu-item>
 				</gb-menu-section>
 				
-				<gb-menu-section title="Choose Your Own">
+				<gb-menu-section title="Choose Your Own" cn-title="檬,飯或粉+自配菜">
 					<gb-menu-item ng-repeat="item in menu.cyo" item="item" emit-item="setCYOItem(item)"></gb-menu-item>
 					<h5 id="cyo-options-heading" ng-show="activeCYO">Pick {{ activeCYO.numOfChoices }} items of your choice</h5>
 					<p ng-if="alertMsg">{{ alertMsg }}</p>
@@ -123,19 +123,19 @@
 					</div>
 				</gb-menu-section>
 				
-				<gb-menu-section title="From The Wok">
+				<gb-menu-section title="From The Wok" cn-title="青竹小炒">
 					<gb-menu-item ng-repeat="item in menu.woks" item="item"></gb-menu-item>
 				</gb-menu-section>
 				
-				<gb-menu-section title="Rice Dishes"> 
+				<gb-menu-section title="Rice Dishes" cn-title="飯類"> 
 					<gb-menu-item ng-repeat="item in menu.rices" item="item"></gb-menu-item>
 				</gb-menu-section>
 				
-				<gb-menu-section title="Fried Rice & Noodle">
+				<gb-menu-section title="Fried Rice & Noodle" cn-title="各式炒飯,炒粉,檬,面">
 					<gb-menu-item ng-repeat="item in menu.friedRiceNoodles" item="item"></gb-menu-item>
 				</gb-menu-section>
 				
-				<gb-menu-section title="Dinner Menu">
+				<gb-menu-section title="Dinner Menu" cn-title="晚餐精選">
 					<gb-menu-item ng-repeat="item in menu.dinners" item="item"></gb-menu-item>
 				</gb-menu-section>
 				

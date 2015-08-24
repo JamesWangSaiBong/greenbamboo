@@ -12,7 +12,7 @@ app.directive('gbMenuSection', function() {
 		templateUrl: 'menu/directives/menuSectionDir.html',
 		link: function(scope, el, attrs, gbMenuCtrl) {
 			
-			scope.displayTitle = scope.title;
+			scope.displayTitle = scope.cnTitle;
 			
 			gbMenuCtrl.addSection(scope);
 			

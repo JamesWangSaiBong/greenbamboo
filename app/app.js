@@ -93,6 +93,10 @@ app.controller('menuCtrl', function($scope, $modal, $rootScope, Menu, Order) {
 	}
 	
 	$scope.completeCYO = function() {
+		if(!$scope.activeCYO) {
+			$scope.completeCYOMsg = 'Please select a dish from above first';
+			return;
+		}
 		var result = $scope.activeCYO.completeOrder()
 		$scope.completeCYOMsg = result.msg;
 		if(result.isCompleted) {
