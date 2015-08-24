@@ -113,7 +113,11 @@ app.controller('menuCtrl', function($scope, $modal, $rootScope, Menu, Order) {
 	
 	$scope.$watch('menuLang', function(newVal) {
 		$rootScope.$broadcast('CHANGE_LANG', newVal);
-	})
+		//Switch CYO-options language
+		for(var i=0; i<$scope.cyoOptions.length; i++) {
+			$scope.cyoOptions[i].setName(newVal);
+		}
+	});
 	
 });
 

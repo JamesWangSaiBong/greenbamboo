@@ -114,7 +114,7 @@
 					<p ng-if="alertMsg">{{ alertMsg }}</p>
 					<ul id="cyo-options">
 						<li ng-repeat="opt in cyoOptions" ng-click="toggleCYOChoice(opt)" ng-class="opt.isSelected ? 'selected-option' : ''">
-							<a>{{ opt.optName }} <span ng-if="opt.addPrice">+{{ opt.addPrice | currency }}</span></a>
+							<a>{{ opt.name }} <span ng-if="opt.addPrice">+{{ opt.addPrice | currency }}</span></a>
 						</li>
 					</ul>
 					<div id="cyo-complete">
