@@ -5,9 +5,12 @@ app.directive('gbOrderItem', function(Order, Menu) {
 		restrict: 'E',
 		templateUrl: 'order/directives/orderItemDir.html',
 		scope: {
-			item: '='
+			item: '=',
+			lang: '='
 		},
 		controller: function($scope) {
+			
+			$scope.item.name = $scope.item.getName($scope.lang);
 			
 			$scope.$watch('item.quantity', function(newVal) {
 				$scope.allowRemove = (newVal > 1)? false : true;

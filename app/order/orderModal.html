@@ -6,46 +6,46 @@
 		<ul>
 			<article ng-show="order.items.appetizers.length != 0" class="order-section">
 				<h3>Appetizers</h3>
-				<gb-order-item ng-repeat="item in order.items.appetizers" item="item" method="removeDish(item)"></gb-order-item>
+				<gb-order-item ng-repeat="item in order.items.appetizers" item="item" method="removeDish(item)" lang="lang"></gb-order-item>
 			</article>
 			
 			<article ng-show="order.items.vegetables.length != 0" class="order-section">
 				<h3>Vegetables</h3>
-				<gb-order-item ng-repeat="item in order.items.vegetables" item="item" method="removeDish(item)"></gb-order-item>
+				<gb-order-item ng-repeat="item in order.items.vegetables" item="item" method="removeDish(item)" lang="lang"></gb-order-item>
 			</article>
 			
 			<article ng-show="order.items.lightCourses.length != 0" class="order-section">
 				<h3>Light Courses</h3>
-				<gb-order-item ng-repeat="item in order.items.lightCourses" item="item" method="removeDish(item)"></gb-order-item>
+				<gb-order-item ng-repeat="item in order.items.lightCourses" item="item" method="removeDish(item)" lang="lang"></gb-order-item>
 			</article>
 			
 			<article ng-show="order.items.noodles.length != 0" class="order-section">
 				<h3>Soup Noodles</h3>
-				<gb-order-item ng-repeat="item in order.items.noodles" item="item" method="removeDish(item)"></gb-order-item>
+				<gb-order-item ng-repeat="item in order.items.noodles" item="item" method="removeDish(item)" lang="lang"></gb-order-item>
 			</article>
 			<article ng-show="order.items.salads.length != 0" class="order-section">
 				<h3>Salads</h3>
-				<gb-order-item ng-repeat="item in order.items.salads" item="item" method="removeDish(item)"></gb-order-item>
+				<gb-order-item ng-repeat="item in order.items.salads" item="item" method="removeDish(item)" lang="lang"></gb-order-item>
 			</article>
 			<article ng-show="order.items.cyo.length != 0" class="order-section">
 				<h3>Choose Your Own</h3>
-				<gb-order-item ng-repeat="item in order.items.cyo" item="item" method="removeDish(item)"></gb-order-item>
+				<gb-order-item ng-repeat="item in order.items.cyo" item="item" method="removeDish(item)" lang="lang"></gb-order-item>
 			</article>
 			<article ng-show="order.items.woks.length != 0" class="order-section">
 				<h3>From The Wok</h3>
-				<gb-order-item ng-repeat="item in order.items.woks" item="item" method="removeDish(item)"></gb-order-item>
+				<gb-order-item ng-repeat="item in order.items.woks" item="item" method="removeDish(item)" lang="lang"></gb-order-item>
 			</article>
-			<article ng-show="order.items.woks.length != 0" class="order-section">
+			<article ng-show="order.items.rices.length != 0" class="order-section">
 				<h3>Rice Dishes</h3>
-				<gb-order-item ng-repeat="item in order.items.rices" item="item" method="removeDish(item)"></gb-order-item>
+				<gb-order-item ng-repeat="item in order.items.rices" item="item" method="removeDish(item)" lang="lang"></gb-order-item>
 			</article>
 			<article ng-show="order.items.friedRiceNoodles.length != 0" class="order-section">
-				<h3>Rice Dishes</h3>
-				<gb-order-item ng-repeat="item in order.items.friedRiceNoodles" item="item" method="removeDish(item)"></gb-order-item>
+				<h3>Fried Rice or Noodles</h3>
+				<gb-order-item ng-repeat="item in order.items.friedRiceNoodles" item="item" method="removeDish(item)" lang="lang"></gb-order-item>
 			</article>
 			<article ng-show="order.items.dinners.length != 0" class="order-section">
-				<h3>Rice Dishes</h3>
-				<gb-order-item ng-repeat="item in order.items.dinners" item="item" method="removeDish(item)"></gb-order-item>
+				<h3>Dinner</h3>
+				<gb-order-item ng-repeat="item in order.items.dinners" item="item" method="removeDish(item)" lang="lang"></gb-order-item>
 			</article>
 		</ul>
 		<div class="order-price">

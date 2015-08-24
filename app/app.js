@@ -28,6 +28,9 @@ app.controller('menuCtrl', function($scope, $modal, $rootScope, Menu, Order) {
 			resolve: {
 				order: function() {
 					return $scope.order;
+				},
+				lang: function() {
+					return $scope.menuLang;
 				}
 			}
 		});
@@ -121,8 +124,10 @@ app.controller('menuCtrl', function($scope, $modal, $rootScope, Menu, Order) {
 	
 });
 
-app.controller('OrderModalCtrl', function($scope, $modalInstance, order){
+app.controller('OrderModalCtrl', function($scope, $modalInstance, order, lang){
 	$scope.order = order;
+	
+	$scope.lang = lang;
 	
 	$scope.ok = function() {
 		$modalInstance.close('completed');

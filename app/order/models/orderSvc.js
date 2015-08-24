@@ -27,7 +27,7 @@ app.service('Order', function() {
 	//Private method to search item in this.items
 	var _searchItem = function(orderItem) {
 		var itemType = orderItem.getType();
-		var itemName = orderItem.getName();
+		var itemName = orderItem.getName('en');
 		for(var i=0; i<self.items[itemType].length; i++) {
 			if(self.items[itemType][i].enName === itemName) {
 				return self.items[itemType][i];

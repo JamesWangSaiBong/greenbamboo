@@ -4,13 +4,19 @@ app.factory('OrderItem', function() {
 	function OrderItem(menuItem) {
 		this.menuId = menuItem.id;
 		this.enName = menuItem.enName;
+		this.cnName = menuItem.cnName;
 		this.type = menuItem.type;
 		this.price = menuItem.price;
 		this.quantity = 1
 	};
 	
-	OrderItem.prototype.getName = function() {
-		return this.enName;
+	OrderItem.prototype.getName = function(lang) {
+		switch (lang) {
+			case 'cn':
+				return this.cnName;
+			case 'en':
+				return this.enName;
+		}
 	}
 	
 	OrderItem.prototype.getQuantity = function() {
