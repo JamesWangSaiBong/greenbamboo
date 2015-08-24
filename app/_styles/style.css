@@ -334,6 +334,16 @@ h5#cyo-options-heading {
 	text-align: center;
 }
 
+h5#cyo-options-heading + p {
+	margin: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+	font-style: italic;
+	background-color:#EEE;
+	color: #FF5722;
+}
+
 ul#cyo-options {
 	list-style-type: none;
 	background-color: #EEE;
@@ -376,6 +386,12 @@ ul#cyo-options  > li.selected-option  > a{
 div#cyo-complete {
 	background-color: #EEE;
 	text-align: right;
+}
+
+div#cyo-complete > p {
+	margin-right: 8px;
+	font-style: italic;
+	color: #FF5722;
 }
 
 div#cyo-complete > button {
