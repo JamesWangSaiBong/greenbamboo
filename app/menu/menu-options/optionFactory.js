@@ -8,7 +8,20 @@ app.factory('Option', function() {
 		this.price = option.price;
 		this.addPrice = option.add_price;
 		this.isPicked = false;
+		//Default chinese
+		this.name = option.opt_cn_name;
 	};
+	
+	Option.prototype.setName = function(lang) {
+		switch (lang) {
+			case 'cn':
+				this.name = this.optCnName;
+				break;
+			case 'en':
+				this.name = this.optName;
+				break;
+		}
+	}
 	
 	Option.prototype.pick = function() {
 		this.isPicked = true;

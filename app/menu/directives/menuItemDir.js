@@ -11,10 +11,13 @@ app.directive('gbMenuItem', function(Order) {
 		},
 		controller: function($scope) {
 			
+			$scope.lang = 'cn';
+			
 			$scope.item.name = $scope.item.cnName;
 			
-			$scope.$on('CHANGE_LANG', function(event,newVal) {
-				switch (newVal) {
+			$scope.$on('CHANGE_LANG', function(event, lang) {
+				$scope.lang = lang;
+				switch (lang) {
 					case 'cn':
 						$scope.item.name = $scope.item.cnName;
 						break;

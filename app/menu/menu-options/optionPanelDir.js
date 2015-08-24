@@ -6,9 +6,17 @@ app.directive('optionPanel', function() {
 		templateUrl: 'menu/menu-options/optionPanel.html',
 		scope: {
 			optSet: '=optionSet',
-			notifyParent: '&pickOption'
+			notifyParent: '&pickOption',
+			lang: '='
+		},
+		link: function(scope, el, attrs) {
+			scope.optSet.setOptionName(scope.lang);
 		},
 		controller: function($scope) {
+			
+			$scope.$watch('lang', function(newVal) {
+				$scope.optSet.setOptionName(newVal);
+			});
 			
 			$scope.radio = {model:undefined};
 			

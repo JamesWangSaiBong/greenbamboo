@@ -16,6 +16,6 @@
 	<!-- Option Section -->
 	<div ng-if="item.isStaging && item.options" class="option-panel well well-lg">
 		<p>Pick your options for <span>{{ item.numOfStagingItems }} {{ item.name }}</span></p>
-		<option-panel ng-repeat="optSet in item.options" option-set="optSet" pick-option="pickOption(choice)"></option-panel>
+		<option-panel ng-repeat="optSet in item.options" option-set="optSet" pick-option="pickOption(choice)" lang="lang"></option-panel>
 	</div>
 </div>

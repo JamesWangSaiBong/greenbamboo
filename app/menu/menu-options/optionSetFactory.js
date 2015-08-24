@@ -24,6 +24,12 @@ app.factory('OptionSet', function(Option){
 	OptionSet.prototype.clearOption = function() {
 		this.isSelected = false;
 		this.selectedOption = null;
+	};
+	
+	OptionSet.prototype.setOptionName = function(lang) {
+		for(var i=0; i<this.setOfOptions.length; i++) {
+			this.setOfOptions[i].setName(lang);	
+		}
 	}
 	
 	return OptionSet;
