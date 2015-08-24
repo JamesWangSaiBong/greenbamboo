@@ -4,6 +4,7 @@ app.directive('gbMenu', function() {
 	return {
 		restrict: 'E',
 		transclude: true,
+		replace: true,
 		scope: {},
 		templateUrl: 'menu/directives/menuDir.html',
 		controller: function($scope) {

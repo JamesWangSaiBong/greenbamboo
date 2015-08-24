@@ -129,11 +129,21 @@ ul {
 
 
 #menu-heading {
+	position: relative;
 	color: #412518;
 	padding: 16px 0;
 	text-align: center;
+}
+
+#menu-heading > h1 {
 	font-weight: bold;
 	letter-spacing: 0.15em;
+}
+
+#menu-heading > div {
+	position: absolute;
+	right: 2%;
+	top: 35%;
 }
 
 

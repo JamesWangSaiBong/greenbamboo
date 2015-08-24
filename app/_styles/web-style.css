@@ -123,50 +123,48 @@
 		display: none !important;
 	}
 	
-	/* Override menu-section ng-hide class */
-	.menu-section > div.ng-hide {
-		display: block !important;
+	section#three-col-menu {
+		display: none;
 	}
 	
-	#web-menu {
-		position:relative;
+	#two-col-menu {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
 	}
 	
-	#web-menu > h1#menu-heading{
+	#menu-heading > h1{
 		font-size: 4em;
 	}
 	
-	#web-menu > .menu-flex-columns {
-		width: 50%;
-		height: 960px;
-		padding-bottom: 54px;
-		display:-webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-flex-flow: column wrap;
-		-ms-flex-flow: column wrap;
-		flex-flow: column wrap;
-	}
-	
-	.menu-flex-columns > section.menu-section {
-		margin: 1em 2% 0em 2%;
-		width: 96%;
+	.menu-col {
+		width:47%;
+		margin-left:2%;
+		margin-right: 2%;
+		flex: 1 1 auto;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
 	}
 	
 	@media only screen and (min-width: 960px) {
-		#web-menu > .menu-flex-columns {
-			width: 33.3333%;
-			height: 600px;
-			display:-webkit-flex;
+		section#three-col-menu {
+			display: -webkit-flex;
 			display: -ms-flexbox;
 			display: flex;
-			-webkit-flex-flow: column wrap;
-			-ms-flex-flow: column wrap;
-			flex-flow: column wrap;
-			-webkit-align-contact: flex-start;
-			-ms-flex-pack: flex-start;
-			align-content: flex-start;
 		}
+	
+		section#two-col-menu {
+			display: none;
+		}
+		
+		.menu-col {
+		width:29.33%;
+		margin-left:2%;
+		margin-right: 2%;
+		flex: 1 1 auto;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+	}
 	}
 	
 	/* ============================================================================
@@ -174,6 +172,8 @@
 	============================================================================= */
 
 	#order-tab {
+		position:relative;
+		bottom: 0;
 		font-size: 1.5em;
 		background-color: #412518;
 		color: #EDE8E1;
