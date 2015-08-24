@@ -1,8 +1,12 @@
 [{"id":1,"type":"appetizers","cn_name":"越式炸春卷 (2)","en_name":"Sring Rolls (2)","price":4.75},
 {"id":2,"type":"appetizers","cn_name":"鮮蝦粉皮卷","en_name":"Fresh Shrimp & Pork Salad Rolls (2)","price":4.75},
 {"id":3,"type":"appetizers","cn_name":"越式豬皮肉絲卷","en_name":"Fresh Shredded Pork Rolls (2)","price":4.75},
-{"id":4,"type":"appetizers","cn_name":"沙爹牛/雞/豬肉","en_name":"Satay Beef / Chicken / Pork (4)","price":7.95},
-{"id":5,"type":"appetizers","cn_name":"烤豬/牛/雞肉","en_name":"Grilled Lemongrass Pork / Beef / Chicken","price":6.95},
+{"id":4,"type":"appetizers","cn_name":"沙爹牛/雞/豬肉","en_name":"Satay Beef / Chicken / Pork (4)","price":7.95,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛","price":0},{"opt_name":"Chicken","opt_cn_name":"雞","price":0},{"opt_name":"Pork","opt_cn_name":"豬","price":0}]]
+},
+{"id":5,"type":"appetizers","cn_name":"烤牛/雞/豬肉","en_name":"Grilled Lemongrass Pork / Beef / Chicken","price":6.95,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛","price":0},{"opt_name":"Chicken","opt_cn_name":"雞","price":0},{"opt_name":"Pork","opt_cn_name":"豬","price":0}]]
+},
 {"id":6,"type":"appetizers","cn_name":"考牛仔骨","en_name":"Grilled Lemongrass Beef Short Ribs","price":7.95},
 {"id":7,"type":"appetizers","cn_name":"烤肉稔肉","en_name":"Grilled Vietnamese Pork Balls (2)","price":5.95},
 {"id":8,"type":"appetizers","cn_name":"烤香葉牛肉卷","en_name":"Grilled Beef wrapped in Betel Leaves (2)","price":8.5},
@@ -14,89 +18,116 @@
 {"id":14,"type":"appetizers","cn_name":"辣炸蝦","en_name":"Deep-Fried Spicy Shrimp (10)","price":10.95},
 {"id":15,"type":"appetizers","cn_name":"酥炸魷魚","en_name":"Deep-Fried Spicy Calamari","price":8.5},
 {"id":16,"type":"appetizers","cn_name":"酥炸軟殼蟹","en_name":"Deep-Fried Spicy Soft Shell Crab","price":14.95},
-{"id":17,"type":"appetizers","cn_name":"香茅辣椒炒青口","en_name":"Stir-Fried New Zealand Mussels w/ Choice of Lemongrass/Light Coconut/Basil Curry","price":9.95},
+{"id":17,"type":"appetizers","cn_name":"香茅辣椒炒青口","en_name":"Stir-Fried New Zealand Mussels w/ Choice of Lemongrass/Light Coconut/Basil Curry","price":9.95,
+	"options":[[{"opt_name":"Lemongrass","opt_cn_name":"香茅","price":0},{"opt_name":"Light Coconut","opt_cn_name":"椰汁","price":0},{"opt_name":"Basil Curry","opt_cn_name":"咖喱","price":0}]]
+},
 {"id":18,"type":"appetizers","cn_name":"酥脆鵪鶉","en_name":"Crispy Quail (2)","price":8.5},
 {"id":19,"type":"appetizers","cn_name":"青竹小食拼盤","en_name":"Green Bamboo Platter","price":20.95},
-{"id":20,"type":"vegetables","cn_name":"蒜蓉炒白菜/芥蘭","en_name":"Stir-Fried Bok Choy / Chinese Green with Garlic","price":8.5},
+{"id":20,"type":"vegetables","cn_name":"蒜蓉炒白菜/芥蘭","en_name":"Stir-Fried Bok Choy / Chinese Green with Garlic","price":8.5,
+	"options":[[{"opt_name":"Bok Choy","opt_cn_name":"白菜","price":0},{"opt_name":"Chinese Green","opt_cn_name":"芥蘭","price":0}]]
+},
 {"id":21,"type":"vegetables","cn_name":"酥炸茄瓜","en_name":"Deep-Fried Spicy Eggplant","price":7.95},
-
-{
-	"id": 4,
-	"en_name": "Grilled Meat Wraps",
-	"type": "lightCourses",
-	"price": 9.00,
-	"options": [
-		[{
-			"opt_name": "Beef",
-			"price": 9.50
-		},
-		{
-			"opt_name": "Pork",
-			"price": 9.00
-		},
-		{
-			"opt_name": "Chicken",
-			"price": 9.00
-		},
-		{
-			"opt_name": "Soft Shell Crab",
-			"price": 14.95
-		}]
+{"id":21,"type":"lightCourses","cn_name":"越式烤肉粉卷 ","en_name":"Grilled Meat Wraps (Beef / Pork / Chicken / Soft Shell Crab)","price":9,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛","price":9.5},{"opt_name":"Pork","opt_cn_name":"豬","price":9},{"opt_name":"Chicken","opt_cn_name":"雞","price":9},{"opt_name":"Soft Shell Crab ","opt_cn_name":"软壳蟹","price":14.95}]]
+},
+{"id":22,"type":"lightCourses","cn_name":"椰汁咖喱牛或雞麵包","en_name":"Beef / Chicken Curry with Bread","price":8.5,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛","price":0},{"opt_name":"Chicken","opt_cn_name":"雞","price":0}]]
+},
+{"id":23,"type":"lightCourses","cn_name":"越式茄汁牛腩麵包","en_name":"Beef Brisket, Carrot Stew with Bread","price":8.75},
+{"id":24,"type":"lightCourses","cn_name":"越式腸粉","en_name":"Freshly Steamed Rolls with Minced Pork & Vietnamese Sausage (weekend only)","price":7.5},
+{"id":25,"type":"noodles","cn_name":"特別牛肉粉/面","en_name":"Special Beef - Rare Beef, Beef Balls, Tendon, Brisket & Tripe","price":7.25,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":7.25},{"opt_name":"Large ","opt_cn_name":"大","price":8.25},{"opt_name":"Extra Large","opt_cn_name":"特大","price":10.95}]
+	]	
+},
+{"id":26,"type":"noodles","cn_name":"生牛肉粉/面","en_name":"Rare Beef","price":7.25,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":7.25},{"opt_name":"Large ","opt_cn_name":"大","price":8.25},{"opt_name":"Extra Large","opt_cn_name":"特大","price":10.75}]
 	]
 },
-{
-	"id": 5,
-	"en_name": "Special Beef Noodle with Rare Beef, Beef Balls, Tendon, Brisket & Tripe",
-	"type": "noodles",
-	"price": 7.25,
-	"options": [
-		[{
-			"opt_name": "Fresh Rice Noodle"
-		},
-		{
-			"opt_name": "Dry Thin Rice Noodle"
-		},
-		{
-			"opt_name": "Egg Noodle"
-		}],
-		[{
-			"opt_name": "Small",
-			"price": 7.25
-		},
-		{
-			"opt_name": "Large",
-			"price": 8.25
-		},
-		{
-			"opt_name": "Extra Large",
-			"price": 10.95
-		}]
+{"id":27,"type":"noodles","cn_name":"泰式牛肉粉/面","en_name":"Thai Style - Rare Beef, Brisket in Tom Yum Soup","price":7.25,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":7.25},{"opt_name":"Large ","opt_cn_name":"大","price":8.25},{"opt_name":"Extra Large","opt_cn_name":"特大","price":10.95}]
 	]
 },
-{
-	"id": 9,
-	"en_name": "Beef Brisket, Carrot Stew with Bread",
-	"type": "lightCourses",
-	"price": 8.75
+{"id":28,"type":"noodles","cn_name":"牛丸粉/面","en_name":"Beef Balls","price":6.5,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":6.5},{"opt_name":"Large ","opt_cn_name":"大","price":7.5},{"opt_name":"Extra Large","opt_cn_name":"特大","price":9.75}]
+	]
 },
-{
-	"id": 10,
-	"en_name": "Sweet & Sour Crab Soup with Vermicelli",
-	"type": "noodles",
-	"price": 8.75
+{"id":29,"type":"noodles","cn_name":"凈粉/面","en_name":"Plain Noodle Soup","price":4.75,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":4.75},{"opt_name":"Large ","opt_cn_name":"大","price":5.75},{"opt_name":"Extra Large","opt_cn_name":"特大","price":7.25}]
+	]
 },
-{
-	"id": 11,
-	"en_name": "Thai Mango Salad with Shrimp & Chicken",
-	"type": "salads",
-	"price": 9.95
+{"id":30,"type":"noodles","cn_name":"魚蛋粉/面","en_name":"Fish Balls","price":6.5,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":6.5},{"opt_name":"Large ","opt_cn_name":"大","price":7.5},{"opt_name":"Extra Large","opt_cn_name":"特大","price":9.75}]
+	]
 },
-{
-	"id": 12,
-	"en_name": "Lime Beef Salad",
-	"type": "salads",
-	"price": 12.50
+{"id":31,"type":"noodles","cn_name":"扎肉粉/面","en_name":"Vietnamese Sausage","price":6.5,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":6.5},{"opt_name":"Large ","opt_cn_name":"大","price":7.5},{"opt_name":"Extra Large","opt_cn_name":"特大","price":9.75}]
+	]
 },
+{"id":32,"type":"noodles","cn_name":"雞絲粉/面","en_name":"Chicken","price":6.95,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":6.95},{"opt_name":"Large ","opt_cn_name":"大","price":7.95},{"opt_name":"Extra Large","opt_cn_name":"特大","price":10.25}]
+	]
+},
+{"id":33,"type":"noodles","cn_name":"生牛肉、雞絲粉/面","en_name":"Rare Beef, Chicken","price":7.25,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":7.25},{"opt_name":"Large ","opt_cn_name":"大","price":8.25},{"opt_name":"Extra Large","opt_cn_name":"特大","price":10.95}]
+	]
+},
+{"id":34,"type":"noodles","cn_name":"海鮮湯粉/面","en_name":"Seafood","price":8.95,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":8.95},{"opt_name":"Large ","opt_cn_name":"大","price":9.75},{"opt_name":"Extra Large","opt_cn_name":"特大","price":12.75}]
+	]
+},
+{"id":35,"type":"noodles","cn_name":"蔬菜清湯粉/面","en_name":"Vegetarian","price":6.5,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":6.5},{"opt_name":"Large ","opt_cn_name":"大","price":7.5},{"opt_name":"Extra Large","opt_cn_name":"特大","price":9.95}]
+	]
+},
+{"id":36,"type":"noodles","cn_name":"越式茄汁牛腩粉/面","en_name":"Beef Brisket, Carrot Stew","price":7.5,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":7.5},{"opt_name":"Large ","opt_cn_name":"大","price":8.5},{"opt_name":"Extra Large","opt_cn_name":"特大","price":11.95}]
+	]
+},
+{"id":37,"type":"noodles","cn_name":"沙爹粉","en_name":"Satay Beef","price":7.5,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":7.5},{"opt_name":"Large ","opt_cn_name":"大","price":8.5},{"opt_name":"Extra Large","opt_cn_name":"特大","price":10.95}]
+	]
+},
+{"id":38,"type":"noodles","cn_name":"椰汁咖喱雞檬/面","en_name":"Curry Chicken w/ Vermicelli","price":7.5,
+	"options":[[{"opt_name":"Vermicelli ","opt_cn_name":"檬","price":0},{"opt_name":"Noodle","opt_cn_name":"面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":7.5},{"opt_name":"Large ","opt_cn_name":"大","price":8.5},{"opt_name":"Extra Large","opt_cn_name":"特大","price":10.95}]
+	]
+},
+{"id":39,"type":"noodles","cn_name":"越南順化檬","en_name":"Hue Style - Beef Shank, Vietnamese","price":7.25,
+	"options":[[{"opt_name":"Small","opt_cn_name":"細","price":7.25},{"opt_name":"Large ","opt_cn_name":"大","price":8.5},{"opt_name":"Extra Large","opt_cn_name":"特大","price":11.25}]]
+},
+{"id":40,"type":"noodles","cn_name":"牛/雞肉香茅椰汁咖喱豆腐粉/面","en_name":"Laksa Style - Beef / Chicken & Tofu in Spicy Lemongrass Coconut Curry Soup","price":7.5,
+	"options":[[{"opt_name":"Fresh Rice Noodle","opt_cn_name":"面","price":0},{"opt_name":"Dry Thin Rice Noodle","opt_cn_name":"粉","price":0},{"opt_name":"Egg Noodle","opt_cn_name":"蛋黄面","price":0}],
+		[{"opt_name":"Small","opt_cn_name":"細","price":7.5},{"opt_name":"Large ","opt_cn_name":"大","price":8.5},{"opt_name":"Extra Large","opt_cn_name":"特大","price":11.5}],
+		[{"opt_name":"Beef","opt_cn_name":"牛"},{"opt_name":"Chicken ","opt_cn_name":"雞"}]
+	]
+},
+{"id":41,"type":"noodles","cn_name":"三色檬 (肉絲+雞絲+蛋絲)","en_name":"Tri-Mix Vermicelli with Chicken, Vietnamese Sausage & Egg","price":7.25,
+	"options":[[{"opt_name":"Small","opt_cn_name":"細","price":7.25},{"opt_name":"Large ","opt_cn_name":"大","price":8.25},{"opt_name":"Extra Large","opt_cn_name":"特大","price":10.95}]]
+},
+{"id":42,"type":"noodles","cn_name":"美拖粉 (干或湯)","en_name":"My-Tho Style - Japanese Glass Noodle w/ Seafood, Pork in Soup / Soup on the side","price":7.95,
+	"options":[[{"opt_name":"Small","opt_cn_name":"細","price":7.95},{"opt_name":"Large ","opt_cn_name":"大","price":9.25},{"opt_name":"Extra Large","opt_cn_name":"特大","price":12.95}]]
+},
+{"id":43,"type":"noodles","cn_name":"蟹肉瀨粉","en_name":"Shrimp & Crab U-Don Noodle with Vietnamese Sausage in Thick Egg Drop Soup","price":8.95},
+{"id":44,"type":"noodles","cn_name":"蟹肉湯米粉","en_name":"Sweet & Sour Crab Soup with Vermicelli","price":8.75},
+{"id":45,"type":"noodles","cn_name":"福建米黃","en_name":"Fu-Kien Style - Vermicelli & Miki Noodle w/ Seafood, Pork & Shrimp Cracker","price":8.95},
+{"id":46,"type":"noodles","cn_name":"金邊分","en_name":"Nam Vang Style - Thin Noodle with Seafood, Pork & Shrimp Cracker","price":8.95},
+{"id":47,"type":"noodles","cn_name":"幼筍清燉鴨檬","en_name":"Bamboo & Duck, Thick Vermicelli Noodle with Ginger Sauce","price":8.5},
+{"id":48,"type":"noodles","cn_name":"冬菇紅棗鴨面","en_name":"Herbal Stewed Duck, Egg Noodle","price":8.95},
+{"id":49,"type":"salads","cn_name":"芒果鮮蝦仁雞絲沙律","en_name":"Thai Mango Salad with Shrimp & Chicken","price":9.95},
+{"id":50,"type":"salads","cn_name":"青檸牛肉沙律","en_name":"Lime Beef Salad","price":12.5},
 {
 	"id": 51,
 	"type": "cyo",
@@ -144,4 +175,67 @@
 	"en_name": "Vietnamese Wrap & Roll Plattter with Choice of 3 Items",
 	"num_of_choices": 3,
 	"price": 12.95
-}]
+},
+{"id":54,"type":"woks","cn_name":"香茅炒牛或雞","en_name":"Lemongrass Beef or Chicken","price":8.5,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛","price":0},{"opt_name":"Chicken","opt_cn_name":"雞","price":0}]]
+},
+{"id":55,"type":"woks","cn_name":"椰汁咖喱炒牛或雞","en_name":"Basil Curry Beef or Chicken","price":8.95,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛","price":0},{"opt_name":"Chicken","opt_cn_name":"雞","price":0}]]
+},
+{"id":56,"type":"woks","cn_name":"薑絲炒牛或雞","en_name":"Ginger Beef or Chicken","price":8.5,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛","price":0},{"opt_name":"Chicken","opt_cn_name":"雞","price":0}]]
+},
+{"id":57,"type":"woks","cn_name":"芒果炒牛或雞","en_name":"Mango Beef or Chicken","price":10.5,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛","price":0},{"opt_name":"Chicken","opt_cn_name":"雞","price":0}]]
+},
+{"id":58,"type":"woks","cn_name":"沙爹牛或雞跟炒檬,飯","en_name":"Satay Beef or Chicken","price":8.95,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛","price":0},{"opt_name":"Chicken","opt_cn_name":"雞","price":0}],
+		[{"opt_name":"Vermicelli","opt_cn_name":"炒檬"},{"opt_name":"Fried Rice","opt_cn_name":"炒飯"}]
+	]
+},
+{"id":59,"type":"woks","cn_name":"香葉炒牛或雞","en_name":"Caramelized Basil Beef or Chicken","price":9.25,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛","price":0},{"opt_name":"Chicken","opt_cn_name":"雞","price":0}]]
+},
+{"id":60,"type":"woks","cn_name":"越式宮爆雞丁","en_name":"Caramelized Spicy Cashew Chicken","price":9.5},
+{"id":61,"type":"woks","cn_name":"越式煎酸甜排骨飯","en_name":"Caramelized Garlic Spareribs","price":8.5},
+{"id":62,"type":"woks","cn_name":"越式煎酸甜魚片反","en_name":"Caramelized Spicy Filet of Sole","price":9.5},
+{"id":63,"type":"woks","cn_name":"越式煎酸甜蝦飯","en_name":"Caramelized Garlic Tiger Shrimps","price":9.95},
+{"id":64,"type":"woks","cn_name":"越式蒜蓉鹵水大頭蝦飯","en_name":"Jumbo Shrimp Sauteed in Garlic Lobster Sauce","price":15.95},
+{"id":65,"type":"woks","cn_name":"越式香草咖喱大頭蝦飯","en_name":"Jumbo Shrimp in Basil Curry","price":15.95},
+{"id":66,"type":"woks","cn_name":"家鄉青菜炒豆腐飯","en_name":"Stir-Fried Tofu and Vegetables","price":8.75},
+{"id":67,"type":"rices","cn_name":"海南雞飯","en_name":"Hunan Style Steamed Chicken Served with Garlic Ginger Fried Rice & Bok Choy","price":7.95},
+{"id":68,"type":"rices","cn_name":"椰汁咖喱雞或牛飯","en_name":"Stewed Cury Chicken / Beef","price":8.5,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛","price":0},{"opt_name":"Chicken","opt_cn_name":"雞","price":0}]]
+},
+{"id":69,"type":"rices","cn_name":"椰汁咖喱蔬菜飯或檬","en_name":"Stewed Curry Vegetables","price":8.5,
+	"options":[[{"opt_name":"Vermicelli","opt_cn_name":"炒檬"},{"opt_name":"Fried Rice","opt_cn_name":"炒飯"}]]
+},
+{"id":70,"type":"rices","cn_name":"越式茄汁牛腩飯","en_name":"Beef Brisket, Carrot Stew","price":7.95},
+{"id":71,"type":"friedRiceNoodles","cn_name":"西貢炒飯","en_name":"Saigon Fried Rice with Shrimps, Pork Sausage and Vietnamese Sausage","price":9.75},
+{"id":72,"type":"friedRiceNoodles","cn_name":"泰式炒飯","en_name":"Thai Pineapple Fried Rice with Shrimps, Chicken, Raisins and Cashews","price":10.95},
+{"id":73,"type":"friedRiceNoodles","cn_name":"八寶茄汁飯 (鮮蝦,雞肉,臘腸,蛋)","en_name":"Hidden Treasures Tomato Fried Rice w/ Shrimps, Chicken & Pork Sausage Topped with Sunny-Side-Up Egg","price":9.5},
+{"id":74,"type":"friedRiceNoodles","cn_name":"泰式炒粉 或沙爹,酸子,咖喱","en_name":"Pad Thai: House, Satay, Curry or Tamarined Stir-Fried Rice Noodles with Tiger Shrimps, Chicken or Tofu","price":9.75,
+	"options":[[{"opt_name":"Thai","opt_cn_name":"泰式","price":0},{"opt_name":"Satay","opt_cn_name":"沙爹","price":0},{"opt_name":"Curry","opt_cn_name":"咖喱","price":0},{"opt_name":"Tamarind","opt_cn_name":"酸子","price":0}]]
+},
+{"id":75,"type":"friedRiceNoodles","cn_name":"炒飯, 粉或酥脆面","en_name":"Fried Rice, Egg or Rice Noodles ","price":9.25,
+	"options":[[{"opt_name":"Fried Rice","opt_cn_name":"炒飯","price":0},{"opt_name":"Egg Noodles","opt_cn_name":"酥脆面","price":0},{"opt_name":"Rice Noodles","opt_cn_name":"炒粉","price":0}]]
+},
+{"id":76,"type":"dinners","cn_name":"越式酸辣湯","en_name":"Vietnamese Hot & Sour Soup","price":8.95,
+	"options":[[{"opt_name":"Shrimp","opt_cn_name":"蝦","price":10.95},{"opt_name":"Fish","opt_cn_name":"魚","price":10.95},{"opt_name":"Chicken","opt_cn_name":"雞","price":8.95}]]
+},
+{"id":77,"type":"dinners","cn_name":"酸辣冬陰功湯","en_name":"Tom Yum Soup (Hot and Sour)","price":8.95,
+	"options":[[{"opt_name":"Shrimp","opt_cn_name":"蝦","price":10.95},{"opt_name":"Chicken","opt_cn_name":"雞","price":8.95},{"opt_name":"Vegetables","opt_cn_name":"蔬菜","price":8.95}]]
+},
+{"id":78,"type":"dinners","cn_name":"越式椰汁辣湯","en_name":"Tom Kha Soup - Spicy Coconut Soup","price":8.95,
+	"options":[[{"opt_name":"Shrimp","opt_cn_name":"蝦","price":10.95},{"opt_name":"Chicken","opt_cn_name":"雞","price":8.95},{"opt_name":"Vegetables","opt_cn_name":"蔬菜","price":8.95}]]
+},
+{"id":79,"type":"dinners","cn_name":"瓦煲魚柳","en_name":"Caramelized Filet of Sole in Clay Pot","price":11.95},
+{"id":80,"type":"dinners","cn_name":"蕉葉紅咖喱蒸魚柳","en_name":"Steamed Filet of Sole in Red Curry wrapped in Banana Leaf","price":12.95},
+{"id":81,"type":"dinners","cn_name":"香茅香芒炒魚柳","en_name":"Lightly Battered Lemongrass Filet of Sole Stir-Fried with Mango","price":13.95},
+{"id":82,"type":"dinners","cn_name":"蒜香脆蝦","en_name":"Caramelized Garlic Shrimp","price":10.95},
+{"id":83,"type":"dinners","cn_name":"蒜香牛柳粒","en_name":"Cubed Steak Stir-Fried in Garlic and House Spices","price":14.95},
+{"id":84,"type":"dinners","cn_name":"時菜炒牛/雞","en_name":"Beef or Chicken Stir-Fried w/ Vegetables","price":12.95,
+	"options":[[{"opt_name":"Beef","opt_cn_name":"牛"},{"opt_name":"Chicken","opt_cn_name":"雞"}]]
+},
+{"id":85,"type":"dinners","cn_name":"香茅焗排骨","en_name":"Grilled Spicy Lemongrass Side Ribs","price":12.95},
+{"id":86,"type":"dinners","cn_name":"白飯","en_name":"Steamed Rice","price":1.5}]

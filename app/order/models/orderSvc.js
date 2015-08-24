@@ -8,7 +8,11 @@ app.service('Order', function() {
 		lightCourses: [],
 		noodles: [],
 		salads: [],
-		cyo: []
+		cyo: [],
+		woks: [],
+		rices: [],
+		friedRiceNoodles: [],
+		dinners: []
 	};
 	
 	this.info = {

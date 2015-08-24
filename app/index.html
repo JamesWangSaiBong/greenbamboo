@@ -123,6 +123,22 @@
 					</div>
 				</gb-menu-section>
 				
+				<gb-menu-section title="From The Wok">
+					<gb-menu-item ng-repeat="item in menu.woks" item="item"></gb-menu-item>
+				</gb-menu-section>
+				
+				<gb-menu-section title="Rice Dishes"> 
+					<gb-menu-item ng-repeat="item in menu.rices" item="item"></gb-menu-item>
+				</gb-menu-section>
+				
+				<gb-menu-section title="Fried Rice & Noodle">
+					<gb-menu-item ng-repeat="item in menu.friedRiceNoodles" item="item"></gb-menu-item>
+				</gb-menu-section>
+				
+				<gb-menu-section title="Dinner Menu">
+					<gb-menu-item ng-repeat="item in menu.dinners" item="item"></gb-menu-item>
+				</gb-menu-section>
+				
 			</gb-menu>
 			
 		</article>

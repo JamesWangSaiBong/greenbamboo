@@ -31,6 +31,22 @@
 				<h3>Choose Your Own</h3>
 				<gb-order-item ng-repeat="item in order.items.cyo" item="item" method="removeDish(item)"></gb-order-item>
 			</article>
+			<article ng-show="order.items.woks.length != 0" class="order-section">
+				<h3>From The Wok</h3>
+				<gb-order-item ng-repeat="item in order.items.woks" item="item" method="removeDish(item)"></gb-order-item>
+			</article>
+			<article ng-show="order.items.woks.length != 0" class="order-section">
+				<h3>Rice Dishes</h3>
+				<gb-order-item ng-repeat="item in order.items.rices" item="item" method="removeDish(item)"></gb-order-item>
+			</article>
+			<article ng-show="order.items.friedRiceNoodles.length != 0" class="order-section">
+				<h3>Rice Dishes</h3>
+				<gb-order-item ng-repeat="item in order.items.friedRiceNoodles" item="item" method="removeDish(item)"></gb-order-item>
+			</article>
+			<article ng-show="order.items.dinners.length != 0" class="order-section">
+				<h3>Rice Dishes</h3>
+				<gb-order-item ng-repeat="item in order.items.dinners" item="item" method="removeDish(item)"></gb-order-item>
+			</article>
 		</ul>
 		<div class="order-price">
 			<h5>{{ order.info.quantity }} items:</h5>

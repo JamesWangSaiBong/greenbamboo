@@ -7,7 +7,11 @@ app.service('ItemIdentifier', function(MenuItem, AdvanceMenuItem, CYOMenuItem) {
 		lightCourses: [],
 		vegetables: [],
 		salads: [],
-		cyo: []
+		cyo: [],
+		woks: [],
+		rices: [],
+		friedRiceNoodles: [],
+		dinners: []
 	};
 	
 	this.identifyMenuItem  = function(menuItems) {
@@ -23,12 +27,20 @@ app.service('ItemIdentifier', function(MenuItem, AdvanceMenuItem, CYOMenuItem) {
 				if(menuItems[i].type === 'lightCourses') { menu.lightCourses.push(new MenuItem(menuItems[i])) };
 				if(menuItems[i].type === 'vegetables') { menu.vegetables.push(new MenuItem(menuItems[i])) };
 				if(menuItems[i].type === 'salads') { menu.salads.push(new MenuItem(menuItems[i])) };
+				if(menuItems[i].type === 'woks') { menu.woks.push(new MenuItem(menuItems[i])) };
+				if(menuItems[i].type === 'rices') { menu.rices.push(new MenuItem(menuItems[i])) };
+				if(menuItems[i].type === 'friedRiceNoodles') { menu.friedRiceNoodles.push(new MenuItem(menuItems[i])) };
+				if(menuItems[i].type === 'dinners') { menu.dinners.push(new MenuItem(menuItems[i])) };
 			} else if(!!menuItems[i].options) {
 				if(menuItems[i].type === 'appetizers') { menu.appetizers.push(new AdvanceMenuItem(menuItems[i])) };
 				if(menuItems[i].type === 'noodles') { menu.noodles.push(new AdvanceMenuItem(menuItems[i])) };
 				if(menuItems[i].type === 'lightCourses') { menu.lightCourses.push(new AdvanceMenuItem(menuItems[i])) };
 				if(menuItems[i].type === 'vegetables') { menu.vegetables.push(new AdvanceMenuItem(menuItems[i])) };
 				if(menuItems[i].type === 'salads') { menu.salads.push(new AdvanceMenuItem(menuItems[i])) };
+				if(menuItems[i].type === 'woks') { menu.woks.push(new AdvanceMenuItem(menuItems[i])) };
+				if(menuItems[i].type === 'rices') { menu.rices.push(new AdvanceMenuItem(menuItems[i])) };
+				if(menuItems[i].type === 'friedRiceNoodles') { menu.friedRiceNoodles.push(new AdvanceMenuItem(menuItems[i])) };
+				if(menuItems[i].type === 'dinners') { menu.dinners.push(new AdvanceMenuItem(menuItems[i])) };
 			}			
 		};
 		return menu;
