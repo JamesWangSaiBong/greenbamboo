@@ -36,10 +36,8 @@ app.controller('menuCtrl', function($scope, $modal, $rootScope, Menu, Order) {
 		});
 		modalInstance.result.then(function(response) {
 			$scope.open = false;
-			console.log(response);
 		}, function(response) {
 			$scope.open = false;
-			console.log(response);
 		});
 	}
 		

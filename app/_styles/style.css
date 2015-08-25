@@ -526,3 +526,17 @@ div#cyo-complete > button {
 	font-size: 1.25em;
 	border-top: 1px solid black;
 }
+
+.modal-footer > p {
+	font-style:italic;
+}
+
+#call-btn {
+	height: 34px;
+	padding: 0;
+}
+
+#call-btn > a {
+	padding: 12px 6px;
+	color: white;
+}

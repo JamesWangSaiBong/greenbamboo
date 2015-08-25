@@ -62,7 +62,12 @@
 		</div>
 	</section>
 	<footer class="modal-footer">
+		<p>Call (416)-292-7961 to place your order</p>
 		<button class="btn btn-warning" ng-click="close()">Close</button>
-		<button class="btn btn-primary" ng-click="ok()">Complete</button>
+		<button id="call-btn" class="btn btn-primary" ng-click="ok()">
+			<a href="tel:+14162927961">
+				<i class="glyphicon glyphicon-earphone"></i> Call
+			</a>
+		</button>
 	</footer>
 </article>
