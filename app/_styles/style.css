@@ -38,7 +38,7 @@ ul {
 	Flex boxes for section that includes number, location and hours
 ============================================================================= */
 #gb-contact-info {
-	padding: 16px 1em 0 1em;
+	padding: 16px 1em 16px 1em;
 	
 	display:-webkit-flex;
 	display: -ms-flexbox;

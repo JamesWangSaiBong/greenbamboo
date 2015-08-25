@@ -64,7 +64,7 @@
 	}
 	
 	#exterior-img {
-		margin-top: 42px;
+		margin-top: 12px;
 	}
 	
 	/* =====================================================================
@@ -85,7 +85,7 @@
 		-webkit-border-radius: 10px;
 		-moz-border-radius: 10px;
 	}
-	
+
 	#free-delivery {
 		color: #9E9E9E;
 		font-size:0.825em;
@@ -107,6 +107,10 @@
 	/* Override ng-hide class for element */
 	#gb-deli-info > img.ng-hide {
 		display: block !important;
+	}
+	
+	#gb-deli-info > img {
+		margin-top:32px;
 	}
 	
 	/* Hide toggle-map-open button in element */
