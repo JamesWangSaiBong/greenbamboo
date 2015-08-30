@@ -53,7 +53,7 @@
 		<!-- end -->
 	</head>
 
-	<body ng-controller="menuCtrl">
+	<body class="container-fluid" ng-controller="menuCtrl">
 		<header>
 			<image id="mobile-banner" src="_assets/banner.jpg" style="height:auto; max-width:100%"/>
 			<image id="web-banner" src="_assets/website-banner.jpg" style="height:auto; max-width:100%"/>
@@ -77,7 +77,8 @@
 				<p ng-show="!order.info.quantity" style="display:inline">Place your order</p>
 				<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
 				<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
-			</section>			
+			</section>
+			
 			<div id="menu-heading">
 				<h1>MENU</h1>
 				<div class="btn-group">
