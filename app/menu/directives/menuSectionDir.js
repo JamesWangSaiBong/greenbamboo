@@ -1,5 +1,5 @@
 'use strict'
-app.directive('gbMenuSection', function() {
+app.directive('gbMenuSection', function($window) {
 	return {
 		replace: true,
 		restrict: 'E',
@@ -12,15 +12,20 @@ app.directive('gbMenuSection', function() {
 		templateUrl: 'menu/directives/menuSectionDir.html',
 		link: function(scope, el, attrs, gbMenuCtrl) {
 			
-			scope.displayTitle = scope.cnTitle;
-			
 			gbMenuCtrl.addSection(scope);
 			
-			scope.select = function() {
-				gbMenuCtrl.select(scope);
-			}
+			scope.displayTitle = scope.cnTitle;
+			
+			scope.openSection = false;
+			
 		},
 		controller: function($scope) {
+			$scope.toggleOpen = function() {
+				if($window.innerWidth < 640) {
+					$scope.openSection = !$scope.openSection;
+				}
+			}
+			
 			$scope.$on('CHANGE_LANG', function(event, lang) {
 				switch (lang) {
 					case 'cn':

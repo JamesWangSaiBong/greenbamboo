@@ -53,7 +53,7 @@
 		<!-- end -->
 	</head>
 
-	<body class="container-fluid" ng-controller="menuCtrl">
+	<body ng-controller="menuCtrl">
 		<header>
 			<image id="mobile-banner" src="_assets/banner.jpg" style="height:auto; max-width:100%"/>
 			<image id="web-banner" src="_assets/website-banner.jpg" style="height:auto; max-width:100%"/>
@@ -71,45 +71,23 @@
 			<gb-delivery-info id="web-delivery-info"></gb-delivery-info>
 		</section>
 				
-		<article id="mobile-menu">
-		
-			<section ng-click="openModal()" id="order-tab" style="cursor:pointer">
-				<p ng-show="!order.info.quantity" style="display:inline">Place your order</p>
-				<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
-				<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
-			</section>
-			
-			<div id="menu-heading">
-				<h1>MENU</h1>
-				<div class="btn-group">
-					<label class="btn btn-success" ng-model="menuLang" btn-radio="'cn'">CN</label>
-					<label class="btn btn-success" ng-model="menuLang" btn-radio="'en'">EN</label>
-				</div>
+		<hgroup id="menu-heading">
+			<h1>MENU</h1>
+			<div class="btn-group">
+				<label class="btn btn-success" ng-model="menuLang" btn-radio="'cn'">CN</label>
+				<label class="btn btn-success" ng-model="menuLang" btn-radio="'en'">EN</label>
 			</div>
-			
-			<gb-menu style="margin-bottom: 40px;">
-				
-				<gb-menu-section title="Appetizers" cn-title="各式小食">
-					<gb-menu-item ng-repeat="item in menu.appetizers" item="item"></gb-menu-item>
-				</gb-menu-section>
-				
-				<gb-menu-section title="Vegetables" cn-title="蔬菜">
-					<gb-menu-item ng-repeat="item in menu.vegetables" item="item"></gb-menu-item>
-				</gb-menu-section>
-				
-				<gb-menu-section title="Light Courses" cn-title="各式粉卷,麵包類">
-					<gb-menu-item ng-repeat="item in menu.lightCourses" item="item"></gb-menu-item>
-				</gb-menu-section>
-				
+		</hgroup>
+		
+		<article id="menu">
+			<gb-menu open-md='true' open-lg="true" class="one">
 				<gb-menu-section title="Soup Noodles" cn-title="各式湯粉,面,檬類">
 					<gb-menu-item ng-repeat="item in menu.noodles" item="item"></gb-menu-item>
 				</gb-menu-section>
-				
-				<gb-menu-section title="Salads" cn-title="沙律">
-					<gb-menu-item ng-repeat="item in menu.salads" item="item"></gb-menu-item>
-				</gb-menu-section>
-				
-				<gb-menu-section title="Choose Your Own" cn-title="檬,飯或粉+自配菜">
+			</gb-menu>
+			
+			<gb-menu open-lg="true" class="two">
+				<gb-menu-section title="Choose Your Own" cn-title="自配檬,飯或粉">
 					<gb-menu-item ng-repeat="item in menu.cyo" item="item" emit-item="setCYOItem(item)"></gb-menu-item>
 					<h5 id="cyo-options-heading" ng-show="activeCYO">Pick {{ activeCYO.numOfChoices }} items of your choice</h5>
 					<p ng-if="alertMsg">{{ alertMsg }}</p>
@@ -123,170 +101,53 @@
 						<button class="btn btn-success" ng-click="completeCYO()">Complete</button>
 					</div>
 				</gb-menu-section>
-				
+			</gb-menu>
+			
+			<gb-menu open-md="true" class="three">
 				<gb-menu-section title="From The Wok" cn-title="青竹小炒">
 					<gb-menu-item ng-repeat="item in menu.woks" item="item"></gb-menu-item>
-				</gb-menu-section>
-				
-				<gb-menu-section title="Rice Dishes" cn-title="飯類"> 
-					<gb-menu-item ng-repeat="item in menu.rices" item="item"></gb-menu-item>
 				</gb-menu-section>
 				
 				<gb-menu-section title="Fried Rice & Noodle" cn-title="各式炒飯,炒粉,檬,面">
 					<gb-menu-item ng-repeat="item in menu.friedRiceNoodles" item="item"></gb-menu-item>
 				</gb-menu-section>
-				
+			</gb-menu>
+			
+			<gb-menu open-when="lg" class="four">
 				<gb-menu-section title="Dinner Menu" cn-title="晚餐精選">
 					<gb-menu-item ng-repeat="item in menu.dinners" item="item"></gb-menu-item>
 				</gb-menu-section>
 				
+				<gb-menu-section title="Rice Dishes" cn-title="飯類"> 
+					<gb-menu-item ng-repeat="item in menu.rices" item="item"></gb-menu-item>
+				</gb-menu-section>
 			</gb-menu>
 			
-		</article>
+			<gb-menu open-lg="true" class="five">
+				<gb-menu-section title="Appetizers" cn-title="各式小食">
+					<gb-menu-item ng-repeat="item in menu.appetizers" item="item"></gb-menu-item>
+				</gb-menu-section>
+				<gb-menu-section title="Light Courses" cn-title="各式粉卷,麵包類">
+					<gb-menu-item ng-repeat="item in menu.lightCourses" item="item"></gb-menu-item>
+				</gb-menu-section>
+			</gb-menu>
+			
+			<gb-menu class="six">
+				<gb-menu-section title="Vegetables" cn-title="蔬菜">
+					<gb-menu-item ng-repeat="item in menu.vegetables" item="item"></gb-menu-item>
+				</gb-menu-section>
+				
+				<gb-menu-section title="Salads" cn-title="沙律">
+					<gb-menu-item ng-repeat="item in menu.salads" item="item"></gb-menu-item>
+				</gb-menu-section>
+			</gb-menu>
+		</article>	
 		
-		<article id="web-menu">
-			<div id="menu-heading">
-				<h1>MENU</h1>
-				<div class="btn-group">
-					<label class="btn btn-success" ng-model="menuLang" btn-radio="'cn'">CN</label>
-					<label class="btn btn-success" ng-model="menuLang" btn-radio="'en'">EN</label>
-				</div>
-			</div>
-			<section id="two-col-menu">
-				<gb-menu class="menu-col">
-					<gb-menu-section title="From The Wok" cn-title="青竹小炒">
-						<gb-menu-item ng-repeat="item in menu.woks" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Appetizers" cn-title="各式小食">
-						<gb-menu-item ng-repeat="item in menu.appetizers" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Light Courses" cn-title="各式粉卷,麵包類">
-						<gb-menu-item ng-repeat="item in menu.lightCourses" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Vegetables" cn-title="蔬菜">
-						<gb-menu-item ng-repeat="item in menu.vegetables" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Salads" cn-title="沙律">
-						<gb-menu-item ng-repeat="item in menu.salads" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-				</gb-menu>
-				
-				<gb-menu class="menu-col">
-					
-					<gb-menu-section title="Soup Noodles" cn-title="各式湯粉,面,檬類">
-						<gb-menu-item ng-repeat="item in menu.noodles" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Choose Your Own" cn-title="檬,飯或粉+自配菜">
-						<gb-menu-item ng-repeat="item in menu.cyo" item="item" emit-item="setCYOItem(item)"></gb-menu-item>
-						<h5 id="cyo-options-heading" ng-show="activeCYO">Pick {{ activeCYO.numOfChoices }} items of your choice</h5>
-						<p ng-if="alertMsg">{{ alertMsg }}</p>
-						<ul id="cyo-options">
-							<li ng-repeat="opt in cyoOptions" ng-click="toggleCYOChoice(opt)" ng-class="opt.isSelected ? 'selected-option' : ''">
-								<a>{{ opt.name }} <span ng-if="opt.addPrice">+{{ opt.addPrice | currency }}</span></a>
-							</li>
-						</ul>
-						<div id="cyo-complete">
-							<p ng-if="completeCYOMsg">{{ completeCYOMsg }}</p>
-							<button class="btn btn-success" ng-click="completeCYO()">Complete</button>
-						</div>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Rice Dishes" cn-title="飯類"> 
-						<gb-menu-item ng-repeat="item in menu.rices" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Fried Rice & Noodle" cn-title="各式炒飯,炒粉,檬,面">
-						<gb-menu-item ng-repeat="item in menu.friedRiceNoodles" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Dinner Menu" cn-title="晚餐精選">
-						<gb-menu-item ng-repeat="item in menu.dinners" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-				</gb-menu>
-			</section>
-			
-			<section id="three-col-menu">
-				<gb-menu class="menu-col">
-					<gb-menu-section title="Appetizers" cn-title="各式小食">
-						<gb-menu-item ng-repeat="item in menu.appetizers" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					
-					<gb-menu-section title="Vegetables" cn-title="蔬菜">
-						<gb-menu-item ng-repeat="item in menu.vegetables" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Salads" cn-title="沙律">
-						<gb-menu-item ng-repeat="item in menu.salads" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-				</gb-menu>
-				
-				<gb-menu class="menu-col">
-				
-				
-					<gb-menu-section title="From The Wok" cn-title="青竹小炒">
-						<gb-menu-item ng-repeat="item in menu.woks" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Light Courses" cn-title="各式粉卷,麵包類">
-						<gb-menu-item ng-repeat="item in menu.lightCourses" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Rice Dishes" cn-title="飯類"> 
-						<gb-menu-item ng-repeat="item in menu.rices" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Fried Rice & Noodle" cn-title="各式炒飯,炒粉,檬,面">
-						<gb-menu-item ng-repeat="item in menu.friedRiceNoodles" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					
-					
-				</gb-menu>
-				
-				<gb-menu class="menu-col">
-					
-					<gb-menu-section title="Soup Noodles" cn-title="各式湯粉,面,檬類">
-						<gb-menu-item ng-repeat="item in menu.noodles" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-					
-					<gb-menu-section title="Choose Your Own" cn-title="檬,飯或粉+自配菜">
-						<gb-menu-item ng-repeat="item in menu.cyo" item="item" emit-item="setCYOItem(item)"></gb-menu-item>
-						<h5 id="cyo-options-heading" ng-show="activeCYO">Pick {{ activeCYO.numOfChoices }} items of your choice</h5>
-						<p ng-if="alertMsg">{{ alertMsg }}</p>
-						<ul id="cyo-options">
-							<li ng-repeat="opt in cyoOptions" ng-click="toggleCYOChoice(opt)" ng-class="opt.isSelected ? 'selected-option' : ''">
-								<a>{{ opt.name }} <span ng-if="opt.addPrice">+{{ opt.addPrice | currency }}</span></a>
-							</li>
-						</ul>
-						<div id="cyo-complete">
-							<p ng-if="completeCYOMsg">{{ completeCYOMsg }}</p>
-							<button class="btn btn-success" ng-click="completeCYO()">Complete</button>
-						</div>
-					</gb-menu-section>
-					
-					<gb-menu-section title="Dinner Menu" cn-title="晚餐精選">
-						<gb-menu-item ng-repeat="item in menu.dinners" item="item"></gb-menu-item>
-					</gb-menu-section>
-					
-				</gb-menu>
-			</section>
-			
-			<section ng-click="openModal()" id="order-tab" style="cursor:pointer">
-				<p ng-show="!order.info.quantity" style="display:inline">Place your order</p>
-				<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
-				<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
-			</section>	
-		</article>
+		<section ng-click="openModal()" id="order-tab" style="cursor:pointer">
+			<p ng-show="!order.info.quantity" style="display:inline">Place your order</p>
+			<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
+			<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
+		</section>
 		
 	</body>
 </html>

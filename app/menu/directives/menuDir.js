@@ -1,33 +1,35 @@
 'use strict'
 
-app.directive('gbMenu', function() {
+app.directive('gbMenu', function($window) {
 	return {
 		restrict: 'E',
 		transclude: true,
 		replace: true,
 		scope: {},
 		templateUrl: 'menu/directives/menuDir.html',
+		link: function(scope, el, attrs) {
+			console.log(scope.sections);
+		},
 		controller: function($scope) {
-			this.sections = [];
+			$scope.sections = [];
 			
-			this.addSection = function(section) {
-				
-				var that = this;
-				that.sections.push(section);
-				if(that.sections.length === 1) {
-					section.isSelected = true;
-				}
+			this.addSection = function(section) {	
+				$scope.sections.push(section);
 			}
 			
-			this.select = function(section) {
-				var that = this;
-				section.isSelected = true;
-				for(var i=0; i<that.sections.length; i++) {
-					if(that.sections[i] !== section) {
-						that.sections[i].isSelected = false;
+			$scope.$watch(function() {
+				return $window.innerWidth;
+			}, function(newVal) {
+				if(newVal < 640) {
+					for(var i=0; i<$scope.sections.length; i++) {
+						$scope.sections[i].openSection = false;
+					}
+				} else {
+					for(var i=0; i<$scope.sections.length; i++) {
+						$scope.sections[i].openSection = true;
 					}
 				}
-			}
+			})
 		}
 	}
 });

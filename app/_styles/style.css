@@ -4,7 +4,7 @@ body {
 	background-color:#EDE8E1;
 }
 
-header, section, footer, aside, nav, article, figure, figcaption {
+header, section, hgroup, footer, aside, nav, article, figure, figcaption {
 	display:block;
 }
 
@@ -32,11 +32,6 @@ ul {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
 	display: none !important;
-}
-
-.container-fluid {
-	padding-right: 0;
-	padding-left: 0;
 }
 
 /* ============================================================================
@@ -113,25 +108,20 @@ ul {
 	Menu section - Menu header & Section header
 ============================================================================= */
 
-#mobile-menu {
-	position: relative;
+#menu {
 	display:-webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 	
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	
-	-webkit-justify-content: flex-start;
-	-ms-flex-pack: start;
-	justify-content: flex-start;
-	
-	-webkit-align-items: stretch;
-	-ms-flex-align: stretch;
-	align-items: stretch;
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
 }
 
+#menu > ul {
+	width: 100%;
+	justify-content: flex-start;
+}
 
 #menu-heading {
 	position: relative;
@@ -423,9 +413,7 @@ div#cyo-complete > button {
 #order-tab {
 	font-size: 1em;
 	font-weight: bold;
-	position: absolute;
 	text-align: right;
-	bottom:0;
 	width: 100%;
 	background-color: #EDE8E1;
 	color: #E65100;
