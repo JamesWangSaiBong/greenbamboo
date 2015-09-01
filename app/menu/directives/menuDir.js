@@ -7,9 +7,6 @@ app.directive('gbMenu', function($window) {
 		replace: true,
 		scope: {},
 		templateUrl: 'menu/directives/menuDir.html',
-		link: function(scope, el, attrs) {
-			console.log(scope.sections);
-		},
 		controller: function($scope) {
 			$scope.sections = [];
 			

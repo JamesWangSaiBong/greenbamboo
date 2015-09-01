@@ -7,53 +7,16 @@
 		<!-- [if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif] -->
-		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="../bower_components/angular/angular.js"></script>
-		<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		
 		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="_styles/style.css">
 		<link rel="stylesheet" href="_styles/mobile-default.css">
 		<link rel="stylesheet" href="_styles/web-style.css">
+		<link rel="stylesheet" href="../bower_components/animate/animate.css">
 		
-		<script src="app.js"></script>
-		
-		<!-- partials -->
-		<script src="partials/headerSlideDir.js"></script>
-		<script src="partials/contactInfoSectionDir.js"></script>
-		<script src="partials/deliveryInfoSectionDir.js"></script>
-		
-		<!-- menu -->
-			<!-- menu-model -->
-			<script src="menu/models/menuSvc.js"></script>
-			<script src="menu/models/menuItemFactory.js"></script>
-			<script src="menu/models/advanceMenuItemFactory.js"></script>
-			<script src="menu/models/CYOMenuItemFactory.js"></script>
-			<script src="menu/models/itemIdentifierSvc.js"></script>
-			
-			<!-- menu-directives -->
-			<script src="menu/directives/qtyBtnDir.js"></script>
-			<script src="menu/directives/menuDir.js"></script>
-			<script src="menu/directives/menuSectionDir.js"></script>
-			<script src="menu/directives/menuItemDir.js"></script>
-			
-			<!-- menu-options -->
-			<script src="menu/menu-options/optionFactory.js"></script>
-			<script src="menu/menu-options/optionSetFactory.js"></script>
-			<script src="menu/menu-options/optionPanelDir.js"></script>
-		
-		<!-- order -->
-			<!-- order models -->
-			<script src="order/models/orderSvc.js"></script>
-			<script src="order/models/orderItemFactory.js"></script>
-			<script src="order/models/advanceOrderItemFactory.js"></script>
-			<script src="order/models/cyoOrderItemFactory.js"></script>
-			
-			<!-- order directives -->
-			<script src="order/directives/orderItemDir.js"></script>
-		<!-- end -->
 	</head>
 
-	<body ng-controller="menuCtrl">
+	<body ng-cloak ng-controller="menuCtrl">
 		<header>
 			<image id="mobile-banner" src="_assets/banner.jpg" style="height:auto; max-width:100%"/>
 			<image id="web-banner" src="_assets/website-banner.jpg" style="height:auto; max-width:100%"/>
@@ -143,11 +106,54 @@
 			</gb-menu>
 		</article>	
 		
-		<section ng-click="openModal()" id="order-tab" style="cursor:pointer">
+		<section ng-click="openModal()" id="order-tab" class="animated" style="cursor:pointer">
 			<p ng-show="!order.info.quantity" style="display:inline">Place your order</p>
 			<p ng-hide="!order.info.quantity" style="display:inline">You've ordered {{ order.info.quantity }} items </p>
 			<i ng-class="open ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-right'"></i>
 		</section>
+		
+		
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="../bower_components/angular/angular.js"></script>
+		<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="app.js"></script>
+		<script src="util.js"></script>
+		
+		<!-- partials -->
+		<script src="partials/headerSlideDir.js"></script>
+		<script src="partials/contactInfoSectionDir.js"></script>
+		<script src="partials/deliveryInfoSectionDir.js"></script>
+		
+		<!-- menu -->
+			<!-- menu-model -->
+			<script src="menu/models/menuSvc.js"></script>
+			<script src="menu/models/menuItemFactory.js"></script>
+			<script src="menu/models/advanceMenuItemFactory.js"></script>
+			<script src="menu/models/CYOMenuItemFactory.js"></script>
+			<script src="menu/models/itemIdentifierSvc.js"></script>
+			
+			<!-- menu-directives -->
+			<script src="menu/directives/qtyBtnDir.js"></script>
+			<script src="menu/directives/menuDir.js"></script>
+			<script src="menu/directives/menuSectionDir.js"></script>
+			<script src="menu/directives/menuItemDir.js"></script>
+			
+			<!-- menu-options -->
+			<script src="menu/menu-options/optionFactory.js"></script>
+			<script src="menu/menu-options/optionSetFactory.js"></script>
+			<script src="menu/menu-options/optionPanelDir.js"></script>
+		
+		<!-- order -->
+			<!-- order models -->
+			<script src="order/models/orderSvc.js"></script>
+			<script src="order/models/orderItemFactory.js"></script>
+			<script src="order/models/advanceOrderItemFactory.js"></script>
+			<script src="order/models/cyoOrderItemFactory.js"></script>
+			
+			<!-- order directives -->
+			<script src="order/directives/orderItemDir.js"></script>
+		<!-- end -->
 		
 	</body>
 </html>
