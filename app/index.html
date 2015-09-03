@@ -43,6 +43,33 @@
 		</hgroup>
 		
 		<article id="menu">
+			<section class="thumbnail">
+				<div ng-show="menuLang == 'cn'" class="chinese">
+					<h2>最新推介</h2>
+					<div>
+						<p>烤雞潛艇三明治 (可改配牛或豬)</p>
+						<span>$4.50</span>
+					</div>
+					<div>
+						<h4>學生優惠: </h4>
+						<p>只需$4.00 加送汽水一罐</p>
+					</div>
+				</div>
+				<div ng-hide="menuLang == 'cn'" class="english">
+					<h2>Special</h2>
+						<div>
+							<p>Toasted Submarine Sandwich (with Chicken/Beef/Pork)</p>
+							<span>$4.50</span>
+						</div>
+						<div>
+							<h4>Student Discount: </h4>
+							<p>$4.00 only with a can of pop</p>
+						</div>
+				</div>
+				<img src="_assets/beef-roll.jpg" alt="..." />
+				<gb-menu-item ng-repeat="item in menu.specials" item="item"></gb-menu-item>
+			</section>
+			
 			<gb-menu open-md='true' open-lg="true" class="one">
 				<gb-menu-section title="Soup Noodles" cn-title="各式湯粉,面,檬類">
 					<gb-menu-item ng-repeat="item in menu.noodles" item="item"></gb-menu-item>

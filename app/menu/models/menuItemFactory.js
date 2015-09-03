@@ -9,6 +9,7 @@ app.factory('MenuItem', function(OrderItem, Order) {
 		this.price = item.price;
 		this.orderQuantity = 0;
 		this.isSelected = false;
+		this.isSpecial = item.special;
 	};
 	
 	MenuItem.prototype.getIsSelected = function() {

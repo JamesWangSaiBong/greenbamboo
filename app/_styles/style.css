@@ -1,5 +1,5 @@
 body {
-	
+	font-family: "Helvetica Neue", Helvetica, Arial, SimHei, '黑体', 'Hiragino Sans GB', '冬青黑体', sans-serif;
 	font-size:160%;
 	background-color:#EDE8E1;
 }
@@ -159,6 +159,71 @@ ul {
 	letter-spacing: 0.1em;
 	word-spacing: 0.15em;
 	color: white
+}
+
+/* ============================================================================
+	Thumbnail
+============================================================================= */
+#menu > section.thumbnail > div > h2{
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #BDBDBD;
+    margin: 0 10px;
+    font-weight: bold;
+	letter-spacing: 0.1em;
+    color: #FF5722	
+}
+
+#menu > section.thumbnail > div > div {
+	position:relative;
+	margin: 10px 10px 0 10px
+}
+
+#menu > section.thumbnail > div.chinese > div > p {
+	font-size: 16px;
+	width: 85%;
+	display: inline-block;
+	padding-right: 8px;
+}
+
+#menu > section.thumbnail > div.chinese > div > span {
+	width: 15%;
+	display: inline-block;
+	float:right;
+}
+
+#menu > section.thumbnail > div.chinese > div > h4 {
+	width: 30%;
+	display: inline-block;
+}
+
+#menu > section.thumbnail > div.chinese > div > h4 + p  {
+	width: 70%;
+	float: right;
+}
+
+#menu > section.thumbnail > div.english > div > p {
+	font-size: 1em;
+	width: 85%;
+	display: inline-block;
+}
+
+#menu > section.thumbnail > div.english > div > span {
+	width: 15%;
+	display: inline-block;
+	float:right;
+	position: absolute;
+	top: 45%;
+}
+
+#menu > section.thumbnail > div.english > div > h4 {
+	font-weight: bold
+}
+
+#menu > section.thumbnail > div.english > div > h4 + p  {
+	font-style:italic;
+	text-align:right;
+	width:100%;
 }
 
 

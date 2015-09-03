@@ -26,7 +26,6 @@ app.directive('gbMenuItem', function(Order) {
 						break;
 				}
 			})
-			
 			$scope.order = function(item) {
 				//Disable it if item has already been selected
 				if(item.isSelected) { return;}

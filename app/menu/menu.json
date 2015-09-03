@@ -238,4 +238,7 @@
 	"options":[[{"opt_name":"Beef","opt_cn_name":"牛"},{"opt_name":"Chicken","opt_cn_name":"雞"}]]
 },
 {"id":85,"type":"dinners","cn_name":"香茅焗排骨","en_name":"Grilled Spicy Lemongrass Side Ribs","price":12.95},
-{"id":86,"type":"dinners","cn_name":"白飯","en_name":"Steamed Rice","price":1.5}]
+{"id":86,"type":"dinners","cn_name":"白飯","en_name":"Steamed Rice","price":1.5},
+{"id":87,"type":"lightCourses","cn_name":"烤雞/牛/豬潛艇三明治","en_name":"Toasted Submarine Sandwich with Chicken/Beef/Pork","price":4.50, "special": true,
+	"options":[[{"opt_name":"Chicken","opt_cn_name":"雞","price":4.50},{"opt_name":"Beef","opt_cn_name":"牛","price":6.00},{"opt_name":"Pork","opt_cn_name":"豬","price":4.50}]]
+}]

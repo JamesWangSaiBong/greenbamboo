@@ -11,7 +11,8 @@ app.service('ItemIdentifier', function(MenuItem, AdvanceMenuItem, CYOMenuItem) {
 		woks: [],
 		rices: [],
 		friedRiceNoodles: [],
-		dinners: []
+		dinners: [],
+		specials: []
 	};
 	
 	this.identifyMenuItem  = function(menuItems) {
@@ -41,8 +42,16 @@ app.service('ItemIdentifier', function(MenuItem, AdvanceMenuItem, CYOMenuItem) {
 				if(menuItems[i].type === 'rices') { menu.rices.push(new AdvanceMenuItem(menuItems[i])) };
 				if(menuItems[i].type === 'friedRiceNoodles') { menu.friedRiceNoodles.push(new AdvanceMenuItem(menuItems[i])) };
 				if(menuItems[i].type === 'dinners') { menu.dinners.push(new AdvanceMenuItem(menuItems[i])) };
-			}			
+			}
 		};
+		
+		//Hand-picking the special items
+		for(var i=0; i<menu.lightCourses.length; i++) {
+			if(menu.lightCourses[i].isSpecial) {
+				menu.specials.push(menu.lightCourses[i]);
+			}
+		}
+		
 		return menu;
 	}
 });
