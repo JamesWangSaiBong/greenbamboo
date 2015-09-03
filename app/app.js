@@ -8,11 +8,6 @@ app.controller('menuCtrl', function($scope, $modal, $rootScope, Menu, Order) {
 		$scope.menu = items;
 	});
 	
-	$scope.showDeliveryMap = false;
-	
-	$scope.toggleDeliveryMap = function() {
-		$scope.showDeliveryMap = !$scope.showDeliveryMap;
-	}
 	$scope.order = Order;
 	
 	$scope.open = false;
