@@ -124,6 +124,9 @@ ul {
 	justify-content: flex-start;
 }
 
+/* ============================================================================
+	Position hgroup-btn to the right only when screen is wider than 375px
+=============================================================================*/
 #menu-heading {
 	position: relative;
 	color: #412518;
@@ -136,12 +139,13 @@ ul {
 	letter-spacing: 0.15em;
 }
 
-#menu-heading > div {
-	position: absolute;
-	right: 2%;
-	top: 35%;
+@media only screen and (min-width: 375px) {
+	#menu-heading > div {
+		position: absolute;
+		right: 2%;
+		top: 35%;
+	}	
 }
-
 
 .menu-section {
 	border-top: 0.5px solid #FF9800;
