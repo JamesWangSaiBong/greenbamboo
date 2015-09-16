@@ -123,7 +123,7 @@
 	==================================================================== */
 	
 	#menu {
-		height: 5000px;
+		height: 5400px;
 	}
 	
 	#menu > .thumbnail {
@@ -181,7 +181,7 @@
 	@media only screen and (min-width: 960px) {
 		
 		#menu {
-			height: 3250px;
+			height: 3500px;
 		}
 		
 		#menu > .thumbnail {
