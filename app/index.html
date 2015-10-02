@@ -38,14 +38,16 @@
 
 	<body ng-cloak ng-controller="menuCtrl">
 		<header>
-			<image id="mobile-banner" src="_assets/banner.jpg" alt="Green Bamboo Vietnamese Restaurant" />
-			<image id="web-banner" src="_assets/website-banner.jpg" alt="Green Bamboo Vietnamese Restaurant"/>
+			<h1 class="seo">Green Bamboo Vietnamese Restaurant, Pho in Scarborough</h1>
+			<image id="mobile-banner" src="_assets/green-bamboo-vietnamese-restaurant.jpg" alt="Green Bamboo Vietnamese Restaurant" />
+			<image id="web-banner" src="_assets/green-bamboo-vietnamese-restaurant-web.jpg" alt="Green Bamboo Vietnamese Restaurant"/>
 		</header>
 		
 		<gb-header-slides id="mobile-img-slides"></gb-header-slides>
 		
 		<section id="web-img-slides">
-			<image src="_assets/images-banner.jpg" alt="Vietnamese Cuisine"/>
+			<h2 class="seo">Vietnamese Spring Roll, Meat Wraps, Thai Beef Roll</h2>
+			<image src="_assets/spring-rolls-meat-wraps-beef-pho.jpg" alt="Vietnamese Spring Rolls, Meat Wraps and Thai Beef Pho"/>
 		</section>
 		
 		<section id="gb-main-info">
@@ -56,6 +58,7 @@
 				
 		<hgroup id="menu-heading">
 			<h1>MENU</h1>
+			<h1 class="seo">Vietnamese Food Menu</h1>
 			<div class="btn-group">
 				<label class="btn btn-success" ng-model="menuLang" btn-radio="'cn'">CN</label>
 				<label class="btn btn-success" ng-model="menuLang" btn-radio="'en'">EN</label>
@@ -98,6 +101,7 @@
 			
 			<gb-menu open-lg="true" class="two">
 				<gb-menu-section title="Choose Your Own" cn-title="自配檬,飯或粉">
+					<h4 class="seo">Pho</h4>
 					<gb-menu-item ng-repeat="item in menu.cyo" item="item" emit-item="setCYOItem(item)"></gb-menu-item>
 					<h5 id="cyo-options-heading" ng-show="activeCYO">Pick {{ activeCYO.numOfChoices }} items of your choice</h5>
 					<p ng-if="alertMsg">{{ alertMsg }}</p>
